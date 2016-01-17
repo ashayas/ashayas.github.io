@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>Honeycomb</title>
+
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../../js/match.js"></script>
+  <!-- CSS  -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="../../css/style.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="../../css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/honeycombnew.webflow.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+</head>
+<body style="background-color: white">
+
+  <div class="w-nav navigation-bar nav-new" data-animation="over-right" data-collapse="all" data-contain="1" data-duration="400">
+    <div class="w-container">
+      <a class="w-inline-block link-block" href="index.html"><img class="logo-1" src="../../images/honeycomblogo.png" width="230"/>
+      </a>
+      <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
+        <div class="w-icon-nav-menu"></div>
+      </div><img class="account-pic" src="../../images/User-icon-premium-white.png" width="34"/>
+      <div class="account-name"><a href="#">Your Account</a></div>
+    </div>
+  <div class="w-nav-overlay" data-wf-ignore=""></div></div>
+
+<div class="w-section section-1 featured-restaurants single">
+    <div class="w-container">
+      <nav class="RandomColor">
+         <div class="nav-wrapper">
+           <form>
+             <div class="input-field">
+               <input id="search" placeholder="Enter to search for a restaurant" required="" type="search"/>
+               <label for="search"><i class="material-icons">search</i></label>
+               <i class="material-icons">close</i>
+             </div>
+           </form>
+         </div>
+       </nav>
+    </div>
+    <div class="w-container" style="padding-top: 1%">
+      <div class="w-row menu-row">
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858090_miscellaneous-28-white.png" width="35"/>
+            <h5 class="menu-title">nearby</h5>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858058_Fire-white.png" width="35"/>
+            <h5 class="menu-title">trending</h5>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858302_like-white.png" width="35"/>
+            <h5 class="menu-title">favourites</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col s12 m3" style="position: fixed;">
+      <div class="card">
+        <div class="card-image">
+          <img src="../../images/restaurantpic.jpg"/>
+        </div>
+        <div class="card-content">
+          <h5>Grapevine Restaurant and Patio at Gray Monk Estate Winery</h5>
+        <ul><li id="RestAddy">1055 Camp Road</li><li>
+        </li></ul>
+
+        </div>
+      </div>
+    </div>
+    <div style="padding-top: 2%; text-align: center">
+    <a class="waves-effect waves-light btn" href="../../Login/login.html" id="NOTLOGGED" style="display:none">Login For Personalized Menu</a>
+  </div>
+    <div class="col s7 offset-s3" id="MENU" style="display: none">
+      <h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Lunch Starters</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item0" class="w-row"><p hidden ="000000000000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Seasonal Greens Collage</h2><div class="price">$9.00</div><div class="price ing">House Dressing; Flatbread Crouton; Root Vegetable Vermicelli; Grape Tomato. Recommend: Estate Pinot Auxerrois</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item1" class="w-row"><p hidden ="000000001110000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Spinach; Baked Goat Cheese and Apple Stack</h2><div class="price">$14.50</div><div class="price ing">Balsamic Reduction; Toasted Walnuts; House Dressing. Recommend: Odyssey White Meritage</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item2" class="w-row"><p hidden ="001000000111000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Sterling Springs Tuscan Chicken Salad</h2><div class="price">$15.00</div><div class="price ing">Grilled Asparagus; Egg; Marinated Olives; Asiago; Baby Greens; House Dressing. Recommend: Estate Rotberger</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item3" class="w-row"><p hidden ="000010000000000010001010"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Ocean Wise Salmon Tartare</h2><div class="price">$16.00</div><div class="price ing">Mango; Pickled Red Onion; Cucumber; Indonesian Curry; Watercress; Poppadom. Recommend: Odyssey White Brut</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item4" class="w-row"><p hidden ="000000000110000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Estate Cheese Board</h2><div class="price">$18.00</div><div class="price ing">A 4 Oz. Sampling of Fine Cheeses; Wine Jelly; Flatbread; Apple Chips; Crackers. Recommend: Odyssey Meritage</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item5" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Chef</h2><div class="price">$9.00</div><div class="price ing">Made Daily with Local Goodness. Recommend: Check with your server</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item6" class="w-row"><p hidden ="000001000100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Tiger Prawns Proven</h2><div class="price">$16.00</div><div class="price ing">Ocean Wise Tiger Prawns; Herb Cream Sauce; Asiago. Recommend: Estate Unwooded Chardonnay</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item7" class="w-row"><p hidden ="000101000000000011000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Pan Seared Digby Scallops</h2><div class="price">$17.00</div><div class="price ing">Crisp Pancetta; Lemon Basil Risotto; Plum Balsamic Reduction. Recommend: Estate Pinot Blanc</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item8" class="w-row"><p hidden ="000000000000110000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Breads &amp; Spreads</h2><div class="price">$8.00</div><div class="price ing">Basket of Fresh Baked Artisan Breads; Variety of House Made Spreads</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Lunch Mains</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item9" class="w-row"><p hidden ="000000000100110000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Side Order Bread</h2><div class="price">$3.00</div><div class="price ing">Served with butter</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item10" class="w-row"><p hidden ="000000000100000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Pan Seared B.C. Steelhead Fillet</h2><div class="price">$23.00</div><div class="price ing">Pear and Fennel Chutney; Citrus Cream Sauce; Rice Pilaf; Fresh Vegetable Medley. Recommend: Estate Pinot Gris</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item11" class="w-row"><p hidden ="010100000001000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Caprese Meatball Sliders</h2><div class="price">$19.00</div><div class="price ing">Pork and Veal Meatballs; Bocconcini; Tomato Sauce; Basil Mayo with your choice of Soup; Salad; or Chefs Potato. Recommend: Estate Cabernet Merlot</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item12" class="w-row"><p hidden ="010000000001000000000100"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Slow Braised Beef</h2><div class="price">$20.00</div><div class="price ing">New York Striploin; Estate Merlot Mushroom Demi; Parsnip Smashed Potato; Horseradish Aioli; Vegetables. Recommend: Estate Merlot</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item13" class="w-row"><p hidden ="011100000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Saltimbocca Cavatappi</h2><div class="price">$19.00</div><div class="price ing">Pancetta; Yam; Cream Sauce; Watercress; Vegetable Brochette; Asiago; Cheddar; served with Cavatappi Pasta. Recommend: Estate Riesling</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item14" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Fraser Valley Duck Confit</h2><div class="price">$20.00</div><div class="price ing">Sp</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item15" class="w-row"><p hidden ="000001000000000011000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Seafood Salad</h2><div class="price">$20.00</div><div class="price ing">Seared Scallops and; Prawns; Baby Greens; House Dressing; Orange Segments; Saffron Foam. Recommend: Estate Pinot Blanc</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item16" class="w-row"><p hidden ="000000000000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Ratatouille</h2><div class="price">$18.00</div><div class="price ing">Roasted Vegetables; Tomato Sauce; Lemon Basil Risotto. Recommend: Estate Rotberger</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Side Orders</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item17" class="w-row"><p hidden ="000000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Charcuterie</h2><div class="price">$28.00</div><div class="price ing">House Terrine; Cured Meats; Cheese; Pickles. Recommend: Odyssey Cabernet Sauvignon</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item18" class="w-row"><p hidden ="001000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">6 Oz. Grilled Chicken Breast</h2><div class="price">$9.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item19" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Sp</h2><div class="price">$7.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item20" class="w-row"><p hidden ="000001000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Tiger Prawn Skewer (4)</h2><div class="price">$9.00</div><div class="price ing"> </div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Dinner Starters</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item21" class="w-row"><p hidden ="000000000000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Pickles; Olives</h2><div class="price">$5.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item22" class="w-row"><p hidden ="000000000000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Seasonal Greens Collage</h2><div class="price">$9.00</div><div class="price ing">House Dressing; Flatbread Crouton; Root Vegetable Vermicelli; Grape Tomato. Recommended: Estate Pinot Auxerrois</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item23" class="w-row"><p hidden ="000000001110000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Baked Goat Cheese and Apple Stack</h2><div class="price">$12.00</div><div class="price ing">Spinach; Balsamic Reduction; Toasted Walnuts; House Dressing. Recommended: Odyssey White Meritage</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item24" class="w-row"><p hidden ="000010000000000010001010"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Ocean Wise Salmon Tartare</h2><div class="price">$16.00</div><div class="price ing">Mango; Pickled Red Onion; Cucumber; Indonesian Curry; Watercress; Poppadum. Recommended: Odyssey White Brut</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item25" class="w-row"><p hidden ="000000000110000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Odyssey Cheese Board</h2><div class="price">$21.00</div><div class="price ing">A 5 Oz. Sampling of Fine Cheeses; Wine Jelly; Flatbread; Apple Chips; Crackers. Recommended: Odyssey Meritage</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item26" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Chef</h2><div class="price">$9.00</div><div class="price ing">Made Daily with Local Goodness. Check with your server</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item27" class="w-row"><p hidden ="000001000100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Tiger Prawns Proven</h2><div class="price">$16.00</div><div class="price ing">Ocean Wise Tiger Prawns; Herb Cream Sauce; Asiago. Recommended: Estate Unwooded Chardonnay</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Dinner Mains</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item28" class="w-row"><p hidden ="000101000000000011000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Pan Seared Digby Scallops</h2><div class="price">$17.00</div><div class="price ing">Crisp Pancetta; Lemon Basil Risotto; Plum Balsamic Reduction. Recommended: Estate Pinot Blanc</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item29" class="w-row"><p hidden ="000000001110000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Rack of Lamb</h2><div class="price">$36.00</div><div class="price ing">Served Medium Rare; Panko Goat Cheese and; Walnut Crust; Blackberry Demi; Potato and; Parsnip. Recommended: Odyssey Meritage</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item30" class="w-row"><p hidden ="010100000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Tower Cut New York</h2><div class="price">$36.00</div><div class="price ing">AAA Beef; Latitude 50 Demi; Bacon Hollandaise; Potato and; Parsnip Mousseline; Seasonal Vegetable. Recommended: Odyssey Cabernet Sauvignon</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item31" class="w-row"><p hidden ="000000000000000110100000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Duck Duck Goose</h2><div class="price">$30.00</div><div class="price ing">Duck Breast; Duck Spring Roll; Gooseberry Coulis; Char Siu Honey Glaze; Sesame Fried Rice; Asian Slaw. Recommended: Odyssey Pinot Noir</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item32" class="w-row"><p hidden ="000001000000000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Seafood Cavatappi</h2><div class="price">$29.00</div><div class="price ing">Pan Seared Scallops and; Skewered Prawns; Vegetable Brochette; Lobster Bisque Sauce; Served with Cavatappi Pasta. Recommended: Odyssey White Meritage</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item33" class="w-row"><p hidden ="001000000000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Roasted Sterling Springs Chicken</h2><div class="price">$26.00</div><div class="price ing">Lemon Basil Risotto; Tomato Sauce; Parmesan Crisp; Seasonal Vegetables. Recommended: Odyssey Merlot</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item34" class="w-row"><p hidden ="000010000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Steelhead Fillet</h2><div class="price">$27.00</div><div class="price ing">Sp</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Side Orders</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item35" class="w-row"><p hidden ="000000000000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Ratatouille</h2><div class="price">$22.00</div><div class="price ing">Roasted Vegetables; Tomato Sauce; Lemon Basil Risotto. Recommended: Estate Rotberger</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item36" class="w-row"><p hidden ="001000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">6 Oz. Grilled Chicken Breast</h2><div class="price">$9.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item37" class="w-row"><p hidden ="000001000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Tiger Prawn Skewer (4)</h2><div class="price">$9.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item38" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Sp</h2><div class="price">$7.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item39" class="w-row"><p hidden ="000001000000000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Seasonal Vegetables</h2><div class="price">$5.00</div><div class="price ing"> </div></div></div></div></div>
+
+    </div>
+  </div>
+
+  <div class="w-section footer" style="background-color:#D8D8D8;">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-4 spc">
+          <h5>about honeycomb</h5>
+          <p class="about-paragraph-1">Honeycomb is for people with food preferences who are tired of the anxiety that comes with trying new restaurants.</p><a class="button business" href="business.html">for business</a>
+        </div>
+        <div class="w-col w-col-4 spc">
+          <h5>useful links</h5><a class="footer-link" href="http://medium.com/tap-honeycomb" target="_blank">Follow our story on Medium!</a><a class="footer-link" href="faq.html">Frequently Asked Questions</a><a class="footer-link" href="#">Coming soon!</a><a class="footer-link" href="#">Coming soon!</a>
+        </div>
+        <div class="w-col w-col-4">
+          <h5>social</h5>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-18.svg" width="20"/><a class="footer-link with-icon" href="http://twitter.com/thoneycomb_app" target="_blank">Twitter</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-03.svg" width="20"/><a class="footer-link with-icon" href="http://facebook.com/honeycombapp" target="_blank">Facebook</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/1432865075_38-instagram.png" width="20"/><a class="footer-link with-icon" href="http://instagram.com/honeycomb_app" target="_blank">Instagram</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-06.svg" width="20"/><a class="footer-link with-icon" href="https://plus.google.com/u/0/113887946563383358148" target="_blank">Google</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="w-section footer center">
+    <div class="w-container">
+      <div class="footer-text">Copyright 2015 Honeycomb by CAMG Inc.</div>
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  
+
+</body></html>

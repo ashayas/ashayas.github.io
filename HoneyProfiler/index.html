@@ -1,0 +1,421 @@
+<html>
+<head>
+	<title>Honeycomb Profiler</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>    
+
+</head>
+
+<body style = "background-image: url('images/background.png'); background-repeat:no-repeat; background-size: 100% 100%;">
+
+<div id = "page1">
+		<p class="flow-text" style = "text-align:center; padding-top:10%";>Discover the most suitable menu items for you.</p> <h5 style = "text-align:center;">Create your profile in 60 seconds</h5>
+		<img src="images/baker.png" style = "padding-left:45%; padding-right:45%; padding-bottom:2%;">
+		<a id="page1Butt" style = "left:45.5%" class= "waves-effect waves-light btn-large">Go!</a>
+</div>
+
+<div id = "dinosaurs" style = "display:none;">
+	<p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:20%; padding-right:20%";>Dinosaurs are back to take over! You only have time to enjoy 1 last meal before they eat you, what are you having?</p><h6 style = "text-align:center; padding-left:20%; padding-right:20%";>We are serious...</h6>
+	  <form action="#" style = "padding-left:40%">
+    <p>
+      <input name="group1" type="radio" id="spaghetti" />
+      <label for="spaghetti">Spaghetti Bolognese</label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="group1" type="radio" id="californiaRoll" />
+      <label for="californiaRoll">California Roll</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="pizza" />
+      <label for="pizza">Wood-Fired Pizza</label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="group1" type="radio" id="hamburger" />
+      <label for="hamburger">Good Ole Hamburger</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="kale" />
+      <label for="kale">Mango Kale Salad</label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="group1" type="radio" id="Pho" />
+      <label for="Pho">Pho</label>
+    </p>
+      <p>
+      <input name="group1" type="radio" id="shwarma" />
+      <label for="shwarma">Chicken Shwarma</label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="group1" type="radio" id="selse" />
+      <label for="selse">Something Else</label>
+    </p>
+  </form>
+		<a id="dinosaursButt" style = "left:45.5%" class= "waves-effect waves-light btn-large">Next!</a>
+</div>
+
+<div id = "meatOrSeafood" style = "display:none;">
+  <p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:20%; padding-right:20%";>Do you have a problem with meat or seafood?</p>
+    <a id="meatProblem" style = "left:45.5%" class= "waves-effect waves-light btn-large">Yes</a>
+    <a id="noMeatProblem" style = "left:45.5%" class= "waves-effect waves-light btn-large">No</a>
+
+</div>
+
+<div id = "whichMeats" style = "display:none;">
+  <p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:20%; padding-right:20%";>Which ones can't you have?</p>
+
+    <form action="#" style = "padding-left:40%">
+    <p>
+      <input type="checkbox" id="RedMeat" />
+      <label for="RedMeat">Red Meat</label>
+
+      <input type="checkbox" id="OtherSea" />
+      <label for="OtherSea">Other Seafood</label>   
+   </p>
+     <p>
+      <input type="checkbox" id="WhiteMeat" />
+      <label for="WhiteMeat">White Meat</label>
+   </p>
+    <p>
+      <input type="checkbox" id="Pork" />
+      <label for="Pork">Pork</label>
+   </p>
+   
+    <p>
+      <input type="checkbox" id="Fish" />
+      <label for="Fish">Fish</label>
+   </p>  
+  </form>
+  <a id="meatRestrictButt" style = "left:45.5%" class= "waves-effect waves-light btn-large">Next!</a>
+</div>
+
+<div id = "tofuQuestion" style = "display:none;">
+<p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:20%; padding-right:20%";>Do you like Tofu?</p>
+<img src="images/tofu.png" style = "padding-left:45%; padding-right:45%; padding-bottom:2%;">
+    <a id="yesTofu" style = "left:45.5%" class= "waves-effect waves-light btn-large">Yes</a>
+    <a id="noTofu" style = "left:45.5%" class= "waves-effect waves-light btn-large">No</a>
+</div>
+
+<div id = "otherAllergies" style = "display:none;">
+  <p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:20%; padding-right:20%";>Do you have any other food restrictions/allergies or preferences?</p>
+    <a id="yesAllergies" style = "left:45.5%" class= "waves-effect waves-light btn-large">Yes</a>
+    <a id="noAllergies" style = "left:45.5%" class= "waves-effect waves-light btn-large">No</a>
+
+</div>
+
+<div id = "listOtherAllergies" style = "display:none;">
+  <p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:20%; padding-right:20%";>Eh, we do too. Check off your restrictions/allergies</p>
+  <form action="#" style = "padding-left:40%">
+    <p>
+      <input type="checkbox" id="Peanuts" />
+      <label for="Peanuts">Peanuts</label>
+      <input type="checkbox" id="Treenuts" style = "padding-right:40%" />
+      <label for="Treenuts">Treenuts</label>
+	 </p>
+     <p>
+      <input type="checkbox" id="Dairy" />
+      <label for="Dairy">Dairy</label>
+      <input type="checkbox" id="Cheese" />
+      <label for="Cheese">Cheese</label>
+	 </p>
+    <p>
+      <input type="checkbox" id="Eggs" />
+      <label for="Eggs">Eggs</label>
+      <input type="checkbox" id="Wheat" />
+      <label for="Wheat">Wheat</label>
+	 </p>
+	 
+    <p>
+      <input type="checkbox" id="Gluten" />
+      <label for="Gluten">Gluten</label>
+      <input type="checkbox" id="Soy" />
+      <label for="Soy">Soy</label>
+	 </p>
+	 
+    <p>
+      <input type="checkbox" id="SesameSeeds" />
+      <label for="SesameSeeds">Sesame Seeds</label>
+      <input type="checkbox" id="Fruit" />
+      <label for="Fruit">Fruit</label>
+	 </p>
+
+    <p>
+      <input type="checkbox" id="Shellfish" />
+      <label for="Shellfish">Shellfish</label>
+      <input type="checkbox" id="Corn" />
+      <label for="Corn">Corn</label>
+	 </p>
+      <input type="checkbox" id="SomethingElse" />
+      <label for="SomethingElse">Something Else</label>	 
+	 </p>	 
+  </form>
+  <a id="otherRestrictButt" style = "left:45.5%" class= "waves-effect waves-light btn-large">Next!</a>
+</div>
+
+<div id = "spicyFoods" style = "display:none;">
+<p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:24%; padding-right:20%";>Do you like spicy food?</p>
+<img src="images/chilli.png" style = "padding-left:45%; padding-right:45%; padding-bottom:2%;">
+    <a id="yesSpicy" style = "left:45.5%" class= "waves-effect waves-light btn-large">Yes</a>
+    <a id="noSpicy" style = "left:45.5%" class= "waves-effect waves-light btn-large">No</a></div>
+
+<div id = "shrooms" style = "display:none;">
+<p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:24%; padding-right:20%";>Do you like mushrooms?</p>
+<img src="images/mushrooms.png" style = "padding-left:45%; padding-right:45%; padding-bottom:2%;">
+    <a id="yesShrooms" style = "left:45.5%" class= "waves-effect waves-light btn-large">Yes</a>
+    <a id="noShrooms" style = "left:45.5%" class= "waves-effect waves-light btn-large">No</a></div>
+
+<div id = "onions" style = "display:none;">
+<p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:28%; padding-right:20%";>Do onions make you cry?</p>
+<img src="images/onion.png" style = "padding-left:45%; padding-right:45%; padding-bottom:2%;">
+    <a id="noOnion" style = "left:45.5%" class= "waves-effect waves-light btn-large">Yes. Hate em</a>
+    <a id="yesOnion" style = "left:45.5%" class= "waves-effect waves-light btn-large">No</a></div>
+
+<div id = "dessert" style = "display:none;">
+<p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:20%; padding-right:20%";>How much is your love for dessert?</p>
+  <div id ="dessertContainer" style = "padding-left:20%; padding-right:20%;">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="dessertIn" min="0" max="10" />
+      </p>
+    <div class="row">
+      <div class="col s1">Heartbreak</div>
+      <div class="col s2 offset-s4">Friend Zone</div>
+      <div class="col s1 offset-s4">Madly in Love</div>
+    </div>
+    </form>
+    <a id="dessertButt" style = "left:45.5%" class= "waves-effect waves-light btn-large">Next!</a>
+  </div>
+</div>
+
+<div id = "legalPage" style = "display:none;">
+  <div id = "legalContainer" style = "padding-left:20%; padding-right:20%; padding-top:5%;"> 
+    <p class = "flow-text">Your answers will only be used to give you a personalized experience.
+    We won't sell it. We won't eat it.*</p>
+
+    <h6>
+    By choosing 'I accept', you are opting in to receive future customized deals from Honeycomb and Cotto Enoteca Pizzeria. You may cancel at any time.
+    <h6>
+
+    <h5>
+    Terms and Conditions
+    </h5>
+
+    <p>
+    All user data will be kept secure and not be released to any third party organizations. Data will only be shared with restaurants if user decides to receive personalized content from that restaurant by "following" them and opting-in. Honeycomb reserves the right to display targeted advertisements to users based on their data. All specific user data will remain anonymous to advertisers.
+    </p>
+
+    <p>
+    Honeycomb and its restaurant partners do not take responsibility if customer receives an inaccurate personalized menu. It is the customers full responsibility to confirm an item's suitability with a server when ordering at the restaurant.
+    </p>
+    <a id="acceptTButt" style = "left:45.5%" class= "waves-effect waves-light btn-large">Accept</a>
+
+  </div>
+</div>
+
+<div id = "finalPage" style = "display:none;">
+<p class="flow-text" style = "text-align:center; padding-top:10%; padding-left:20%; padding-right:20%";>Your profile is ready!</p>
+<img src="images/bread.png" style = "padding-left:45%; padding-right:45%; padding-bottom:2%;">
+    <a onclick="displayRestaurants()" style = "left:45.5%" class= "waves-effect waves-light btn-large">Start Honeycombing!</a>
+</div>
+</div>
+
+<div id = "declinefinalPage" style = "display:none;">
+  <a id="declinefinalPageButt" class="waves-effect waves-light btn-large" style = "position: absolute; top:50%; right:50%;">Page13</a>
+</div>
+	
+</body>
+
+<script>
+ $(document).ready(function(){
+    var userString = "";
+    //"spaghetti,caliroll,pizza,hamburger,kale,pho,shwarma,somethingelse,red meat, white meat, pork, fish, other seafood, tofu, peanuts, treenuts, dairy, cheese, eggs, wheat, gluten, soy, seasameseeds, fruit, shellfish, corn, somethingElse, spicy, mushrooms, onions, desert"
+    //Question 1: 1-8 1 = spaghetti ... 8 = somethingElse = 1 bit 
+	//Question 3: red meat 1 if cant eat 0 if can, 0000 <white, pork, fish, other = 5 bits
+	//Question 4: tofu 1 if cant eat, 0 if can = 1 bit 
+	//Question 5: peanuts 1 if cant eat, 0 if can 0000 0000 0000 treenuts, dairy, cheese, eggs, wheat, gluten, soy, seasameseeds, fruit, shellfish, corn, somethingElse, = 13 bits
+	//Question 6: spicy 1 if cant eat, 0 if can
+	//Question 7: mushrooms 1 if cant eat, 0 if can
+	//question 8: onions 1 if cant eat, 0 if can
+	//question 9: dessert 0 if bottom range, 1 if mid range, 2 if upper range = 1 bit 
+	//24 bits total
+    $("#page1Butt").click(function(){
+        $("#page1").hide();
+        $("#dinosaurs").show();
+    });
+
+    $("#dinosaursButt").click(function(){
+		if($('#spaghetti').is(':checked')) { userString=userString+"1"}
+		else if($('#californiaRoll').is(':checked')) { userString=userString+"2"}
+		else if($('#pizza').is(':checked')) { userString=userString+"3"}
+		else if($('#hamburger').is(':checked')) { userString=userString+"4"}
+		else if($('#kale').is(':checked')) { userString=userString+"5"}
+		else if($('#Pho').is(':checked')) { userString=userString+"6"}
+		else if($('#shwarma').is(':checked')) { userString=userString+"7"}
+		else if($('#selse').is(':checked')) { userString=userString+"8"}
+        $("#dinosaurs").hide();
+        $("#meatOrSeafood").show();
+    });
+
+    $("#meatProblem").click(function(){
+        $("#meatOrSeafood").hide();
+        $("#whichMeats").show();
+    });
+
+    $("#meatRestrictButt").click(function(){
+		if($('#RedMeat').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+		
+		if($('#WhiteMeat').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Pork').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Fish').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#OtherSea').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+		
+        $("#whichMeats").hide();
+        $("#tofuQuestion").show();
+    });
+
+    $("#noMeatProblem").click(function(){
+		userString = userString + "00000";	
+        $("#meatOrSeafood").hide();
+        $("#tofuQuestion").show();
+    });
+
+    $("#noTofu").click(function(){
+		userString = userString + "1";
+        $("#tofuQuestion").hide();
+        $("#otherAllergies").show();
+    });	
+	
+    $("#yesTofu").click(function(){
+		userString = userString + "0";
+        $("#tofuQuestion").hide();
+        $("#otherAllergies").show();
+    });
+
+    $("#noAllergies").click(function(){
+		userString = userString + "0000000000000";
+        $("#otherAllergies").hide();
+        $("#spicyFoods").show();
+    });
+
+    $("#yesAllergies").click(function(){
+        $("#otherAllergies").hide();
+        $("#listOtherAllergies").show();
+    });
+
+    $("#otherRestrictButt").click(function(){
+		if($('#Peanuts').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Treenuts').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}		
+		
+		if($('#Dairy').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Cheese').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Eggs').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Wheat').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Gluten').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Soy').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#SesameSeeds').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Fruit').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Shellfish').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#Corn').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}
+
+		if($('#SomethingElse').is(':checked')) { userString = userString + "1"}
+		else {userString = userString + "0"}		
+		
+        $("#listOtherAllergies").hide();
+        $("#spicyFoods").show();
+    });
+
+    $("#noSpicy").click(function(){
+		userString = userString + "1";
+        $("#spicyFoods").hide();
+        $("#shrooms").show();
+    });	
+	
+    $("#yesSpicy").click(function(){
+		userString = userString + "0";
+        $("#spicyFoods").hide();
+        $("#shrooms").show();
+    });
+
+    $("#noShrooms").click(function(){
+		userString = userString + "1";
+        $("#shrooms").hide();
+        $("#onions").show();
+    });	
+	
+    $("#yesShrooms").click(function(){
+		userString = userString + "0";
+        $("#shrooms").hide();
+        $("#onions").show();
+    });
+
+    $("#noOnion").click(function(){
+		userString = userString + "1";
+        $("#onions").hide();
+        $("#dessert").show();
+    });	
+	
+    $("#yesOnion").click(function(){
+		userString = userString + "0";
+        $("#onions").hide();
+        $("#dessert").show();
+    });	
+
+
+    $("#dessertButt").click(function(){
+		var dessertValU = ""+ String($('#dessertIn').val());
+		userString = userString + dessertValU;
+		$("#dessert").hide();
+        $("#legalPage").show();
+    });    
+    var hash;
+    $("#acceptTButt").click(function(){
+		
+    //PUSH USERSTRING TO FIREBASE USING USERAUTH
+        var ref = new Firebase("https://honeycombapp.firebaseio.com/");
+        var url = String(window.location.href);
+        hash = url.substring(url.indexOf('?')+1);
+
+        var usersRef = ref.child("users");
+        usersRef.child(String(hash)).set({
+          honeyValue: userString
+        });
+
+
+        $("#legalPage").hide();
+        $("#finalPage").show();
+    });
+
+         
+
+  });
+
+</script>
+
+</html>

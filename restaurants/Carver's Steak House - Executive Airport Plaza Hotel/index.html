@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>Honeycomb</title>
+
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../../js/match.js"></script>
+  <!-- CSS  -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="../../css/style.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="../../css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/honeycombnew.webflow.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+</head>
+<body style="background-color: white">
+
+  <div class="w-nav navigation-bar nav-new" data-animation="over-right" data-collapse="all" data-contain="1" data-duration="400">
+    <div class="w-container">
+      <a class="w-inline-block link-block" href="index.html"><img class="logo-1" src="../../images/honeycomblogo.png" width="230"/>
+      </a>
+      <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
+        <div class="w-icon-nav-menu"></div>
+      </div><img class="account-pic" src="../../images/User-icon-premium-white.png" width="34"/>
+      <div class="account-name"><a href="#">Your Account</a></div>
+    </div>
+  <div class="w-nav-overlay" data-wf-ignore=""></div></div>
+
+<div class="w-section section-1 featured-restaurants single">
+    <div class="w-container">
+      <nav class="RandomColor">
+         <div class="nav-wrapper">
+           <form>
+             <div class="input-field">
+               <input id="search" placeholder="Enter to search for a restaurant" required="" type="search"/>
+               <label for="search"><i class="material-icons">search</i></label>
+               <i class="material-icons">close</i>
+             </div>
+           </form>
+         </div>
+       </nav>
+    </div>
+    <div class="w-container" style="padding-top: 1%">
+      <div class="w-row menu-row">
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858090_miscellaneous-28-white.png" width="35"/>
+            <h5 class="menu-title">nearby</h5>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858058_Fire-white.png" width="35"/>
+            <h5 class="menu-title">trending</h5>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858302_like-white.png" width="35"/>
+            <h5 class="menu-title">favourites</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col s12 m3" style="position: fixed;">
+      <div class="card">
+        <div class="card-image">
+          <img src="../../images/restaurantpic.jpg"/>
+        </div>
+        <div class="card-content">
+          <h5>Carver's Steak House - Executive Airport Plaza Hotel</h5>
+        <ul><li id="RestAddy">7211 Westminster Highway</li><li>
+        </li></ul>
+
+        </div>
+      </div>
+    </div>
+    <div style="padding-top: 2%; text-align: center">
+    <a class="waves-effect waves-light btn" href="../../Login/login.html" id="NOTLOGGED" style="display:none">Login For Personalized Menu</a>
+  </div>
+    <div class="col s7 offset-s3" id="MENU" style="display: none">
+      <h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Starters</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item0" class="w-row"><p hidden ="010000000000000000001010"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Beef goulash</h2><div class="price">$6.00</div><div class="price ing">Traditional Hungarian beef soup; beef; onion; vegetables; spices; paprika</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item1" class="w-row"><p hidden ="000011000000000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Pacific Northwest seafood chowder</h2><div class="price">$7.00</div><div class="price ing">Wild BC salmon; clams; shrimp</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item2" class="w-row"><p hidden ="000000000100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Caesar salad</h2><div class="price">$8.00</div><div class="price ing">Chef</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item3" class="w-row"><p hidden ="000100000001000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Spinach salad</h2><div class="price">$8.00</div><div class="price ing">Spinach; smoked bacon; Harrison farms eggs; grape tomatoes; balsamic vinaigrette</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item4" class="w-row"><p hidden ="000000001000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Carver</h2><div class="price">$8.00</div><div class="price ing">Mesculin and; micro greens; tomato champagne vinaigrette; seasonal berries; walnuts; cucumbers; tomatoes</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Carver's Signature Appetizers</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item5" class="w-row"><p hidden ="000000000000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Caprese salad</h2><div class="price">$8.00</div><div class="price ing">Boccocini balls; tomatoes; basil; balsamic reduction; olive oil; Bolivian rose salt</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item6" class="w-row"><p hidden ="000001000000000011000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Calamari</h2><div class="price">$11.00</div><div class="price ing">Lemon marinated squid; red pepper; jalape</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item7" class="w-row"><p hidden ="000001000000000011001010"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Salt &amp; pepper tiger prawns</h2><div class="price">$12.00</div><div class="price ing">Chilli; garlic; green onion; sea salt; black pepper; mango salsa</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item8" class="w-row"><p hidden ="010000000110000010001000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Beef tenderloin Carpaccio</h2><div class="price">$11.00</div><div class="price ing">Olive and; truffle oil; smoked lemon juice; grana padano cheese; avocado salsa</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item9" class="w-row"><p hidden ="000001000001110011001000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Dungeness crab cake</h2><div class="price">$12.00</div><div class="price ing">Balsamic reduction; mango salsa</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item10" class="w-row"><p hidden ="000001000000000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Oysters Rockefeller</h2><div class="price">$15.00</div><div class="price ing">Traditional New Orleans baked dish</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item11" class="w-row"><p hidden ="000000000100000000000100"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Escargot</h2><div class="price">$12.00</div><div class="price ing">Shiitake mushrooms; butter garlic baked</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item12" class="w-row"><p hidden ="000001000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Prawn Martini</h2><div class="price">$12.00</div><div class="price ing">Cinnamon infused horseradish cocktail sauce</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item13" class="w-row"><p hidden ="000001000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Carver</h2><div class="price">$6.00</div><div class="price ing"> </div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Carver's Features</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item14" class="w-row"><p hidden ="010000000001000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Steakhouse salad</h2><div class="price">$14.00</div><div class="price ing">Spinach; romaine lettuce; eggs; grape tomatoes; 4oz beef strep loin; balsamic vinaigrette</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item15" class="w-row"><p hidden ="001000001110000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Fraser Valley chicken breast</h2><div class="price">$20.00</div><div class="price ing">Pistachio; Salt Spring Island goat cheese; mozzarella; garlic mashed potatoes; seasonal vegetables sundried fig reduction</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item16" class="w-row"><p hidden ="000010001000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Ocean wise; Lois Lake steelhead salmon</h2><div class="price">$24.00</div><div class="price ing">Whiskey and; maple syrup soaked salmon; walnut; Yukon Gold mashed potato; market vegetables</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item17" class="w-row"><p hidden ="000010000100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Sablefish</h2><div class="price">$29.00</div><div class="price ing">Crispy seared; roasted cumin; coriander; garlic cream sauce linguine; cracked red chilies</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item18" class="w-row"><p hidden ="001100001100000000001100"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Chicken or seafood linguine</h2><div class="price">$15.00</div><div class="price ing">bacon; bell peppers; mushrooms; scallion; chili; pesto cream sauce</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item19" class="w-row"><p hidden ="000010000000000010101000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Blackened black cod</h2><div class="price">$29.00</div><div class="price ing">Mashed potatoes; seasonal vegetables corn mango salsa</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Carver's Selected Cuts</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item20" class="w-row"><p hidden ="010000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Certified Angus Beef</h2><div class="price">$39.00</div><div class="price ing">Yukon Gold mashed potato; seasonal vegetables; blue cheese; port wine reductionCertified Angus beef </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item21" class="w-row"><p hidden ="010001000000000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Filet mignon; 7oz</h2><div class="price">$31.00</div><div class="price ing">Yukon Gold mashed potato; seasonal vegetables; veal port wine reductionCentre cut filet; most tender; milder in flavor</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item22" class="w-row"><p hidden ="010001000000000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Filet mignon; 10oz</h2><div class="price">$35.00</div><div class="price ing">Yukon Gold mashed potato; seasonal vegetables; veal port wine reductionCentre cut filet; most tender; milder in flavor</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item23" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Certified Angus Beef</h2><div class="price">$29.00</div><div class="price ing">Mashed potatoes; seasonal vegetables; veal port wine reduction Certified Angus beef</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item24" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Certified Angus Beef </h2><div class="price">$33.00</div><div class="price ing">Mashed potatoes; seasonal vegetables; veal port wine reduction Certified Angus Beef</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item25" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Rib eye; 10 oz</h2><div class="price">$29.00</div><div class="price ing">Yukon Gold mashed potato; seasonal vegetables; veal port wine reduction. The rib eye; an example of Certified Angus Beef</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Carver's Specialties</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item26" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Certified Angus Beef</h2><div class="price">$28.00</div><div class="price ing">Yukon Gold mashed potato; seasonal vegetables; veal port wine reduction Certified Angus Beef</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item27" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Carver</h2><div class="price">$15.00</div><div class="price ing">Alberta Certified Angus Beef </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item28" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Lamb burger</h2><div class="price">$15.00</div><div class="price ing">Ground lamb and; Alberta Certified Angus Beef </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item29" class="w-row"><p hidden ="000100000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">St. Louis barbecue pork ribs</h2><div class="price">$24.00</div><div class="price ing">Pork back ribs; Jack Daniels BBQ sauce; mashed Yukon Gold potatoes</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Accompaniments</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item30" class="w-row"><p hidden ="000000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Braised lamb shank</h2><div class="price">$25.00</div><div class="price ing">Lamb shank in red zinfandel; spices; garlic mashed potatoes; saut</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item31" class="w-row"><p hidden ="000000000100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Garlic butter prawnsz</h2><div class="price">$9.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item32" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Oscar topping</h2><div class="price">$10.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item33" class="w-row"><p hidden ="000000000100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Asparagus; butter sauce</h2><div class="price">$6.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item34" class="w-row"><p hidden ="010000000001000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">French fries</h2><div class="price">$5.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item35" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Russet baked potato</h2><div class="price">$4.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item36" class="w-row"><p hidden ="000000000000000000100000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Bourbon peppercorn sauce</h2><div class="price">$2.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item37" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Veal port wine reduction</h2><div class="price">$2.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item38" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Saut</h2><div class="price">$5.00</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item39" class="w-row"><p hidden ="000001000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Carver</h2><div class="price">$5.00</div><div class="price ing"> </div></div></div></div></div>
+
+    </div>
+  </div>
+
+  <div class="w-section footer" style="background-color:#D8D8D8;">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-4 spc">
+          <h5>about honeycomb</h5>
+          <p class="about-paragraph-1">Honeycomb is for people with food preferences who are tired of the anxiety that comes with trying new restaurants.</p><a class="button business" href="business.html">for business</a>
+        </div>
+        <div class="w-col w-col-4 spc">
+          <h5>useful links</h5><a class="footer-link" href="http://medium.com/tap-honeycomb" target="_blank">Follow our story on Medium!</a><a class="footer-link" href="faq.html">Frequently Asked Questions</a><a class="footer-link" href="#">Coming soon!</a><a class="footer-link" href="#">Coming soon!</a>
+        </div>
+        <div class="w-col w-col-4">
+          <h5>social</h5>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-18.svg" width="20"/><a class="footer-link with-icon" href="http://twitter.com/thoneycomb_app" target="_blank">Twitter</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-03.svg" width="20"/><a class="footer-link with-icon" href="http://facebook.com/honeycombapp" target="_blank">Facebook</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/1432865075_38-instagram.png" width="20"/><a class="footer-link with-icon" href="http://instagram.com/honeycomb_app" target="_blank">Instagram</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-06.svg" width="20"/><a class="footer-link with-icon" href="https://plus.google.com/u/0/113887946563383358148" target="_blank">Google</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="w-section footer center">
+    <div class="w-container">
+      <div class="footer-text">Copyright 2015 Honeycomb by CAMG Inc.</div>
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  
+
+</body></html>

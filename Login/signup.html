@@ -1,0 +1,115 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+	
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>	  
+	  
+    </head>
+
+    <body style = "background-image: url('bg.jpg'); background-size: cover">
+<div id = "loginContainer" style="width: 50%; position:absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;">
+    <div class="col m6">
+            <h3 class="center-align">Signup</h3>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" placeholder = "Email" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id='pass1' type="password" placeholder = "Password" class="validate">
+                        </div>
+						<div class="input-field col s12">
+                            <input  id='pass2' type="password" placeholder = "Confirm Password" class="validate">
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="col m12">
+						<p id="invalidInput" class = "center-align"></p>
+
+                            <p class="center-align">
+                                <button class="btn btn-large waves-effect waves-light" type="button" onclick="signUserUp()">Signup</button>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        </div>
+    
+    <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
+	  
+	  <script>
+
+	  	function goToProfiler(userIdentity){
+	  		var locationTemp = "" + '../HoneyProfiler/index.html?' + userIdentity;
+	  		window.location.href(locationTemp);
+	  	}
+
+	  	function signUserUp(){
+	  	
+		//check if input is valid
+		var pass1 = document.getElementById('pass1').value;
+		var pass2 = document.getElementById('pass2').value;
+		var email = document.getElementById('email').value;
+		
+		if (pass1 != pass2){
+			document.getElementById('invalidInput').innerHTML = "Your passwords do not match. Try again";
+			document.getElementById('pass1').value = "";
+			document.getElementById('pass2').value = "";
+		}
+		
+		else if (pass1 == pass2){
+			var ref = new Firebase("https://honeycombapp.firebaseio.com/");
+			ref.createUser({
+			  email: email,
+			  password: pass1
+			}, function(error, userData) {
+			  if (error) {
+				switch (error.code) {
+				  case "EMAIL_TAKEN":
+					document.getElementById('invalidInput').innerHTML = "Email already taken";
+					break;
+				  case "INVALID_EMAIL":
+					document.getElementById('invalidInput').innerHTML = "Invalid email!";
+					break;
+				  default:
+				  	console.log("Login Failed!", error);
+				}
+			  } else {
+			document.getElementById('invalidInput').innerHTML = "Created user succesfully";
+				var d = new Date();
+				d.setTime(d.getTime() + (1*24*60*60*1000));
+				var expires = "expires="+d.toUTCString();
+				document.cookie= "storedUser=" + email +"; " + expires;
+				document.cookie= "storedPassword="+ pass1 +"; " + expires;
+				goToProfiler(String(userData.uid));		
+
+			  }
+			});
+		}
+		
+		
+		//change to home page of site
+		//save login info
+	  }
+
+
+
+	  </script>
+	  
+
+    </body>
+  </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>Honeycomb</title>
+
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../../js/match.js"></script>
+  <!-- CSS  -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="../../css/style.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="../../css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/honeycombnew.webflow.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+</head>
+<body style="background-color: white">
+
+  <div class="w-nav navigation-bar nav-new" data-animation="over-right" data-collapse="all" data-contain="1" data-duration="400">
+    <div class="w-container">
+      <a class="w-inline-block link-block" href="index.html"><img class="logo-1" src="../../images/honeycomblogo.png" width="230"/>
+      </a>
+      <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
+        <div class="w-icon-nav-menu"></div>
+      </div><img class="account-pic" src="../../images/User-icon-premium-white.png" width="34"/>
+      <div class="account-name"><a href="#">Your Account</a></div>
+    </div>
+  <div class="w-nav-overlay" data-wf-ignore=""></div></div>
+
+<div class="w-section section-1 featured-restaurants single">
+    <div class="w-container">
+      <nav class="RandomColor">
+         <div class="nav-wrapper">
+           <form>
+             <div class="input-field">
+               <input id="search" placeholder="Enter to search for a restaurant" required="" type="search"/>
+               <label for="search"><i class="material-icons">search</i></label>
+               <i class="material-icons">close</i>
+             </div>
+           </form>
+         </div>
+       </nav>
+    </div>
+    <div class="w-container" style="padding-top: 1%">
+      <div class="w-row menu-row">
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858090_miscellaneous-28-white.png" width="35"/>
+            <h5 class="menu-title">nearby</h5>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858058_Fire-white.png" width="35"/>
+            <h5 class="menu-title">trending</h5>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858302_like-white.png" width="35"/>
+            <h5 class="menu-title">favourites</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col s12 m3" style="position: fixed;">
+      <div class="card">
+        <div class="card-image">
+          <img src="../../images/restaurantpic.jpg"/>
+        </div>
+        <div class="card-content">
+          <h5>Finer Things Tour - Whistler Tasting Tours</h5>
+        <ul><li id="RestAddy">1st Floor- 4090 Whistler Way</li><li>
+        </li></ul>
+
+        </div>
+      </div>
+    </div>
+    <div style="padding-top: 2%; text-align: center">
+    <a class="waves-effect waves-light btn" href="../../Login/login.html" id="NOTLOGGED" style="display:none">Login For Personalized Menu</a>
+  </div>
+    <div class="col s7 offset-s3" id="MENU" style="display: none">
+      <h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Lunch Tour</h2><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Hidden Gems Dinner Tour</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item0" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Lunch Tour*</h2><div class="price">Price Unavailable</div><div class="price ing">This tour features 6 fantastic stops for a delicious multi-course lunch (FireRock; Gone Bakery; Elements; Rogers; Rocky; Brewhouse). Meeting Location: The FireRock Lounge. Tour Departure: 12:30pm (2.5 hours)</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Finer Things Dinner Tour</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item1" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Hidden Gems Dinner Tour*</h2><div class="price">Price Unavailable</div><div class="price ing">This tour features 4 delicious courses at local favourite restaurants (Brewhouse; Elements; Stonesedge; Rogers; Caramba). Meeting Location: The Brewhouse. Tour Departure: 5:00pm (3.5 hours); (Dec 21-Jan 3); 4:10pm (3.5 hours). Minimum 2ppl</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Dessert Tour</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item2" class="w-row"><p hidden ="000100000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Finer Things Dinner Tour*</h2><div class="price">Price Unavailable</div><div class="price ing">This tour features champagne sabering in a wine cellar and 4 delicious courses at award winning restaurants (Bearfoot; Hy</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Finer Things Tour**</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item3" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Dessert Tour*</h2><div class="price">Price Unavailable</div><div class="price ing">This tour features 6 fantastic stops in one evening for delicious desserts and tasty drinks (Brewhouse; Caramba; Quattro; Hy</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item4" class="w-row"><p hidden ="000100000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Bearfoot Bistro</h2><div class="price">Price Unavailable</div><div class="price ing">The group is hosted in an impressive 15;000-bottle wine cellar. Guests will learn the old French tradition of sabering open a bottle of Champagne with a sword. Executive Chef and 2008 Canadian Culinary Champion; Melissa Craig; prepares a delicious amusebouche tasting plate that varies with what is fresh. Wine Pairing: Sumac Ridge Stellar</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item5" class="w-row"><p hidden ="010010000000001100001000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Hy</h2><div class="price">Price Unavailable</div><div class="price ing">Cajun crusted blackened ahi tuna or beef tenderloin in a teriyaki sesame seed sauce or vegetable spring rolls with fresh greens and; strawberries. Wine Pairing: Quails Gate Pinot Noir</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item6" class="w-row"><p hidden ="000010000000000010000100"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Quattro</h2><div class="price">Price Unavailable</div><div class="price ing">Wild Pacific salmon; arugula with orange fennel vinaigrette or veal scaloppini with bocconcini; tomato; and basil both sided with the signature Quattro pasta. Wild mushroom risotto available for vegetarians. Wine Pairing: Mission Hill Cabernet Merlot</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Hidden Gems Tour**</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item7" class="w-row"><p hidden ="000000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">FireRock*</h2><div class="price">Price Unavailable</div><div class="price ing">Chef will serve their choice of artisan cheese plate or seasonal dessert. Wine Pairing: Inniskillin Riesling Icewine</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item8" class="w-row"><p hidden ="000000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Whistler Brewhouse</h2><div class="price">Price Unavailable</div><div class="price ing">The evening begins at Whistler village</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item9" class="w-row"><p hidden ="000010000000010000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Elements Urban Tapas Parlour</h2><div class="price">Price Unavailable</div><div class="price ing">BC wild salmon pan seared and baked in fresh flavours; served over a bed of fresh vegetables or barley lentil croquet; saut</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item10" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Stonesedge</h2><div class="price">Price Unavailable</div><div class="price ing">Signature casserole with du puy lentil ragout; saut</div></div></div></div></div>
+
+    </div>
+  </div>
+
+  <div class="w-section footer" style="background-color:#D8D8D8;">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-4 spc">
+          <h5>about honeycomb</h5>
+          <p class="about-paragraph-1">Honeycomb is for people with food preferences who are tired of the anxiety that comes with trying new restaurants.</p><a class="button business" href="business.html">for business</a>
+        </div>
+        <div class="w-col w-col-4 spc">
+          <h5>useful links</h5><a class="footer-link" href="http://medium.com/tap-honeycomb" target="_blank">Follow our story on Medium!</a><a class="footer-link" href="faq.html">Frequently Asked Questions</a><a class="footer-link" href="#">Coming soon!</a><a class="footer-link" href="#">Coming soon!</a>
+        </div>
+        <div class="w-col w-col-4">
+          <h5>social</h5>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-18.svg" width="20"/><a class="footer-link with-icon" href="http://twitter.com/thoneycomb_app" target="_blank">Twitter</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-03.svg" width="20"/><a class="footer-link with-icon" href="http://facebook.com/honeycombapp" target="_blank">Facebook</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/1432865075_38-instagram.png" width="20"/><a class="footer-link with-icon" href="http://instagram.com/honeycomb_app" target="_blank">Instagram</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-06.svg" width="20"/><a class="footer-link with-icon" href="https://plus.google.com/u/0/113887946563383358148" target="_blank">Google</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="w-section footer center">
+    <div class="w-container">
+      <div class="footer-text">Copyright 2015 Honeycomb by CAMG Inc.</div>
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  
+
+</body></html>

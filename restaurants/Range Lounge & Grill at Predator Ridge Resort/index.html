@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>Honeycomb</title>
+
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../../js/match.js"></script>
+  <!-- CSS  -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="../../css/style.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+  <link href="../../css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/honeycombnew.webflow.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+</head>
+<body style="background-color: white">
+
+  <div class="w-nav navigation-bar nav-new" data-animation="over-right" data-collapse="all" data-contain="1" data-duration="400">
+    <div class="w-container">
+      <a class="w-inline-block link-block" href="index.html"><img class="logo-1" src="../../images/honeycomblogo.png" width="230"/>
+      </a>
+      <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
+        <div class="w-icon-nav-menu"></div>
+      </div><img class="account-pic" src="../../images/User-icon-premium-white.png" width="34"/>
+      <div class="account-name"><a href="#">Your Account</a></div>
+    </div>
+  <div class="w-nav-overlay" data-wf-ignore=""></div></div>
+
+<div class="w-section section-1 featured-restaurants single">
+    <div class="w-container">
+      <nav class="RandomColor">
+         <div class="nav-wrapper">
+           <form>
+             <div class="input-field">
+               <input id="search" placeholder="Enter to search for a restaurant" required="" type="search"/>
+               <label for="search"><i class="material-icons">search</i></label>
+               <i class="material-icons">close</i>
+             </div>
+           </form>
+         </div>
+       </nav>
+    </div>
+    <div class="w-container" style="padding-top: 1%">
+      <div class="w-row menu-row">
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858090_miscellaneous-28-white.png" width="35"/>
+            <h5 class="menu-title">nearby</h5>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858058_Fire-white.png" width="35"/>
+            <h5 class="menu-title">trending</h5>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858302_like-white.png" width="35"/>
+            <h5 class="menu-title">favourites</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col s12 m3" style="position: fixed;">
+      <div class="card">
+        <div class="card-image">
+          <img src="../../images/restaurantpic.jpg"/>
+        </div>
+        <div class="card-content">
+          <h5>Range Lounge & Grill at Predator Ridge Resort</h5>
+        <ul><li id="RestAddy">301 Village Centre Place</li><li>
+        </li></ul>
+
+        </div>
+      </div>
+    </div>
+    <div style="padding-top: 2%; text-align: center">
+    <a class="waves-effect waves-light btn" href="../../Login/login.html" id="NOTLOGGED" style="display:none">Login For Personalized Menu</a>
+  </div>
+    <div class="col s7 offset-s3" id="MENU" style="display: none">
+      <h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Salads</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item0" class="w-row"><p hidden ="000101001000000011000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Crab Salad</h2><div class="price">Price Unavailable</div><div class="price ing">Baby romaine; fresh pears; spiced nuts; crispy bacon and; house-made ranch dressing</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item1" class="w-row"><p hidden ="000000000000000000000010"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Bibb Salad</h2><div class="price">Price Unavailable</div><div class="price ing">Red onion; shaved carrots; cucumber; house-made thousand island dressing</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item2" class="w-row"><p hidden ="000110000111000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Broken Caesar</h2><div class="price">Price Unavailable</div><div class="price ing">Roasted garlic and; anchovy vinaigrette; poached egg; bacon; parmesan cheese</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Entrees - Poultry &amp; Pork</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item3" class="w-row"><p hidden ="000000000110000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Blue Cheese Wedge</h2><div class="price">Price Unavailable</div><div class="price ing">Wedge lettuce; olives; tomatoes; blue cheese vinaigrette</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item4" class="w-row"><p hidden ="001000000000000010000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Farmcrest Roasted Chicken</h2><div class="price">Price Unavailable</div><div class="price ing">Lemon rosemary sauce and; cornbread</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item5" class="w-row"><p hidden ="001000000000000010000110"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Pulled Chicken Gnocchi</h2><div class="price">Price Unavailable</div><div class="price ing">Mushrooms; caramelized onions; lemon; cherry tomatoes</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Entrees - Beef</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item6" class="w-row"><p hidden ="000100000000000010001000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Roasted Heritage Pork Chop</h2><div class="price">Price Unavailable</div><div class="price ing">Apple ginger pur</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item7" class="w-row"><p hidden ="010000000001000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Beef Tartare (3oz or 6oz)</h2><div class="price">Price Unavailable</div><div class="price ing">Truffle; quail egg; garlic; pickle; lavash. recommended as an appetizer</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item8" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Sirloin (7oz)</h2><div class="price">Price Unavailable</div><div class="price ing">Reserve Canadian</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item9" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Tenderloin (8oz or 12oz)</h2><div class="price">Price Unavailable</div><div class="price ing">Reserve Canadian</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item10" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Striploin (8oz or 12oz)</h2><div class="price">Price Unavailable</div><div class="price ing">Okanagan Valley</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item11" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Ribeye (14oz)</h2><div class="price">Price Unavailable</div><div class="price ing">Prime grade</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item12" class="w-row"><p hidden ="010000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Tomahawk (44oz)</h2><div class="price">Price Unavailable</div><div class="price ing">Heritage angus</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item13" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">T-Bone (48oz)</h2><div class="price">Price Unavailable</div><div class="price ing">Reserve Canadian</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item14" class="w-row"><p hidden ="010000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Steak Feature</h2><div class="price">Price Unavailable</div><div class="price ing">Talk to your server about today</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Entrees - Fish &amp; Seafood</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item15" class="w-row"><p hidden ="010000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Braised Feature</h2><div class="price">Price Unavailable</div><div class="price ing">Talk to your server about today</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item16" class="w-row"><p hidden ="000010000000001010001010"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Ahi Tuna Tartare</h2><div class="price">Price Unavailable</div><div class="price ing">Ginger soy dressing; apples; red peppers; red onion; fried wontons; dried apples. recommended as an appetizer</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item17" class="w-row"><p hidden ="000001000100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Wild Red Prawns</h2><div class="price">Price Unavailable</div><div class="price ing">Tomato; garlic; butter; sambal. recommended as an appetizer</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item18" class="w-row"><p hidden ="000000000100000000000100"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Saut</h2><div class="price">Price Unavailable</div><div class="price ing">Fennel; garlic; mushrooms; cream reduction; artisan bread. recommended as an appetizer</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item19" class="w-row"><p hidden ="000011000100110001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Lobster Crab Saut</h2><div class="price">Price Unavailable</div><div class="price ing">Wild red prawn; squid; seared tuna; herb butter; artisan bread</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item20" class="w-row"><p hidden ="000010001100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Pan Roasted Halibut</h2><div class="price">Price Unavailable</div><div class="price ing">Panko almond crust; sundried tomato butter</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item21" class="w-row"><p hidden ="000010001000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Steelhead Trout</h2><div class="price">Price Unavailable</div><div class="price ing">Butternut squash pur</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item22" class="w-row"><p hidden ="000001000110000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Okanagan Char</h2><div class="price">Price Unavailable</div><div class="price ing">Celery root pur</div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Entrees Add / Accompany / Enhance</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item23" class="w-row"><p hidden ="000010000000001000001100"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Sablefish</h2><div class="price">Price Unavailable</div><div class="price ing">Marinated soy and; ginger; braised fennel; pickled mushrooms</div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item24" class="w-row"><p hidden ="000001000000000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">King Crab Legs</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item25" class="w-row"><p hidden ="000001000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Wild Red Prawns</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item26" class="w-row"><p hidden ="000000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Melted Blue Cheese</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item27" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">B</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item28" class="w-row"><p hidden ="000000000110000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Mac &amp; Cheese</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item29" class="w-row"><p hidden ="000001000110000001000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Lobster Mac &amp; Cheese</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item30" class="w-row"><p hidden ="000000000100000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Creamy Horseradish</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item31" class="w-row"><p hidden ="000000000000000000000000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">B</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item32" class="w-row"><p hidden ="000000000000000000100000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Cognac &amp; Green Peppercorn</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><div class="item-div" style = "background-color: #ebebe0;"><div id="item33" class="w-row"><p hidden ="000100000100000000100000"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Cream Corn &amp; Bacon</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div><h2 id = "ZEMENUNUMBER" style = "padding-top: 1%;" class="section-heading centered r1">Desserts</h2><div class="item-div" style = "background-color: #ebebe0;"><div id="item34" class="w-row"><p hidden ="000000000000000000000100"></p><div class="w-col w-col-3"><img src="../../images/item.png"></div><div class="w-col w-col-9"><div class="item-deets"><h2 class="item-name">Mushrooms &amp; Garlic</h2><div class="price">Price Unavailable</div><div class="price ing"> </div></div></div></div></div>
+
+    </div>
+  </div>
+
+  <div class="w-section footer" style="background-color:#D8D8D8;">
+    <div class="w-container">
+      <div class="w-row">
+        <div class="w-col w-col-4 spc">
+          <h5>about honeycomb</h5>
+          <p class="about-paragraph-1">Honeycomb is for people with food preferences who are tired of the anxiety that comes with trying new restaurants.</p><a class="button business" href="business.html">for business</a>
+        </div>
+        <div class="w-col w-col-4 spc">
+          <h5>useful links</h5><a class="footer-link" href="http://medium.com/tap-honeycomb" target="_blank">Follow our story on Medium!</a><a class="footer-link" href="faq.html">Frequently Asked Questions</a><a class="footer-link" href="#">Coming soon!</a><a class="footer-link" href="#">Coming soon!</a>
+        </div>
+        <div class="w-col w-col-4">
+          <h5>social</h5>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-18.svg" width="20"/><a class="footer-link with-icon" href="http://twitter.com/thoneycomb_app" target="_blank">Twitter</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-03.svg" width="20"/><a class="footer-link with-icon" href="http://facebook.com/honeycombapp" target="_blank">Facebook</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/1432865075_38-instagram.png" width="20"/><a class="footer-link with-icon" href="http://instagram.com/honeycomb_app" target="_blank">Instagram</a>
+          </div>
+          <div class="w-clearfix footer-link-wrapper"><img class="info-icon" src="../../images/social-06.svg" width="20"/><a class="footer-link with-icon" href="https://plus.google.com/u/0/113887946563383358148" target="_blank">Google</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="w-section footer center">
+    <div class="w-container">
+      <div class="footer-text">Copyright 2015 Honeycomb by CAMG Inc.</div>
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  
+
+</body></html>
