@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Sat Jan 23 2016 08:11:37 GMT+0000 (UTC) -->
+<html data-wf-site="562c5d68ecbbd65066676294" data-wf-page="569d9b837b6867883a2418b9">
+<head>
+  <meta charset="utf-8">
+  <title>Signup-test</title>
+  <meta name="description" content="Find the most suitable restaurant items based on your dietary preferences.">
+  <meta property="og:title" content="Signup-test">
+  <meta property="og:description" content="Honeycomb finds you food based on your dietary needs. We're food matchmakers.">
+  <meta property="og:image" content="https://daks2k3a4ib2z.cloudfront.net/562c5d68ecbbd65066676294/568abfce8dc3d8d3799f95d3_New%20Honeycomb%20OpenGraph.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/honeysite2.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>    
+
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:300,regular,500"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="images/gplusprofhoney.png">
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-58647533-4'], ['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <style>
+    /* Set the media query's min-width to whatever you want */
+    @media screen and (min-width: 1200px) {
+        /* Set the container's max-width to whatever you want */
+        .w-container {
+            max-width: 1170px;
+        }
+    }
+  </style>
+</head>
+<body class="sign-log-body">
+  <div data-collapse="all" data-animation="over-right" data-duration="400" class="w-nav navigation-bar nav-new">
+    <a href="index.html" class="w-inline-block mobile-link-block"><img width="204" src="images/honeycomblogo.png" class="w-hidden-main w-hidden-medium w-hidden-small logo-1 mobile"><img width="283" src="images/honeycomblogo.png" class="w-hidden-tiny logo-main">
+    </a>
+    <nav role="navigation" class="w-nav-menu navigation-menu"><a href="index.html" class="w-nav-link navigation-link">HOME</a><a href="contact125.html" class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link">Contact</a><a href="faq.html" class="w-nav-link navigation-link">F.A.Q.</a><a href="mailto:chef@honeycombapp.io?subject=Honeycomb%20Inquiry" class="w-nav-link navigation-link">CONTACT</a>
+    </nav>
+    <div class="w-nav-button hamburger-button"><img width="32" src="images/1451303420_Hamburger_Round-white.png" class="w-hidden-tiny menu-icon"><img width="20" src="images/1451303420_Hamburger_Round-white.png" class="w-hidden-main w-hidden-medium w-hidden-small icon-mobile">
+    </div>
+  </div>
+  <div class="w-section sign-log-section">
+    <div class="w-container form-div-container">
+      <div class="form-div">
+        <div class="w-form mock-form">
+          <div id="email-form">
+            <h2 class="key-point">Create your account</h2>
+            <input id="email" type="email" placeholder="EMAIL ADDRESS" name="Email" data-name="Email" required="required" class="w-input mock-text">
+            <input id="pass1" type="password" placeholder="CREATE PASSWORD" name="Password" data-name="Password" required="required" class="w-input mock-text">
+            <input id="pass2" type="password" placeholder="CONFIRM PASSWORD" name="Password-2" data-name="Password 2" required="required" class="w-input mock-text">
+            <div class="w-checkbox w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny remember-me">
+              <input id="Remember-Me" type="checkbox" name="Remember-Me" data-name="Remember Me" class="w-checkbox-input">
+              <label for="Remember-Me" class="w-form-label">Remember Me</label>
+            </div>
+            <div id = "invalidInput">
+ 
+            <button type="button" onclick="signUserUp()" value="BEGIN" data-wait="Please wait..." class="w-button signup-login-buttons sign-page">SignUp!</button>
+          </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script>
+    $('.custom-button').on('click', function (evt) {
+      $('.target-tab-link').triggerHandler('click');
+      evt.preventDefault();
+    });
+
+
+      function goToProfiler(userIdentity){
+        var locationTemp = "" + 'restaurants.html?' + userIdentity;
+        window.location.href(locationTemp);
+      }
+
+      function signUserUp(){
+      
+    //check if input is valid
+    var pass1 = document.getElementById('pass1').value;
+    var pass2 = document.getElementById('pass2').value;
+    var email = document.getElementById('email').value;
+    
+    if (pass1 != pass2){
+      document.getElementById('invalidInput').innerHTML = "Your passwords do not match. Try again";
+      document.getElementById('pass1').value = "";
+      document.getElementById('pass2').value = "";
+    }
+    
+    else if (pass1 == pass2){
+      var ref = new Firebase("https://honeycombapp.firebaseio.com/");
+      ref.createUser({
+        email: email,
+        password: pass1
+      }, function(error, userData) {
+        if (error) {
+        switch (error.code) {
+          case "EMAIL_TAKEN":
+          document.getElementById('invalidInput').innerHTML = "Email already taken";
+          break;
+          case "INVALID_EMAIL":
+          document.getElementById('invalidInput').innerHTML = "Invalid email!";
+          break;
+          default:
+            console.log("Login Failed!", error);
+        }
+        } else {
+      document.getElementById('invalidInput').innerHTML = "Created user succesfully";
+        var d = new Date();
+        d.setTime(d.getTime() + (1*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie= "storedUser=" + email +"; " + expires;
+        document.cookie= "storedPassword="+ pass1 +"; " + expires;
+        goToProfiler(String(userData.uid));   
+
+        }
+      });
+    }
+    
+    
+    //change to home page of site
+    //save login info
+    }
+
+  </script>
+</body>
+</html>
