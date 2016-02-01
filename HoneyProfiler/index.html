@@ -126,7 +126,7 @@
 
         var usersRef = ref.child("users");
         usersRef.child(String(hash)).set({
-          username: code
+          username: binary
         });
          
         window.location = "../restaurants.html?" + username; 
