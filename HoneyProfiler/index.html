@@ -13,7 +13,6 @@
 
 <script>
  $(document).ready(function(){
-    window.alert("YOOO");
 
     var hash;
     var code;
@@ -129,8 +128,8 @@
         usersRef.child(String(hash)).set({
           username: binary
         });
-         
-        window.location = "../restaurants.html?" + username; 
+        
+        window.alert("DONE"); 
 
   });
 
