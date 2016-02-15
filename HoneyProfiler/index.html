@@ -124,12 +124,19 @@
         console.log(code);
         console.log(binary);
 
+        var onComplete = function (error) {
+            if (error){
+            }
+            else{
+                window.location.href("../restaurant.html?" + username);
+            }
+        }
+
         var usersRef = ref.child("users");
-        usersRef.child(String(hash)).set({
-          username: binary
-        });
+        usersRef.child(String(username)).set({
+          binary: binary
+        }, onComplete);
         
-        window.alert("DONE"); 
 
   });
 
