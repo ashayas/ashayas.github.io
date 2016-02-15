@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Sun Feb 14 2016 23:50:24 GMT+0000 (UTC) -->
+<html data-wf-site="5679e510e7f2da3b70619690" data-wf-page="56b3af7ca29b68f1098f72eb">
+<head>
+  <meta charset="utf-8">
+  <title>Favourites</title>
+  <meta name="description" content="No more fussing about what to eat. Find the exact items to eat based on your personal food preferences.">
+  <meta property="og:title" content="Favourites">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/honeycombnew.webflow2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:300,regular,500"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="images/gplusprofhoney.png">
+  <meta property="og:image" content="https://daks2k3a4ib2z.cloudfront.net/5567bbce47dc18034e5e24e9/55a88610e4665fc569944588_Open%20Graph%20HC%203.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <style>
+    /* Set the media query's min-width to whatever you want */
+    @media screen and (min-width: 1200px) {
+        /* Set the container's max-width to whatever you want */
+        .w-container {
+            max-width: 1170px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div data-collapse="all" data-animation="over-right" data-duration="400" data-contain="1" class="w-nav navigation-bar nav-new">
+    <div class="w-container">
+      <a href="index.html" class="w-inline-block link-block"><img width="230" src="images/honeycomblogo.png" class="logo-1">
+      </a>
+      <nav role="navigation" class="w-nav-menu navigation-menu"><a href="/sign-up" class="w-nav-link navigation-link create-profile-link">CREATE PROFILE</a><a href="index.html" class="w-nav-link navigation-link">HOME</a><a href="/contact" class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link">Contact</a><a href="/faq" class="w-nav-link navigation-link">F.A.Q.</a><a href="/contact" class="w-nav-link navigation-link">CONTACT</a>
+      </nav>
+      <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+      <a href="account.html" class="w-clearfix w-inline-block account-link-block"><img width="30" src="images/User-icon-premium-white.png" class="w-hidden-small w-hidden-tiny account-pic">
+        <div class="account-name">User</div>
+      </a>
+    </div>
+  </div>
+  <div class="w-section section-1 featured-restaurants">
+    <div class="w-container">
+      <h1 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny heading-1">METRO&nbsp;VANCOUVER</h1>
+      <h3 class="restaurant-featured-h3">Hi [name], get <span class="personalized-text">personalized</span> restaurant menus</h3>
+      <div class="w-form for-wrap-1">
+        <form id="email-form" name="email-form" data-name="Email Form" class="w-clearfix">
+          <div class="city-name">
+            <h5 class="city-head">Vancouver</h5>
+          </div>
+          <input id="email" type="text" placeholder="Search for a restaurant..." name="email" data-name="Email" required="required" class="w-input search-bar">
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-container">
+      <div class="w-row menu-row">
+        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+          <a href="index.html" class="w-inline-block tab-page-link">
+            <div class="div-menu-icon"><img width="25" src="images/1450858090_miscellaneous-28-white.png" class="menu-icon">
+              <h5 class="menu-title">nearby</h5>
+            </div>
+          </a>
+        </div>
+        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+          <a href="trending.html" class="w-inline-block tab-page-link">
+            <div class="div-menu-icon"><img width="25" src="images/1450858058_Fire-white.png" class="menu-icon">
+              <h5 class="menu-title">trending</h5>
+            </div>
+          </a>
+        </div>
+        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+          <a href="favourites.html" class="w-inline-block tab-page-link">
+            <div class="div-menu-icon clicked"><img width="25" src="images/1450858302_like.png" class="menu-icon">
+              <h5 class="menu-title clicked">favourites</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="Vancouver" class="w-section w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny section featured-restaurants">
+    <div class="w-container">
+      <div class="section-title-group r1">
+        <h2 class="section-heading centered r1">Featured restaurants</h2>
+        <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny section-subheading center r1">enter your email address to be matched with restaurants</div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section section trending-coming-soon">
+    <div class="w-container coming-soon-container"><img width="74" src="images/1450858302_like.png">
+      <h2 class="coming-soon-title">Favourite restaurants - coming soon!</h2>
+      <p>Save restaurants and come back to them later.</p><a href="#" class="w-button go-back-button">Back to Homepage</a>
+    </div>
+  </div>
+  <div class="w-section footer center white">
+    <div class="w-container">
+      <div class="footer-text">Copyright 2016 Honeycomb by CAMG Inc.</div>
+      <div class="legal-links"><a class="legal-link-1" href="http://honeycomb.ai/terms-of-use" target="_blank">Terms of Use</a> | <a class="legal-link-1" href="http://honeycomb.ai/privacy-policy" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script>
+    $('.custom-button').on('click', function (evt) {
+      $('.target-tab-link').triggerHandler('click');
+      evt.preventDefault();
+    });
+  </script>
+</body>
+</html>

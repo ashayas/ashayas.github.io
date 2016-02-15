@@ -13,13 +13,38 @@ $(function(){
   }
 
   function checkItems(userBinary){
-    console.log('Yo');
+    $("#MENU").show()
+    var i = 0;
+    var j = 0;
+    while(($("#ZEMENUNUMBER"+String(i)).length) > 0){
+      console.log($("#ZEMENUNUMBER"+String(i)).text());
+      var sectionFlag = 1;
+      while(($("#item"+String(j)).length) > 0){
+        console.log(j);
+        var a = $("#item"+String(j)).html();
+        a = a.split('hidden="');
+        var itmbinary = String(a[1]);
+        itmbinary = String(itmbinary.split('"')[0]);
+        console.log(itmbinary + " " + a[0] + userBinary);
+        if (compareBinaries(itmbinary, userBinary) == true){
+          $("#item"+String(j)).hide();
+          sectionFlag = sectionFlag & 1;
+        }
 
+        else {
+          sectionFlag = sectionFlag & 0;
+        }
+
+        j = j + 1;
+      }
+      i = i + 1;
+      if (sectionFlag == 1){
+        //$("#ZEMENUNUMBER" + String(i)).hide();
+      }
+    }
   } 
 
   var url = String(window.location.href);
-
-  //ERROR CHECK HERE?
   var hash = url.substring(url.indexOf('?')+1);
   console.log(hash);
   var userBinary;
