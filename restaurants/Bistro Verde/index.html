@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Sun Feb 14 2016 23:50:24 GMT+0000 (UTC) --><html data-wf-page="567b1a930b1acbeb588d6d23" data-wf-site="5679e510e7f2da3b70619690"><head>
+  <meta charset="utf-8"/>
+  <title>Bistro Verde - Nordstrom Pacific Centre</title>
+  <meta content="No more fussing about what to eat. Find the exact items to eat based on your personal food preferences." name="description"/>
+  <meta content="New Restaurant 2" property="og:title"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Webflow" name="generator"/>
+  <link href="../../css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/honeycombnew.webflow2.css" rel="stylesheet" type="text/css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:300,regular,500"]
+      }
+    });
+  </script>
+  <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="../../js/match.js" type="text/javascript"></script>  
+  <script src="../../js/modernizr.js" type="text/javascript"></script>
+  <link href="../../images/favicon-32x32.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../../images/gplusprofhoney.png" rel="apple-touch-icon"/>
+  <meta content="https://daks2k3a4ib2z.cloudfront.net/5567bbce47dc18034e5e24e9/55a88610e4665fc569944588_Open%20Graph%20HC%203.png" property="og:image"/>
+  <meta content="image/png" property="og:image:type"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+  <style>
+    /* Set the media query's min-width to whatever you want */
+    @media screen and (min-width: 1200px) {
+        /* Set the container's max-width to whatever you want */
+        .w-container {
+            max-width: 1170px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="w-nav navigation-bar nav-new" data-animation="over-right" data-collapse="all" data-contain="1" data-duration="400">
+    <div class="w-container">
+      <a class="w-inline-block link-block" href="../../index.html"><img class="logo-1" src="../../images/honeycomblogo.png" width="230"/>
+      </a>
+      <nav class="w-nav-menu navigation-menu" role="navigation"><a class="w-nav-link navigation-link create-profile-link" href="../../sign-up">CREATE PROFILE</a><a class="w-nav-link navigation-link" href="../../index.html">HOME</a><a class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link" href="../../contact">Contact</a><a class="w-nav-link navigation-link" href="../../faq">F.A.Q.</a><a class="w-nav-link navigation-link" href="../../contact">CONTACT</a>
+      </nav>
+      <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+      <a class="w-clearfix w-inline-block account-link-block" href="../../account.html"><img class="w-hidden-small w-hidden-tiny account-pic" src="../../images/User-icon-premium-white.png" width="30"/>
+        <div class="account-name">User</div>
+      </a>
+    </div>
+  </div>
+  <div class="w-section section-1 featured-restaurants single" data-ix="verify-view">
+    <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+      <h1 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny heading-1">METRO VANCOUVER</h1>
+      <div class="w-form for-wrap-1">
+        <form class="w-clearfix" data-name="Email Form" id="email-form" name="email-form">
+          <div class="city-name">
+            <h5 class="city-head">Vancouver</h5>
+          </div>
+          <input class="w-input search-bar" data-name="Email" id="email" name="email" placeholder="Search for a restaurant..." required="required" type="text"/>
+          <input class="w-button button-search" data-wait="Please wait..." type="submit" value="SEARCH"/>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-container">
+      <div class="w-row menu-row">
+        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+          <a class="w-inline-block tab-page-link" href="../../index.html">
+            <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858090_miscellaneous-28-white.png" width="25"/>
+              <h5 class="menu-title">nearby</h5>
+            </div>
+          </a>
+        </div>
+        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+          <a class="w-inline-block tab-page-link" href="../../trending.html">
+            <div class="div-menu-icon" data-ix="display-verify-tablet"><img class="menu-icon" src="../../images/1450858058_Fire-white.png" width="25"/>
+              <h5 class="menu-title">trending</h5>
+            </div>
+          </a>
+        </div>
+        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+          <a class="w-inline-block tab-page-link" href="../../favourites.html">
+            <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858302_like-white.png" width="25"/>
+              <h5 class="menu-title">favourites</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny menu-section">
+    <div class="w-row">
+      <div class="w-col w-col-4">
+        <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858090_miscellaneous-28-white.png" width="64"/>
+          <h5 class="menu-title">nearby</h5>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858058_Fire-white.png" width="64"/>
+          <h5 class="menu-title">trending</h5>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="div-menu-icon"><img class="menu-icon" src="../../images/1450858302_like-white.png" width="64"/>
+          <h5 class="menu-title">favourites</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny section featured-restaurants" id="Vancouver">
+    <div class="w-container">
+      <div class="section-title-group r1">
+        <h2 class="section-heading centered r1">Featured restaurants</h2>
+        <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny section-subheading center r1">enter your email address to be matched with restaurants</div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section section restaurants">
+    <h3 class="w-hidden-main personalized-menu-title" data-ix="display-verify">Your personalized menu...</h3>
+    <div class="w-row">
+      <div class="w-col w-col-3 w-col-stack restaurant-column">
+        <div class="div-res"><img class="res-image-2" src="../../images/D60_8534-168.jpg" width="1250"/>
+          <h1 class="restaurant-name">Bistro Verde - Nordstrom Pacific Centre</h1>
+          <h4 class="restaurant-address new">799 Robson St<br/> NUMBER, <a class="web-link" href="#">cotto.ca</a></h4>
+          <div>
+            <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-clearfix"><a class="w-button rest-cta new-format" href="tel:+16042998002">+FAVOURITE</a><a class="w-button rest-cta new-format" href="tel:+16042998002">SHARE</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-hidden-tiny div-res div-res-2">
+          <div>
+            <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-clearfix"><a class="w-button rest-cta new-format" href="tel:+16042998002">+FAVOURITE</a><a class="w-button rest-cta new-format" href="tel:+16042998002">SHARE</a>
+            </div>
+          </div>
+          <p class="restaurant-description">Cotto Enoteca Pizzeria showcases modern Italian cuisine, specializing in authentic VPN certified Neapolitan pizza and comforting Italian dishes.</p><a class="w-button reserve-button" href="#">Reserve Table</a>
+        </div>
+      </div>
+      <div class="w-col w-col-6 w-col-stack column-m">
+        <h3 class="w-hidden-medium w-hidden-small w-hidden-tiny personalized-menu-title">Your personalized menu...</h3>
+
+        <div id="MENU">
+<h2 id="Sexion0"class="section-heading centered r1">Starters and Small Plates</h2><div id="Sexion0item0" class="item-div"><p hidden ="000000000100000000000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Roma Tomato Basil Soup</h2><div class="price">N/A</div><div class="price ing">N/A</div></div></div></div></div><div id="Sexion0item2" class="item-div"><p hidden ="000001000000000010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Fried Calamari</h2><div class="price">$11.50 </div><div class="price ing">Banana pepper; bean sprouts; sweet chile sauce</div></div></div></div></div><div id="Sexion0item3" class="item-div"><p hidden ="000000000110000000000100"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Roasted Mushroom Bruschetta</h2><div class="price">$10.25 </div><div class="price ing">Baby arugula; manchego cheese; port balsamic reduction</div></div></div></div></div><div id="Sexion0item4" class="item-div"><p hidden ="000011000000001001001000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Ahi Tuna Poke</h2><div class="price">$14.95 </div><div class="price ing">Seaweed salad; seasoned wontons; soy sauce; wasabi</div></div></div></div></div><div id="Sexion0item5" class="item-div"><p hidden ="001000000110000010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Cilantro Lime Chicken Tacos</h2><div class="price">$10.95 </div><div class="price ing">Romaine; yellow pepper; tomato; cilantro lime vinaigrette; queso fresco</div></div></div></div></div><div id="Sexion0item6" class="item-div"><p hidden ="000010000101110000000010"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Smoked Wild Salmon with Johnny Cakes</h2><div class="price">$12.25 </div><div class="price ing">Horseradish dill crème fraiche, pickled onion, crispy capers</div></div></div></div></div><h2 id="Sexion1"class="section-heading centered r1">Pizza and Flatbread</h2><div id="Sexion1item7" class="item-div"><p hidden ="000100000110110000001000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Sopressata Pizza</h2><div class="price">$13.50 </div><div class="price ing">Oven-roasted tomatoes; yellow peppers; provolone and parmigiano cheeses</div></div></div></div></div><div id="Sexion1item8" class="item-div"><p hidden ="000000000110110010000100"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Herbed Mushroom Flatbread</h2><div class="price">$12.50 </div><div class="price ing">Provolone cheese; baby arugula; extra virgin olive oil</div></div></div></div></div><div id="Sexion1item9" class="item-div"><p hidden ="000000000110110010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Neapolitan Pizza</h2><div class="price">$11.95 </div><div class="price ing">mozzarella; provolone; pear tomatoes; fresh basil</div></div></div></div></div><h2 id="Sexion2"class="section-heading centered r1">Sandwiches</h2><div id="Sexion2item10" class="item-div"><p hidden ="000110000111110010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Wild Salmon &amp; Maple Glazed Bacon</h2><div class="price">$15.95 </div><div class="price ing">Bacon jam; avocado; tomato; garlic aioli, toasted rustic bread</div></div></div></div></div><div id="Sexion2item11" class="item-div"><p hidden ="000000000110110010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Short Rib Grilled Cheese</h2><div class="price">$14.95 </div><div class="price ing">blackberry jam; white cheddar cheese; toasted rustic bread</div></div></div></div></div><div id="Sexion2item12" class="item-div"><p hidden ="001100000111110010100000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Roast Turkey Club</h2><div class="price">$14.95 </div><div class="price ing">Crisp bacon; avocado; tomato; peppercorn aioli, toasted rustic bread</div></div></div></div></div><div id="Sexion2item13" class="item-div"><p hidden ="000000000111110000100010"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Bv Burger</h2><div class="price">$15.50 </div><div class="price ing">Balsamic roasted onion; tomato; sharp white cheddar; peppercorn aioli, brioche roll</div></div></div></div></div><div id="Sexion2item14" class="item-div"><p hidden ="000100000111110000000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Glazed Ham &amp; Manchego Cheese</h2><div class="price">$14.95 </div><div class="price ing">Johnston's ham, mango chutney, baby arugula, peppercorn aioli, toasted rustic bread</div></div></div></div></div><h2 id="Sexion3"class="section-heading centered r1">Salads</h2><div id="Sexion3item15" class="item-div"><p hidden ="001000000000110010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Roasted Chicken &amp; Avocado Salad</h2><div class="price">$16.25 </div><div class="price ing">Rustic croutons; petite tomatoes; pickled french beans; radish; roasted tomato dressing</div></div></div></div></div><div id="Sexion3item16" class="item-div"><p hidden ="000001000110110011100000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Cilantro Lime Shrimp Salad</h2><div class="price">$19.25 </div><div class="price ing">Wild shrimp; petite tomatoes; grilled corn; pepitas; jack cheese; tortilla crisps; cilantro lime vinaigrette</div></div></div></div></div><div id="Sexion3item17" class="item-div"><p hidden ="000000001110110000000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Roasted Local Beet Salad</h2><div class="price">$12.95 </div><div class="price ing">Baby lettuce; chevre; toasted hazelnuts; walnut vinaigrette</div></div></div></div></div><div id="Sexion3item18" class="item-div"><p hidden ="000011000000001001001000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Ginger Crusted Ahi Tuna Salad</h2><div class="price">$19.95 </div><div class="price ing">Napa cabbage; blistered green beans; red pepper; seasoned wontons; candied ginger; soy glaze; spicy thai basil vinaigrette</div></div></div></div></div><div id="Sexion3item19" class="item-div"><p hidden ="000000001110110010000010"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Kale &amp; Farro Salad</h2><div class="price">$12.50 </div><div class="price ing">Butternut squash; toasted almonds; blue cheese; red onion; pomegranate vinaigrette</div></div></div></div></div><div id="Sexion3item20" class="item-div"><p hidden ="000010000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Herb Roasted Salmon Nicoise</h2><div class="price">$19.95 </div><div class="price ing">Wild salmon; haricot verts; petite tomatoes; egg; potatoes; roasted tomato dressing</div></div></div></div></div><div id="Sexion3item21" class="item-div"><p hidden ="001000001000110110001000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Chinese Chicken Salad</h2><div class="price">$13.75 </div><div class="price ing">Julienne vegetables; crisp wontons; toasted almonds; mandarin oranges; sesame seeds; ginger sesame dressing</div></div></div></div></div><h2 id="Sexion4"class="section-heading centered r1">Entrées</h2><div id="Sexion4item22" class="item-div"><p hidden ="000001000110110001001000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Shrimp Linguine with Spicy Tomato Sauce</h2><div class="price">$22.95 </div><div class="price ing">Wild shrimp; baby spinach; petite tomatoes; parmesan cheese; fresh herbs</div></div></div></div></div><div id="Sexion4item23" class="item-div"><p hidden ="001000000000000000100000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Pan Roasted Chicken</h2><div class="price">$23.95 </div><div class="price ing">Crispy smashed potatoes; baby carrots; brussels sprouts; peppercorn demi-glace</div></div></div></div></div><div id="Sexion4item24" class="item-div"><p hidden ="000010001110000000000100"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Grilled Wild Salmon Filet</h2><div class="price">$23.95 </div><div class="price ing">Roasted butternut squash and seasonal mushroom risotto; micro greens; beurre blanc</div></div></div></div></div><div id="Sexion4item25" class="item-div"><p hidden ="010000000000000000001110"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Skirt Steak Salsa Verde</h2><div class="price">$26.95 </div><div class="price ing">Heirloom potatoes; patty pan squash; asparagus; shiitake mushrooms; balsamic grilled onion</div></div></div></div></div><div id="Sexion4item26" class="item-div"><p hidden ="000001000110000001000100"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Sauteed Chicken & Angel Hair Pasta</h2><div class="price">$19.95 </div><div class="price ing">Baby spinach; oyster mushrooms; roasted garlic tomato sauce; rosemary beurre blanc</div></div></div></div></div><div id="Sexion4item27" class="item-div"><p hidden ="000011000000001001000100"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Sake Marinated Black Cod</h2><div class="price">$31.00 </div><div class="price ing">Shrimp dumplings; organic spinach; shiitake mushroom; soy broth</div></div></div></div></div><div id="Sexion4item28" class="item-div"><p hidden ="010000000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Bone in Rib Eye Steak</h2><div class="price">$38.00 </div><div class="price ing">Crispy smashed potatoes; baby carrots; brussels sprouts</div></div></div></div></div><h2 id="Sexion5"class="section-heading centered r1">Kids Cafe Menu</h2><div id="Sexion5item29" class="item-div"><p hidden ="001000000000000010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Chicken Fingers</h2><div class="price">$7.25 </div><div class="price ing">chicken breast tenders; french fries; ranch or bbq dipping sauce and fresh fruit</div></div></div></div></div><div id="Sexion5item30" class="item-div"><p hidden ="010000000110110010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Grilled Cheese Sandwich</h2><div class="price">$6.95 </div><div class="price ing">grilled cheese sandwich on whole wheat bread; french fries and fresh fruit</div></div></div></div></div><div id="Sexion5item31" class="item-div"><p hidden ="000000000111110010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Macaroni &amp; Cheese</h2><div class="price">$6.95 </div><div class="price ing">classic macaroni and cheese and a serving of fresh fruit</div></div></div></div></div><div id="Sexion5item32" class="item-div"><p hidden ="000000000111110010000000"></p><div class="w-row item-row"><div class="w-col w-col-3 w-col-small-3"><img src="../../images/D60_7486-11.jpg"></div><div class="w-col w-col-9 w-col-small-9"><div class="item-deets"><h2 class="item-name">Pasta with Tomato Sauce</h2><div class="price">$6.95 </div><div class="price ing">sweet tomato sauce; grated parmesan cheese; served with fresh fruit</div></div></div></div></div>
+  
+        </div>
+
+        <div class="w-hidden-main div-res div-res-2">
+          <div>
+            <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-clearfix"><a class="w-button rest-cta new-format" href="tel:+16042998002">+FAVOURITE</a><a class="w-button rest-cta new-format" href="tel:+16042998002">SHARE</a>
+            </div>
+          </div>
+          <p class="w-hidden-main w-hidden-medium w-hidden-small restaurant-description">Cotto Enoteca Pizzeria showcases modern Italian cuisine, specializing in authentic VPN certified Neapolitan pizza and comforting Italian dishes.</p><a class="w-button reserve-button" href="#">Reserve Table</a>
+        </div>
+      </div>
+
+
+      <div class="w-col w-col-3 w-col-stack">
+        <div class="disclaimer-div" id="disclaimer"><img class="verify-logo-1" src="../../images/honeylogo semi-verify.png" width="30"/>
+          <h4 class="verified-header">Menu verification is <a class="verified-link" href="#">in-progress.</a></h4>
+          <p class="verified-paragraph">Some menu item ingredients are still being verified.</p>
+          <div class="disclaimer-2">
+            <h4 class="disclaimer-title">DISCLAIMER - PLEASE READ</h4>
+            <p class="disclaimer-paragraph">It is the end user's sole responsibility to confirm the applicable ingredients of any given menu item with the restaurant staff upon ordering. Honeycomb and it's listed restaurants are not responsible for any inaccurate menu items or cross contamination. Always remember to inform restaurant staff of your dietary restrictions and/or allergies.</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="w-section footer center white">
+    <div class="w-container">
+      <div class="footer-text">Copyright 2016 Honeycomb by CAMG Inc.</div>
+      <div class="legal-links"><a class="legal-link-1" href="http://honeycomb.ai/terms-of-use" target="_blank">Terms of Use</a> | <a class="legal-link-1" href="http://honeycomb.ai/privacy-policy" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="w-section w-hidden-main w-hidden-medium w-hidden-small verify-footer" data-ix="display-none">
+    <div class="w-hidden-main w-hidden-medium w-clearfix footer-verify-div"><img class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny verify-logo-footer" src="../../images/honeylogo semi-verify.png" width="29"/>
+      <h4 class="verified-header verification-footer">Menu verification is in-progress.<br/><a class="disclaimer-link" href="#disclaimer">Please read our disclaimer.</a></h4>
+    </div>
+  </div>
+  <div class="w-section w-hidden-main w-hidden-medium w-hidden-tiny verify-footer-landscape" data-ix="display-none">
+    <div class="w-hidden-main w-hidden-medium w-clearfix footer-verify-div"><img class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny verify-logo-footer" src="../../images/honeylogo semi-verify.png" width="29"/>
+      <h4 class="verified-header verification-footer">Menu verification is in-progress.<br/><a class="disclaimer-link" href="#disclaimer">Please read our disclaimer.</a></h4>
+    </div>
+  </div>
+  <div class="w-section w-hidden-main w-hidden-small w-hidden-tiny verify-tablet-footer" data-ix="display-none">
+    <div class="w-hidden-main w-hidden-medium w-clearfix footer-verify-div"><img class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny verify-logo-footer" src="../../images/honeylogo semi-verify.png" width="29"/>
+      <h4 class="verified-header verification-footer">Menu verification is in-progress.<br/><a class="disclaimer-link" href="#disclaimer">Please read our disclaimer.</a></h4>
+    </div>
+    <div class="verify-tablet-div">
+      <h4 class="verified-header verification-footer">Menu verification is in-progress.<br/><a class="disclaimer-link" href="#disclaimer">Please read our disclaimer.</a></h4>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+  <script src="../../js/webflow.js" type="text/javascript"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script>
+    $('.custom-button').on('click', function (evt) {
+      $('.target-tab-link').triggerHandler('click');
+      evt.preventDefault();
+    });
+  </script>
+
+</body></html>

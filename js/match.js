@@ -13,9 +13,40 @@ $(function(){
   }
 
   function checkItems(userBinary){
-    console.log('Yo');
+    var i = 0;
+    var j = 0;
+    var maxItems = 3;
 
-  } 
+    //loop thru all sections
+    while(($("#Sexion"+String(i)).length) > 0){
+      maxItems = 3;
+      $("#Sexion"+String(i)).hide();            
+      //loop thru all items
+      while(($("#Sexion"+String(i)+"item"+String(j)).length) > 0){
+        console.log($("#Sexion"+String(i)+"item"+String(j)));
+        console.log("ITEM:"+ j);
+        $("#Sexion"+String(i)+"item"+String(j)).hide();
+        var a = $("#Sexion"+String(i)+"item"+String(j)).html();
+        //console.log(a);
+        a = a.split('"');
+        var itmbinary = String(a[1]);
+        //console.log("ITEMBINARY"+ itmbinary);
+
+        if(compareBinaries(itmbinary, userBinary) == false && maxItems > 0){
+          $("#Sexion"+String(i)+"item"+String(j)).show();
+          $("#Sexion"+String(i)).show();      
+          maxItems --;
+          //console.log("MAX ITEMS: " + maxItems);  
+        }
+
+        else{
+          $("#Sexion"+String(i)+"item"+String(j)).hide();
+        }
+        j++;
+    }
+    i++;
+  }
+} 
 
   var url = String(window.location.href);
 
@@ -31,9 +62,9 @@ $(function(){
       var newref = new Firebase("https://honeycombapp.firebaseio.com/users/"+hash);
       newref.on("value", function(snapshot) {
           a=((snapshot.val()));
-          userBinary = a.honeyValue;
+          userBinary = a.binary;
           checkItems(userBinary);
-          console.log("UserBinary Is" + userBinary)
+          console.log("UserBinary Is" + userBinary);
       }, function (errorObject) {
         console.log("error");
       });

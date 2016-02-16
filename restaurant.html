@@ -21,6 +21,7 @@
     });
   </script>
   <script type="text/javascript" src="js/modernizr.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png">
   <link rel="apple-touch-icon" href="images/gplusprofhoney.png">
   <meta property="og:image" content="https://daks2k3a4ib2z.cloudfront.net/5567bbce47dc18034e5e24e9/55a88610e4665fc569944588_Open%20Graph%20HC%203.png" />
@@ -38,29 +39,7 @@
   </style>
 </head>
 <body>
-  <div data-collapse="all" data-animation="over-right" data-duration="400" class="w-nav w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-bar new-bar">
-    <a href="index.html" class="w-inline-block link-block link-new"><img width="230" src="images/honeycomblogo.png" class="logo-1">
-    </a>
-    <nav role="navigation" class="w-nav-menu navigation-menu"><a href="/sign-up" class="w-nav-link navigation-link create-profile-link">CREATE PROFILE</a><a href="index.html" class="w-nav-link navigation-link">HOME</a><a href="/contact" class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link">Contact</a><a href="/faq" class="w-nav-link navigation-link">F.A.Q.</a><a href="/contact" class="w-nav-link navigation-link">CONTACT</a>
-    </nav>
-    <div class="w-nav-button hamburger-button new-menu">
-      <div class="w-icon-nav-menu"></div>
-    </div>
-  </div>
-  <div data-collapse="all" data-animation="over-right" data-duration="400" data-contain="1" data-ix="display-none-nav-scroll" class="w-nav w-hidden-small w-hidden-tiny nav-scroll-main">
-    <div class="w-container">
-      <a href="index.html" class="w-inline-block link-block"><img width="230" src="images/honeycomblogo.png" class="logo-1">
-      </a>
-      <nav role="navigation" class="w-nav-menu navigation-menu"><a href="/sign-up" class="w-nav-link navigation-link create-profile-link">CREATE PROFILE</a><a href="index.html" class="w-nav-link navigation-link">HOME</a><a href="/contact" class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link">Contact</a><a href="/faq" class="w-nav-link navigation-link">F.A.Q.</a><a href="/contact" class="w-nav-link navigation-link">CONTACT</a>
-      </nav>
-      <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
-        <div class="w-icon-nav-menu"></div>
-      </div>
-      <a href="account.html" class="w-clearfix w-inline-block account-link-block"><img width="34" src="images/User-icon-premium-white.png" class="w-hidden-small w-hidden-tiny account-pic">
-        <div class="account-name">[NAME]</div>
-      </a>
-    </div>
-  </div>
+
   <div data-collapse="all" data-animation="over-right" data-duration="400" data-contain="1" class="w-nav navigation-bar nav-new">
     <div class="w-container">
       <a href="index.html" class="w-inline-block link-block"><img width="230" src="images/honeycomblogo.png" class="logo-1">
@@ -71,7 +50,7 @@
         <div class="w-icon-nav-menu"></div>
       </div>
       <a href="account.html" class="w-clearfix w-inline-block account-link-block"><img width="30" src="images/User-icon-premium-white.png" class="w-hidden-small w-hidden-tiny account-pic">
-        <div class="account-name">User</div>
+        <div class="account-name">My Account</div>
       </a>
     </div>
   </div>
@@ -86,18 +65,13 @@
           </div>
           <input id="email" type="text" placeholder="Search for a restaurant..." name="email" data-name="Email" required="required" class="w-input search-bar">
         </form>
-        <div class="w-form-done">
-          <p>Thank you! Your submission has been received!</p>
-        </div>
-        <div class="w-form-fail">
-          <p>Oops! Something went wrong while submitting the form</p>
-        </div>
+
       </div>
     </div>
     <div class="w-container">
       <div class="w-row menu-row">
         <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
-          <a href="index.html" class="w-inline-block tab-page-link">
+          <a href="#" class="w-inline-block tab-page-link">
             <div data-ix="display-nav-scroll" class="div-menu-icon clicked"><img width="25" src="images/1450858090_miscellaneous-28.png" class="menu-icon clicked">
               <h5 class="menu-title clicked">nearby</h5>
             </div>
@@ -128,49 +102,24 @@
       </div>
     </div>
   </div>
-  <div class="w-section section restaurants">
+  <div ng-app="myApp" ng-controller = "myCtrl" class="w-section section restaurants">
     <h2 class="section-heading centered r1">Featured restaurants</h2>
     <a href="#main-menu" data-ix="display-none-button" class="w-button back-to-top-button"></a>
+
     <div class="w-row row-1">
       <div class="w-col w-col-4">
-        <a href="menu-1.html" class="w-inline-block page-nav-link">
-          <div class="div-res"><img width="382" src="images/D60_8534-168.jpg" class="res-image-2">
-            <h1 class="restaurant-name name-card">Cotto enoteca pizzeria</h1>
-            <h4 class="restaurant-address new">6011 Hastings St. North Burnaby, BC&nbsp;</h4>
-          </div>
-        </a>
-      </div>
-      <div class="w-col w-col-4">
-        <a href="#" class="w-inline-block page-nav-link">
-          <div class="div-res"><img width="362" src="images/araxi.jpg" class="res-image-2">
-            <h1 class="restaurant-name name-card">araxi</h1>
-            <h4 class="restaurant-address new">6011 Hastings St. North Burnaby, BC&nbsp;</h4>
-          </div>
-        </a>
-      </div>
-      <div class="w-col w-col-4">
-        <a href="#" class="w-inline-block page-nav-link">
-          <div class="div-res"><img width="362" src="images/american_grille_marriot_vancouver_airport.jpg" class="res-image-2">
-            <h1 class="restaurant-name name-card">american grille marriot</h1>
-            <h4 class="restaurant-address new">6011 Hastings St. North Burnaby, BC&nbsp;</h4>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="w-row row-1">
-      <div class="w-col w-col-4">
-        <a href="#" class="w-inline-block page-nav-link">
+        <a href="restaurants/Bistro Verde/index.html{{userUID}}" class="w-inline-block page-nav-link">
           <div class="div-res"><img width="299" src="images/arc_restaurant.jpg" class="res-image-2">
-            <h1 class="restaurant-name name-card">Cotto enoteca pizzeria</h1>
-            <h4 class="restaurant-address new">6011 Hastings St. North Burnaby, BC&nbsp;</h4>
+            <h1 class="restaurant-name name-card">Bistro Verde</h1>
+            <h4 class="restaurant-address new">799 Robson St&nbsp;</h4>
           </div>
         </a>
       </div>
       <div class="w-col w-col-4">
         <a href="#" class="w-inline-block page-nav-link">
           <div class="div-res"><img width="299" src="images/aura_nita_lake_lodge.jpg" class="res-image-2">
-            <h1 class="restaurant-name name-card">Cotto enoteca pizzeria</h1>
-            <h4 class="restaurant-address new">6011 Hastings St. North Burnaby, BC&nbsp;</h4>
+            <h1 class="restaurant-name name-card">Cafe il Nido</h1>
+            <h4 class="restaurant-address new">780 Thurlow Street&nbsp;</h4>
           </div>
         </a>
       </div>
@@ -186,26 +135,28 @@
     <div class="w-row row-1">
       <div class="w-col w-col-4">
         <div class="div-res"><img width="382" src="images/D60_8534-168.jpg" class="res-image-2">
-          <h1 class="restaurant-name name-card">Cotto enoteca pizzeria</h1>
-          <h4 class="restaurant-address new">6011 Hastings St. North Burnaby, BC&nbsp;</h4>
+          <h1 class="restaurant-name name-card">Hy's Steakhouse Encore</h1>
+          <h4 class="restaurant-address new">637 Hornby St&nbsp;</h4>
         </div>
       </div>
       <div class="w-col w-col-4">
         <a href="#" class="w-inline-block page-nav-link">
           <div class="div-res"><img width="382" src="images/D60_8534-168.jpg" class="res-image-2">
-            <h1 class="restaurant-name name-card">Cotto enoteca pizzeria</h1>
-            <h4 class="restaurant-address new">6011 Hastings St. North Burnaby, BC&nbsp;</h4>
+            <h1 class="restaurant-name name-card">La Terrazza</h1>
+            <h4 class="restaurant-address new">1088 Cambie Street&nbsp;</h4>
           </div>
         </a>
       </div>
+
       <div class="w-col w-col-4">
         <a href="#" class="w-inline-block page-nav-link">
-          <div class="div-res"><img width="382" src="images/D60_8534-168.jpg" class="res-image-2">
-            <h1 class="restaurant-name name-card">Cotto enoteca pizzeria</h1>
-            <h4 class="restaurant-address new">6011 Hastings St. North Burnaby, BC&nbsp;</h4>
+          <div class="div-res"><img width="362" src="images/araxi.jpg" class="res-image-2">
+            <h1 class="restaurant-name name-card">Bistros Pastis</h1>
+            <h4 class="restaurant-address new">2153 West 4th Ave&nbsp;</h4>
           </div>
         </a>
-      </div>
+      </div>      
+
     </div>
   </div>
   <div class="w-section footer center white">
@@ -218,6 +169,16 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+
+    <script>
+      var app = angular.module('myApp', []);
+      var url = String(window.location.href);
+      var hash = url.substring(url.indexOf('?')+1);
+      app.controller('myCtrl', function($scope) {
+        $scope.userUID = "?"+hash;
+      });
+    </script>
+
   <script>
     $('.custom-button').on('click', function (evt) {
       $('.target-tab-link').triggerHandler('click');
