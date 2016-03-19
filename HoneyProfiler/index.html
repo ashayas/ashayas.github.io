@@ -34,7 +34,12 @@
         var username = hash.split(':')[0];
         code = hash.substring(hash.indexOf(':')+1);
 
+        if(code.length <= 1){
+        binary = binary + String(choice) + String(redMeat) + String(whiteMeat) + String(pork)  + String(fish) + String(otherSeafood) + String(tofu) + String(peanuts) + String(treenuts) + String(dairy) + String(cheese) + String(eggs) + String(wheat) + String(gluten) + String(soy) + String(sesameseeds) + String(fruit) + String(shellfish) + String(corn) + String(someThingElse) + String(spicy) + String(mushrooms) + String(onions) + String(dessert);        	
+        }
         
+        else{
+
         if (parseInt(code[0])% 2 != 0) {
         	redMeat = 1;
         }
@@ -120,9 +125,11 @@
 
         binary = binary + String(choice) + String(redMeat) + String(whiteMeat) + String(pork)  + String(fish) + String(otherSeafood) + String(tofu) + String(peanuts) + String(treenuts) + String(dairy) + String(cheese) + String(eggs) + String(wheat) + String(gluten) + String(soy) + String(sesameseeds) + String(fruit) + String(shellfish) + String(corn) + String(someThingElse) + String(spicy) + String(mushrooms) + String(onions) + String(dessert);
 
-        console.log(username);
-        console.log(code);
+
         console.log(binary);
+
+        }
+
 
         var onComplete = function (error) {
             if (error){

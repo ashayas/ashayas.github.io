@@ -107,16 +107,16 @@
           var d = new Date();
         d.setTime(d.getTime() + (30*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
-        document.cookie= "storedUser=" + email +"; " + expires;
-        document.cookie= "storedPassword="+ pass +"; " + expires;
+        document.cookie= "honeyUser=" + email +"; " + expires;
+        document.cookie= "honeyPassword="+ pass +"; " + expires;
       }
 
       else {
           var d = new Date();
         d.setTime(d.getTime() + (1*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
-        document.cookie= "storedUser=" + email +"; " + expires;
-        document.cookie= "storedPassword="+ pass +"; " + expires;
+        document.cookie= "honeyUser=" + email +"; " + expires;
+        document.cookie= "honeyPassword="+ pass +"; " + expires;
       }
         var userLink = 'restaurant.html?' + String(authData.uid);
         window.location.href = (userLink);
