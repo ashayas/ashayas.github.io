@@ -187,18 +187,31 @@
   <script type="text/javascript" src="js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
-  	window.alert("didnt even get here");
-  	var user = getCookie("honeyUser");
-	var pass = getCookie("honeyPassword);
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+  	$(function(){
+  		var user = getCookie("honeyUser");
+		var pass = getCookie("honeyPassword");
 	
-	if (user != "")
-	{
-	window.alert("YEEE BUDDY");
-	window.location.assign("restaurant.html");
-	}
-	else{
-		window.alert("Not logged in");
-	}
+		if (user != "")
+		{
+		window.alert("YEEE BUDDY");
+		window.location.assign("restaurant.html");
+		}
+		else{
+			window.alert("Not logged in");
+		}
+	});
     $('.custom-button').on('click', function (evt) {
       $('.target-tab-link').triggerHandler('click');
       evt.preventDefault();
