@@ -14,9 +14,7 @@ $(function(){
     var user=getCookie("honeyUser");
     var pass=getCookie("honeyPassword");
 
-    if (user != "") {
-        window.alert("Welcome again " + user + ' ' + pass);
-    } else {
-        window.alert("NOPE");
-    }
+    if (user == "") {
+        window.alert("Please Login!");
+    } 
 });
