@@ -130,8 +130,9 @@
         var d = new Date();
         d.setTime(d.getTime() + (1*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
-        document.cookie= "storedUser=" + email +"; " + expires;
-        document.cookie= "storedPassword="+ pass1 +"; " + expires;
+        document.cookie= "honeyUser=" + email +"; " + expires;
+        document.cookie= "honeyPassword="+ pass1 +"; " + expires;
+	document.cookie= "honeyUID=" + String(authData.uid) + "; " + expires;
         goToProfiler(String(userData.uid));   
 
         }
