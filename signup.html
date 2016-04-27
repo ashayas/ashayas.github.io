@@ -132,7 +132,7 @@
         var expires = "expires="+d.toUTCString();
         document.cookie= "honeyUser=" + email +"; " + expires;
         document.cookie= "honeyPassword="+ pass1 +"; " + expires;
-	document.cookie= "honeyUID=" + String(authData.uid) + "; " + expires;
+	document.cookie= "honeyUID=" + String(userData.uid) + "; " + expires;
         goToProfiler(String(userData.uid));   
 
         }
