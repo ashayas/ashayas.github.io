@@ -30,7 +30,6 @@ $(function(){
 
     //loop thru all sections
     while(($("#Sexion"+String(i)).length) > 0){
-      maxItems = 3;
       $("#Sexion"+String(i)).hide();            
       //loop thru all items
       while(($("#Sexion"+String(i)+"item"+String(j)).length) > 0){
@@ -43,10 +42,9 @@ $(function(){
         var itmbinary = String(a[1]);
         //console.log("ITEMBINARY"+ itmbinary);
 
-        if(compareBinaries(itmbinary, userBinary) == false && maxItems > 0){
+        if(compareBinaries(itmbinary, userBinary) == false){
           $("#Sexion"+String(i)+"item"+String(j)).show();
           $("#Sexion"+String(i)).show();      
-          maxItems --;
           //console.log("MAX ITEMS: " + maxItems);  
         }
 
