@@ -1,5 +1,16 @@
 $(function(){
 
+	  function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
   function compareBinaries(itemBinary, userBinary) {
     var a = String(itemBinary);
     var b = String(userBinary);
@@ -50,9 +61,8 @@ $(function(){
 
   var url = String(window.location.href);
 
+  var hash = getCookie("honeyUID");
   //ERROR CHECK HERE?
-  var hash = url.substring(url.indexOf('?')+1);
-  console.log(hash);
   var userBinary;
   var ref = new Firebase("https://honeycombapp.firebaseio.com/users/");
 
