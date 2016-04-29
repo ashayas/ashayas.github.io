@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Sun Feb 14 2016 23:50:24 GMT+0000 (UTC) -->
-<html data-wf-site="5679e510e7f2da3b70619690" data-wf-page="56b3c18ec8db189970a333a0">
+<!-- Last Published: Fri Apr 29 2016 07:04:35 GMT+0000 (UTC) -->
+<html data-wf-site="5679e510e7f2da3b70619690" data-wf-page="57205bb98d15a35849f29895">
 <head>
   <meta charset="utf-8">
-  <title>My Account</title>
-  <meta name="description" content="No more fussing about what to eat. Find the exact items to eat based on your personal food preferences.">
-  <meta property="og:title" content="account">
+  <title>My Account | Honeycomb</title>
+  <meta name="description" content="Edit your dietary preferences.">
+  <meta property="og:title" content="My Account | Honeycomb">
+  <meta property="og:description" content="Edit your dietary preferences.">
+  <meta name="twitter:card" content="summary">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Webflow">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/honeycombnew.webflow2.css">
+  <link rel="stylesheet" type="text/css" href="css/honeycombnew.webflow.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
@@ -27,142 +29,112 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <style>
-    /* Set the media query's min-width to whatever you want */
-    @media screen and (min-width: 1200px) {
-        /* Set the container's max-width to whatever you want */
-        .w-container {
-            max-width: 1170px;
-        }
-    }
-  </style>
 </head>
 <body>
-  <div data-collapse="all" data-animation="over-right" data-duration="400" class="w-nav w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-bar new-bar">
-    <a href="index.html" class="w-inline-block link-block link-new"><img width="230" src="images/honeycomblogo.png" class="logo-1">
-    </a>
-    <nav role="navigation" class="w-nav-menu navigation-menu"><a href="/sign-up" class="w-nav-link navigation-link create-profile-link">CREATE PROFILE</a><a href="index.html" class="w-nav-link navigation-link">HOME</a><a href="/contact" class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link">Contact</a><a href="/faq" class="w-nav-link navigation-link">F.A.Q.</a><a href="/contact" class="w-nav-link navigation-link">CONTACT</a>
-    </nav>
-    <div class="w-nav-button hamburger-button new-menu">
-      <div class="w-icon-nav-menu"></div>
-    </div>
-  </div>
-  <div data-collapse="all" data-animation="over-right" data-duration="400" data-contain="1" class="w-nav navigation-bar nav-new">
-    <div class="w-container">
-      <a href="index.html" class="w-inline-block link-block"><img width="230" src="images/honeycomblogo.png" class="logo-1">
+  <div class="account-page-wrapper">
+    <div data-collapse="all" data-animation="over-right" data-duration="400" data-contain="1" class="w-nav navigation-bar nav-new">
+      <a href="index.html" class="w-inline-block link-block"><img width="195" src="images/honeycomblogo.png" class="honeycomb-nav-logo">
       </a>
       <nav role="navigation" class="w-nav-menu navigation-menu"><a href="/sign-up" class="w-nav-link navigation-link create-profile-link">CREATE PROFILE</a><a href="index.html" class="w-nav-link navigation-link">HOME</a><a href="/contact" class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link">Contact</a><a href="/faq" class="w-nav-link navigation-link">F.A.Q.</a><a href="/contact" class="w-nav-link navigation-link">CONTACT</a>
       </nav>
       <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
         <div class="w-icon-nav-menu"></div>
       </div>
-      <a href="account.html" class="w-clearfix w-inline-block account-link-block"><img width="30" src="images/User-icon-premium-white.png" class="w-hidden-small w-hidden-tiny account-pic">
-        <div class="account-name">User</div>
+      <a href="account.html" class="w-inline-block w-clearfix account-link-block"><img width="20" src="images/user white.png" class="w-hidden-small w-hidden-tiny account-icon">
+        <div class="account-text">My Account</div>
       </a>
+      <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny"></div>
     </div>
-  </div>
-  <div data-ix="verify-view" class="w-section section-1 featured-restaurants single">
-    <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
-      <h1 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny heading-1">METRO&nbsp;VANCOUVER</h1>
-      <div class="w-form for-wrap-1">
-        <form id="email-form" name="email-form" data-name="Email Form" class="w-clearfix">
-          <div class="city-name">
-            <h5 class="city-head">Vancouver</h5>
+    <div class="w-section hero-section featured-restaurants single">
+      <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+        <h1 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny heading-1">METRO&nbsp;VANCOUVER</h1>
+        <div class="w-form search-form">
+          <form id="email-form" name="email-form" data-name="Email Form" class="w-clearfix">
+            <div class="city-name-div">
+              <h5 class="search-city-name-text">Vancouver</h5>
+            </div>
+            <input id="email" type="text" placeholder="Search for a restaurant..." name="email" data-name="Email" required="required" class="w-input search-bar">
+            <input type="submit" value="SEARCH" data-wait="Please wait..." class="w-button button-search">
+          </form>
+          <div class="w-form-done">
+            <p>Thank you! Your submission has been received!</p>
           </div>
-          <input id="email" type="text" placeholder="Search for a restaurant..." name="email" data-name="Email" required="required" class="w-input search-bar">
-          <input type="submit" value="SEARCH" data-wait="Please wait..." class="w-button button-search">
-        </form>
-        <div class="w-form-done">
-          <p>Thank you! Your submission has been received!</p>
-        </div>
-        <div class="w-form-fail">
-          <p>Oops! Something went wrong while submitting the form</p>
-        </div>
-      </div>
-    </div>
-    <div class="w-container">
-      <div class="w-row menu-row">
-        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
-          <a href="restaurant.html" class="w-inline-block tab-page-link">
-            <div class="div-menu-icon"><img width="25" src="images/1450858090_miscellaneous-28-white.png" class="menu-icon">
-              <h5 class="menu-title">nearby</h5>
-            </div>
-          </a>
-        </div>
-        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
-          <a href="trending.html" class="w-inline-block tab-page-link">
-            <div data-ix="display-verify-tablet" class="div-menu-icon"><img width="25" src="images/1450858058_Fire-white.png" class="menu-icon">
-              <h5 class="menu-title">trending</h5>
-            </div>
-          </a>
-        </div>
-        <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
-          <a href="favourites.html" class="w-inline-block tab-page-link">
-            <div class="div-menu-icon"><img width="25" src="images/1450858302_like-white.png" class="menu-icon">
-              <h5 class="menu-title">favourites</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="w-section w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny menu-section">
-    <div class="w-row">
-      <div class="w-col w-col-4">
-        <div class="div-menu-icon"><img width="64" src="images/1450858090_miscellaneous-28-white.png" class="menu-icon">
-          <h5 class="menu-title">nearby</h5>
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="div-menu-icon"><img width="64" src="images/1450858058_Fire-white.png" class="menu-icon">
-          <h5 class="menu-title">trending</h5>
-        </div>
-      </div>
-      <div class="w-col w-col-4">
-        <div class="div-menu-icon"><img width="64" src="images/1450858302_like-white.png" class="menu-icon">
-          <h5 class="menu-title">favourites</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="Vancouver" class="w-section w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny section featured-restaurants">
-    <div class="w-container">
-      <div class="section-title-group r1">
-        <h2 class="section-heading centered r1">Featured restaurants</h2>
-        <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny section-subheading center r1">enter your email address to be matched with restaurants</div>
-      </div>
-    </div>
-  </div>
-  <div class="w-section section restaurants">
-    <div class="w-container">
-      <h2 class="account-title">Manage Account</h2>
-      <div class="account-div">
-        <div class="w-row">
-          <div class="w-col w-col-6 account-column">
-            <h4 class="account-heading-title">Honeycomb Profile</h4>
-            <div class="account-email"><strong data-new-link="true">Email:</strong> [email@email.com]</div>
-            <div class="account-diet"><strong data-new-link="true">Dietary Restrictions:</strong> Red Meat, Pork, Seafood</div><a href="#" class="w-button dietary-button">Edit Dietary Preferences</a>
+          <div class="w-form-fail">
+            <p>Oops! Something went wrong while submitting the form</p>
           </div>
-          <div class="w-col w-col-6">
-            <h4 class="account-heading-title">Email/Password</h4><a href="#" class="w-button dietary-button">Change Email</a><a href="#" class="w-button dietary-button">Change Password</a>
+        </div>
+      </div>
+      <div class="w-container">
+        <div class="w-row navigation-row">
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a href="index.html" class="w-inline-block nav-page-link">
+              <div class="nav-div nav-clicked"><img width="20" src="images/location white.png" class="menu-icon">
+                <h5 class="w-hidden-tiny page-title">local</h5>
+              </div>
+            </a>
+          </div>
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a href="trending.html" class="w-inline-block nav-page-link">
+              <div data-ix="display-verify-tablet" class="nav-div"><img width="20" src="images/1450858058_Fire-white.png" class="menu-icon">
+                <h5 class="w-hidden-tiny page-title">trending</h5>
+              </div>
+            </a>
+          </div>
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a href="favourites.html" class="w-inline-block nav-page-link">
+              <div class="nav-div"><img width="20" src="images/1450858302_like-white.png" class="menu-icon">
+                <h5 class="w-hidden-tiny page-title">favourites</h5>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="w-section footer center white">
-    <div class="w-container">
-      <div class="footer-text">Copyright 2016 Honeycomb by CAMG Inc.</div>
-      <div class="legal-links"><a class="legal-link-1" href="http://honeycomb.ai/terms-of-use" target="_blank">Terms of Use</a> | <a class="legal-link-1" href="http://honeycomb.ai/privacy-policy" target="_blank">Privacy Policy</a>
+    <div class="w-section main-section">
+      <div class="w-container">
+        <h2 class="account-title">My Account</h2>
+        <div class="account-div">
+          <div class="w-row">
+            <div class="w-col w-col-6">
+              <div class="profile-div">
+                <h4 class="account-heading-title">Honeycomb Profile</h4>
+                <div class="profile-email"><strong data-new-link="true">EMAIL:</strong> [email@email.com]</div>
+                <div class="account-diet"><strong data-new-link="true">DIETARY RESTRICTIONS:</strong>&nbsp;Red Meat, Pork, Seafood</div><a href="#" class="w-button dietary-button">Edit Dietary Preferences</a>
+              </div>
+            </div>
+            <div class="w-col w-col-6">
+              <div class="w-clearfix user-info-div">
+                <h4 class="account-heading-title">Email/Password</h4>
+                <div class="account-email"><a class="change-link" href="#">Change Email</a>
+                </div>
+                <div class="account-email"><a class="change-link" href-disabled="#">Change Password</a>
+                </div>
+                <h4 class="account-heading-title assistance">need assistance?</h4>
+                <div class="email-us">Email us at <a class="support-email" href="mailto:chef@honeycomb.ai?subject=Support%20Request">chef@honeycomb.ai</a>
+                </div><a href="#" class="logout">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-section footer">
+      <div class="w-container"><img width="150" src="images/honeycomblogo.png" class="logo-bottom">
+        <div class="footer-text">© 2016 Honeycomb.ai Solutions Inc. All Rights Reserved.</div>
+        <div class="legal-links"><a class="legal-link-1" target="_blank" href="http://honeycomb.ai/terms-of-use">Terms of Use</a> | <a class="legal-link-1" target="_blank" href="http://honeycomb.ai/privacy-policy">Privacy Policy</a>
+        </div>
+        <div class="social-div">
+          <a href="https://www.facebook.com/honeycombapp/" target="_blank" class="w-inline-block"><img width="15" src="images/social-03.svg" class="social-icon">
+          </a>
+          <a href="https://twitter.com/honeycomb_app" target="_blank" class="w-inline-block"><img width="15" src="images/social-18.svg" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/honeycomb_app/" target="_blank" class="w-inline-block"><img width="15" src="images/1432865075_38-instagram.png" class="social-icon">
+          </a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="w-section w-hidden-main w-hidden-medium footer center white">
-    <div class="w-container">
-      <div class="footer-text">Copyright 2015 Honeycomb by CAMG Inc.</div>
-    </div>
-  </div>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
