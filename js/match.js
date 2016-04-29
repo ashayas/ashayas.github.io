@@ -62,29 +62,34 @@ $(function(){
   var hash = getCookie("honeyUID");
   //ERROR CHECK HERE?
   var userBinary;
+  console.log("HERE WE GO: " + hash);
   var ref = new Firebase("https://honeycombapp.firebaseio.com/users/");
 
-  // Attach an asynchronous callback to read the data at our posts reference
-  ref.on("value", function(snapshot) {
-    if (snapshot.child(hash).exists()){
-      var newref = new Firebase("https://honeycombapp.firebaseio.com/users/"+hash);
-      newref.on("value", function(snapshot) {
-          a=((snapshot.val()));
-          userBinary = a.binary;
-          checkItems(userBinary);
-          console.log("UserBinary Is" + userBinary);
-      }, function (errorObject) {
-        console.log("error");
-      });
+  if (hash != ""){
+
     }
-    else {
-      console.log("NOUSERLIKETHATEXISTS");
-      $("#NOTLOGGED").show();
-    }
-  }, function (errorObject) {
-    console.log("error");
-  });
-  //look up the hash on firebase, get the user
+    // Attach an asynchronous callback to read the data at our posts reference
+    ref.on("value", function(snapshot) {
+      if (snapshot.child(hash).exists()){
+        var newref = new Firebase("https://honeycombapp.firebaseio.com/users/"+hash);
+        newref.on("value", function(snapshot) {
+            a=((snapshot.val()));
+            userBinary = a.binary;
+            checkItems(userBinary);
+            console.log("UserBinary Is" + userBinary);
+        }, function (errorObject) {
+          console.log("error");
+        });
+      }
+      else {
+        console.log("NOUSERLIKETHATEXISTS");
+        $("#NOTLOGGED").show();
+      }
+    }, function (errorObject) {
+      console.log("error");
+    });
+    //look up the hash on firebase, get the user
+  }
 
 
 });
