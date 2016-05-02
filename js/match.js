@@ -66,8 +66,6 @@ $(function(){
   var ref = new Firebase("https://honeycombapp.firebaseio.com/users/");
 
   if (hash != ""){
-
-    }
     // Attach an asynchronous callback to read the data at our posts reference
     ref.on("value", function(snapshot) {
       if (snapshot.child(hash).exists()){
@@ -89,7 +87,9 @@ $(function(){
       console.log("error");
     });
     //look up the hash on firebase, get the user
-  }
+    }
+
+  });
 
 
-});
+//});
