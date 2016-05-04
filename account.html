@@ -14,6 +14,9 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
   <link rel="stylesheet" type="text/css" href="css/honeycombnew.webflow.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>      
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
@@ -98,15 +101,12 @@
             <div class="w-col w-col-6">
               <div class="profile-div">
                 <h4 class="account-heading-title">Honeycomb Profile</h4>
-                <div class="profile-email"><strong data-new-link="true">EMAIL:</strong> [email@email.com]</div>
-                <div class="account-diet"><strong data-new-link="true">DIETARY RESTRICTIONS:</strong>&nbsp;Red Meat, Pork, Seafood</div><a href="#" class="w-button dietary-button">Edit Dietary Preferences</a>
+                <div class="profile-email"><strong data-new-link="true">EMAIL:</strong> <div id = "eemail"> [email@email.com] </div></div>
+                <div class="account-diet"><strong data-new-link="true">DIETARY RESTRICTIONS:</strong><p id = "userPreferences"> &nbsp;Red Meat, Pork, Seafood</p></div><a href="#" class="w-button dietary-button">Edit Dietary Preferences</a>
               </div>
             </div>
             <div class="w-col w-col-6">
               <div class="w-clearfix user-info-div">
-                <h4 class="account-heading-title">Email/Password</h4>
-                <div class="account-email"><a class="change-link" href="#">Change Email</a>
-                </div>
                 <div class="account-email"><a class="change-link" href-disabled="#">Change Password</a>
                 </div>
                 <h4 class="account-heading-title assistance">need assistance?</h4>
@@ -134,7 +134,6 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   <script>
@@ -142,6 +141,64 @@
       $('.target-tab-link').triggerHandler('click');
       evt.preventDefault();
     });
+
+
   </script>
+
+  <script type = "text/javascript">
+    function goToProfiler(userIdentity){
+        var locationTemp = 'https://honeycombapp.typeform.com/to/JYkvwX?username=' + userIdentity;
+        window.location.href = locationTemp;
+      }
+
+    function logUserOut(){
+        var d = new Date();
+        d.setTime(d.getTime() + (1*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie= "honeyUser=" + "" +"; " + expires;
+        document.cookie= "honeyPassword="+ "" +"; " + expires;
+        document.cookie= "honeyUID=" + "" + "; " + expires;
+        window.location.assign("index.html");
+    }
+
+    function resetPassword(){
+      var resetEmail = $("#eemail").text();
+      var ref = new Firebase("https://honeycombapp.firebaseio.com/");
+      ref.resetPassword({
+        email: resetEmail
+      }, function(error) {
+        if (error) {
+          switch (error.code) {
+            case "INVALID_USER":
+              console.log("The specified user account does not exist.");
+              break;
+            default:
+              console.log("Error resetting password:", error);
+          }
+        } else {
+          console.log("Password reset email sent successfully!");
+          $("change-link").text("Reset email sent to email!");
+        }
+      });      
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+      }
+    return "";
+}
+
+      var userIdentity = getCookie("honeyUID");
+      var userEmail = getCookie("honeyUser");
+      window.alert(userIdentity);
+      $("#eemail").text(userEmail);
+
+  </script>
+
 </body>
 </html>
