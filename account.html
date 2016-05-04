@@ -102,16 +102,16 @@
               <div class="profile-div">
                 <h4 class="account-heading-title">Honeycomb Profile</h4>
                 <div class="profile-email"><strong data-new-link="true">EMAIL:</strong> <div id = "eemail"> [email@email.com] </div></div>
-                <div class="account-diet"><strong data-new-link="true">DIETARY RESTRICTIONS:</strong><p id = "userPreferences"> &nbsp;Red Meat, Pork, Seafood</p></div><a href="#" class="w-button dietary-button">Edit Dietary Preferences</a>
+                <div class="account-diet"><strong data-new-link="true">DIETARY RESTRICTIONS:</strong><p id = "userPreferences"> &nbsp;Red Meat, Pork, Seafood</p></div><a href="#" onclick="goToProfiler();" class="w-button dietary-button">Edit Dietary Preferences</a>
               </div>
             </div>
             <div class="w-col w-col-6">
               <div class="w-clearfix user-info-div">
-                <div class="account-email"><a class="change-link" href-disabled="#">Change Password</a>
+                <div class="account-email"><a class="change-link" href="#" onclick="resetPassword();">Change Password</a>
                 </div>
                 <h4 class="account-heading-title assistance">need assistance?</h4>
                 <div class="email-us">Email us at <a class="support-email" href="mailto:chef@honeycomb.ai?subject=Support%20Request">chef@honeycomb.ai</a>
-                </div><a href="#" class="logout">Logout</a>
+                </div><a href="#" class="logout" onclick="logUserOut();">Logout</a>
               </div>
             </div>
           </div>
@@ -152,6 +152,7 @@
       }
 
     function logUserOut(){
+        window.alert("Logged out user!");
         var d = new Date();
         d.setTime(d.getTime() + (1*24*60*60*1000));
         var expires = "expires="+d.toUTCString();
