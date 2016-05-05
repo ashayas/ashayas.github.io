@@ -208,7 +208,7 @@
       var userEmail = getCookie("honeyUser");
       var code = "";
       $("#eemail").text(userEmail);
-        var newref = new Firebase("https://honeycombapp.firebaseio.com/users/"+userIdentity);
+        var newref = new Firebase("https://honeycombapp.firebaseio.com/users/"+String(userIdentity));
         console.log(userIdentity);
         newref.on("value", function(snapshot) {
             a=((snapshot.val()));
