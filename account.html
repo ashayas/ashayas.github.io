@@ -204,12 +204,17 @@
       var someThingElse = 0; var spicy = 0; var mushrooms = 0; 
       var onions = 0;
 
-      var userIdentity = getCookie("honeyUID");
-      var userEmail = getCookie("honeyUser");
-      var code = "";
-      $("#eemail").text(userEmail);
-        var newref = new Firebase("https://honeycombapp.firebaseio.com/users/"+String(userIdentity));
-        console.log(userIdentity);
+  var hash = getCookie("honeyUID");
+  //ERROR CHECK HERE?
+  var code;
+  console.log("HERE WE GO: " + hash);
+  var ref = new Firebase("https://honeycombapp.firebaseio.com/users/");
+
+  if (hash != ""){
+    // Attach an asynchronous callback to read the data at our posts reference
+    ref.on("value", function(snapshot) {
+      if (snapshot.child(hash).exists()){
+        var newref = new Firebase("https://honeycombapp.firebaseio.com/users/"+hash);
         newref.on("value", function(snapshot) {
             a=((snapshot.val()));
             code = a.binary;
@@ -217,6 +222,16 @@
         }, function (errorObject) {
           console.log("error");
         });
+      }
+      else {
+        console.log("NOUSERLIKETHATEXISTS");
+        $("#NOTLOGGED").show();
+      }
+    }, function (errorObject) {
+      console.log("error");
+    });
+    //look up the hash on firebase, get the user
+    }
 
       if (parseInt(code[1])) {
 
