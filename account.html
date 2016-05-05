@@ -233,7 +233,7 @@
     //look up the hash on firebase, get the user
     }
 
-      if (parseInt(code[1])) {
+      if (parseInt(String(code)[1])) {
 
           var temp = $("#userPreferences").text();
           $("#userPreferences").text(temp + "Red Meat ");
