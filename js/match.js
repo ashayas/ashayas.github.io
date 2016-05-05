@@ -32,9 +32,7 @@ $(function(){
     while(($("#Sexion"+String(i)).length) > 0){
       $("#Sexion"+String(i)).hide();            
       //loop thru all items
-      while(($("#Sexion"+String(i)+"item"+String(j)).length) > 0){
-        console.log($("#Sexion"+String(i)+"item"+String(j)));
-        console.log("ITEM:"+ j);
+      while(($("#Sexion"+String(i)+"item"+String(j)).length) > 0){ 
         $("#Sexion"+String(i)+"item"+String(j)).hide();
         var a = $("#Sexion"+String(i)+"item"+String(j)).html();
         //console.log(a);
@@ -43,6 +41,7 @@ $(function(){
         //console.log("ITEMBINARY"+ itmbinary);
 
         if(compareBinaries(itmbinary, userBinary) == false){
+          console.log("Found a match!");
           $("#Sexion"+String(i)+"item"+String(j)).show();
           $("#Sexion"+String(i)).show();      
           //console.log("MAX ITEMS: " + maxItems);  
