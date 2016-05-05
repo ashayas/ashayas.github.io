@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
 <!-- Last Published: Fri Apr 29 2016 07:04:35 GMT+0000 (UTC) -->
-<html data-wf-site="5679e510e7f2da3b70619690" data-wf-page="57215a55719e685563555d61">
+<html data-wf-site="5679e510e7f2da3b70619690" data-wf-page="5720f1dcbaf64c53495c6274">
 <head>
   <meta charset="utf-8">
-  <title>Invite Friends | Honeycomb</title>
-  <meta name="description" content="Invite your friends to get personalized restaurant menus using Honeycomb.">
-  <meta property="og:title" content="Invite Friends | Honeycomb">
-  <meta property="og:description" content="Invite your friends to get personalized restaurant menus using Honeycomb.">
+  <title>Menu Verification | Honeycomb</title>
+  <meta name="description" content="Understand how we verify restaurant menu item ingredients.">
+  <meta property="og:title" content="Menu Verification | Honeycomb">
+  <meta property="og:description" content="Understand how we verify restaurant menu item ingredients.">
   <meta name="twitter:card" content="summary">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Webflow">
@@ -66,7 +66,7 @@
     <div class="w-container">
       <div class="w-row navigation-row">
         <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
-          <a href="restaurant.html" class="w-inline-block nav-page-link">
+          <a href="index.html" class="w-inline-block nav-page-link">
             <div data-ix="display-nav-scroll" class="nav-div nav-clicked"><img width="20" src="images/location white.png" class="menu-icon clicked">
               <h5 class="w-hidden-tiny page-title">LOCAL</h5>
             </div>
@@ -91,63 +91,54 @@
   </div>
   <div class="w-section main-section">
     <div class="w-container verify-title-container">
-      <h2 class="listing-page-heading"><span style="font-weight: 600;">Invite Friends</span></h2>
+      <h2 class="listing-page-heading"><span style="font-weight: 600;">menu verification</span></h2>
     </div>
     <div class="w-container verify-container">
-      <h2 class="verification-page-title first"><span style="font-weight: 600;">social media share</span></h2>
-      <p class="verify-page-paragraph">Click below to send a message directly on Facebook messenger...</p>
-      <div class="w-embed">
-        <div class="fb-send" data-href="http://honeycomb.ai"></div>
-      </div>
-      <h2 class="verification-page-title"><span style="font-weight: 600;">send an exclusive invite</span></h2>
-      <p class="verify-page-paragraph">Have friend who wants to join Honeycomb? Get them further up the waitlist by sending them an invite.</p>
-      <div class="w-form invite-form">
-        <form id="wf-form-Invite-Form" name="wf-form-Invite-Form" data-name="Invite Form">
-          <input id="name" type="text" placeholder="Enter your name" name="name" data-name="Name" required="required" class="w-input">
-          <input id="email-3" type="email" placeholder="Enter your email address" name="email" data-name="Email 3" required="required" class="w-input">
-          <input id="name-2" type="text" placeholder="Enter friend's name" name="name-2" data-name="Name 2" required="required" class="w-input">
-          <input id="Email-4" type="email" placeholder="Enter friend's email address" name="Email-2" data-name="Email 2" required="required" class="w-input">
-          <textarea id="field" placeholder="Send a personal message (optional)" name="field" class="w-input"></textarea>
-          <input type="submit" value="Submit" data-wait="Please wait..." class="w-button reserve-button">
-        </form>
-        <div class="w-form-done success-message">
-          <p>Invite sent!</p><a href="invite.html" class="w-button reserve-button">Send another invitation</a>
+      <h2 class="verification-page-title first"><span style="font-weight: 600;">what is verification?</span></h2>
+      <p class="verify-page-paragraph">Verification is the process of analyzing restaurant menu items and determining whether any of the ingredients relate to the dietary restrictions that we support. Every listed restaurant menu has gone through at least one level of verification. There are two levels of our verification, both of which are described below.</p>
+      <h2 class="verification-page-title"><span style="font-weight: 600;">verification statuses</span></h2>
+      <p class="verify-page-paragraph">When viewing a restaurant's menu on Honeycomb, you'll notice a verification status box - on the right hand side on desktop, and right below restaurant details on mobile. This status box lets you know which level of verification the restaurant's menu is currently at, which serves to give you a 'heads up' with regards to the level of ingredient accuracy to expect. While we strive to provide the most accurate data possible, there are distinct differences between "Active" and "Unverified" levels of verification.</p>
+      <div class="w-row status-row">
+        <div class="w-col w-col-6 column-1">
+          <h3 class="verify-status-title active">active status</h3>
+          <p class="verify-page-paragraph">Active Verification means that we are continually working together with the respective restaurant to maintain an accurate database of menu item ingredient information. We make sure to stay updated with restaurants on either a weekly, bi-weekly, or monthly basis, depending on their menu edit frequency. This is not foolproof, but is definitely more accurate and reliable than Unverified Verification. We urge you to follow our Menu Disclaimer (see below) regardless.
+            <br>
+            <br>Note: Active menu items have a blue hexagon.</p>
+          <div class="w-row item-row example">
+            <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width="35" src="images/honeyverify2.png">
+            </div>
+            <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
+              <div class="menu-item-div">
+                <h2 class="item-name">Burrata</h2>
+                <div class="item-price">16.00</div>
+                <div class="item-price ing">Soft cow milk cheese, roasted pepper caponata, red wine syrup, rosemary forno bread</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="w-form-fail">
-          <p>Oops! Something went wrong while submitting the form</p>
+        <div class="w-col w-col-6 column-2">
+          <h3 class="verify-status-title unverified">unverified status</h3>
+          <p class="verify-page-paragraph">Unverified Verification means that we have used our menu-analysis technology to determine any problematic ingredients. Essentially, we have a virtual chef looking at every dish in order to determine what possible dietary conflicts there might be. It is important to note that we do not have any confirmation of accuracy from restaurants at this stage, which may result in a higher level of uncertainty in comparison to Active Verification. We urge you to follow our Menu Disclaimer (see below).
+            <br>
+            <br>Note: Unverified menu items have a grey hexagon.</p>
+          <div class="w-row item-row example">
+            <div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width="35" src="images/honeyverify grey test.png">
+            </div>
+            <div class="w-col w-col-10 w-col-small-10 w-col-tiny-10">
+              <div class="menu-item-div">
+                <h2 class="item-name">Burrata</h2>
+                <div class="item-price">16.00</div>
+                <div class="item-price ing">Soft cow milk cheese, roasted pepper caponata, red wine syrup, rosemary forno bread</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="w-section other-links-section">
-    <div class="w-row">
-      <div class="w-col w-col-4 other-links-column">
-        <a href="http://honeycomb.ai/philosophy" target="_blank" class="w-inline-block other-link-link-block">
-          <div class="other-link-div review-div">
-            <div class="other-link-title review-link">our philosophy</div>
-            <div class="other-link-description"><strong class="question-bold">Why are there no customer reviews?</strong>
-              <br>Learn how Honeycomb works.</div>
-          </div>
-        </a>
-      </div>
-      <div class="w-col w-col-4 other-links-column">
-        <a href="invite.html" class="w-inline-block other-link-link-block">
-          <div class="other-link-div invite-div">
-            <div class="other-link-title invite-link">Invite your friends</div>
-            <div class="other-link-description"><strong class="question-bold">Have any friends with dietary restrictions?</strong>
-              <br>Make their life easy and send them an invite!</div>
-          </div>
-        </a>
-      </div>
-      <div class="w-col w-col-4 other-links-column">
-        <a href="http://honeycomb.ai/health" target="_blank" class="w-inline-block other-link-link-block">
-          <div class="other-link-div health-div">
-            <div class="other-link-title health-link">Honeycomb Health</div>
-            <div class="other-link-description"><strong class="question-bold">Do you take your diet seriously?</strong>
-              <br>Check out our amazing resource base.</div>
-          </div>
-        </a>
-      </div>
+      <h2 class="verification-page-title"><span style="font-weight: 600;">disabled status</span></h2>
+      <p class="verify-page-paragraph">When viewing a non-personalized version of a restaurant menu, you will see that verification has been disabled. This means that there is no 'matching' or analysis happening, and you simply seeing the plain menu as you would on the respective restaurant's website.</p>
+      <h2 class="verification-page-title"><span style="font-weight: 600;">menu disclaimer</span></h2>
+      <p class="verify-page-paragraph">It is the end user's sole responsibility to confirm the applicable ingredients of any given menu item with the restaurant staff upon ordering. Honeycomb and it's listed restaurants are not responsible for any inaccurate menu items or cross contamination. Always remember to inform restaurant staff of your dietary restrictions and/or allergies.</p>
+      <p class="verify-page-paragraph">If you have any questions, feel free to email us at chef@honeycomb.ai</p>
     </div>
   </div>
   <div class="w-section footer">
@@ -173,16 +164,6 @@
       $('.target-tab-link').triggerHandler('click');
       evt.preventDefault();
     });
-  </script>
-  <div id="fb-root"></div>
-  <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=540528716004035";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
   </script>
 </body>
 </html>
