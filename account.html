@@ -209,6 +209,7 @@
       var code = "";
       $("#eemail").text(userEmail);
         var newref = new Firebase("https://honeycombapp.firebaseio.com/users/"+userIdentity);
+        console.log(userIdentity);
         newref.on("value", function(snapshot) {
             a=((snapshot.val()));
             code = a.binary;
