@@ -212,7 +212,6 @@
         newref.on("value", function(snapshot) {
             a=((snapshot.val()));
             code = a.binary;
-            checkItems(userBinary);
             console.log("UserBinary Is" + userBinary);
         }, function (errorObject) {
           console.log("error");
