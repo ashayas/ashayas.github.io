@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Fri Apr 29 2016 07:04:35 GMT+0000 (UTC) --><html data-wf-page="57206f938d15a35849f2b7fe" data-wf-site="5679e510e7f2da3b70619690"><head>
+  <meta charset="utf-8"/>
+  <title>Kobe Izakaya Lounge</title>
+  <meta content="No more fussing about what to eat. Find the exact items to eat based on your personal food preferences." name="description"/>
+  <meta content="Menu 13" property="og:title"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Webflow" name="generator"/>
+  <link href="../../css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/honeycombnew.webflow.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:300,regular,500"]
+      }
+    });
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+  <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+  <script src="../../js/modernizr.js" type="text/javascript"></script>
+  <script src="../../js/match.js" type="text/javascript"></script>  
+
+  <link href="images/favicon-32x32.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="images/gplusprofhoney.png" rel="apple-touch-icon"/>
+  <meta content="https://daks2k3a4ib2z.cloudfront.net/5567bbce47dc18034e5e24e9/55a88610e4665fc569944588_Open%20Graph%20HC%203.png" property="og:image"/>
+  <meta content="image/png" property="og:image:type"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+</head>
+<body>
+  <div class="w-nav navigation-bar nav-new" data-animation="over-right" data-collapse="all" data-contain="1" data-duration="400">
+    <a class="w-inline-block link-block" href="../../index.html"><img class="honeycomb-nav-logo" src="../../images/honeycomblogo.png" width="195"/>
+    </a>
+    <nav class="w-nav-menu navigation-menu" role="navigation"><a class="w-nav-link navigation-link create-profile-link" href="/sign-up">CREATE PROFILE</a><a class="w-nav-link navigation-link" href="index.html">HOME</a><a class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link" href="/contact">Contact</a><a class="w-nav-link navigation-link" href="/faq">F.A.Q.</a><a class="w-nav-link navigation-link" href="/contact">CONTACT</a>
+    </nav>
+    <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
+      <div class="w-icon-nav-menu"></div>
+    </div>
+    <a class="w-inline-block w-clearfix account-link-block" href="../../account.html"><img class="w-hidden-small w-hidden-tiny account-icon" src="../../images/user white.png" width="20"/>
+      <div class="account-text">My Account</div>
+    </a>
+    <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+  </div>
+  <div class="w-section hero-section featured-restaurants single">
+    <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+      <h1 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny heading-1">METRO VANCOUVER</h1>
+      <div class="w-form search-form">
+        <form class="w-clearfix" data-name="Email Form" id="email-form" name="email-form">
+          <div class="city-name-div">
+            <h5 class="search-city-name-text">Vancouver</h5>
+          </div>
+          <input class="w-input search-bar" data-name="Email" id="email" name="email" placeholder="Search for a restaurant..." required="required" type="text"/>
+          <input class="w-button button-search" data-wait="Please wait..." type="submit" value="SEARCH"/>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-container">
+      <div class="w-form w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny search-form">
+        <form class="w-clearfix" data-name="Email Form" id="email-form" name="email-form">
+          <div class="city-name-div">
+            <h5 class="search-city-name-text">Vancouver</h5>
+          </div>
+          <input class="w-input search-bar" data-name="Email 2" id="email-2" name="email-2" placeholder="Search for a restaurant..." required="required" type="text"/>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+      <div>
+        <div class="w-row navigation-row">
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a class="w-inline-block nav-page-link" href="../../restaurant.html">
+              <div class="nav-div nav-clicked"><img class="menu-icon" src="../../images/location white.png" width="20"/>
+                <h5 class="w-hidden-tiny page-title">local</h5>
+              </div>
+            </a>
+          </div>
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a class="w-inline-block nav-page-link" href="../../trending.html">
+              <div class="nav-div" data-ix="display-verify-tablet"><img class="menu-icon" src="../../images/1450858058_Fire-white.png" width="20"/>
+                <h5 class="w-hidden-tiny page-title">trending</h5>
+              </div>
+            </a>
+          </div>
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a class="w-inline-block nav-page-link" href="../../favourites.html">
+              <div class="nav-div"><img class="menu-icon" src="../../images/1450858302_like-white.png" width="20"/>
+                <h5 class="w-hidden-tiny page-title">favourites</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section main-section">
+    <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+      <h3 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny personalized-menu-title">Your <span class="restaurant-menu-name">personalized</span> menu</h3>
+    </div><a class="w-inline-block restaurant-link-block" href="#Restaurant-Info"><h3 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny personalized-menu-title" data-ix="display-verify">Your personalized menu for <strong><span class="restaurant-menu-name">Kobe Izakaya Lounge</span></strong></h3></a>
+    <div class="w-row">
+      <div class="w-col w-col-3 restaurant-column">
+        <div class="menu-restaurant-div"><img class="restaurant-image" src="images/restaurant.jpg" width="1250"/>
+          <h1 class="restaurant-name">Kobe Izakaya Lounge</h1>
+          <h4 class="restaurant-address menu-address">1042 Alberni Street<br/>(604) 684-2451, <a class="restaurant-website-link" href="http://koberestaurant.com/" target="_blank">Website</a></h4>
+          <div>
+            <div class="w-clearfix w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny"><a class="w-button rest-cta new-format" href="tel:+16042998002">+FAVOURITE</a><a class="w-button rest-cta new-format" href="tel:+16042998002">SHARE</a>
+            </div>
+          </div>
+          <p class="restaurant-description">Chefs entertain while cooking on a Japanese-style griddle, plus izakaya dishes in the lounge.</p><a class="w-button reserve-button" href="http://www.opentable.com/kobe-izakaya-lounge" target="_blank">Reserve Table</a>
+        </div>
+
+      </div>
+      <div class="w-col w-col-6 menu-column">
+        <div class="w-clearfix menu-type-div"><a class="w-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny menu-type-button-1" href="#">Lunch</a><a class="w-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny menu-type-button-1" href="#">dinner</a>
+          <div class="w-dropdown menu-type-dropdown" data-delay="0">
+            <div class="w-dropdown-toggle dropdown-menu-toggle">
+              <div class="dropdown-text"><strong>Kobe Izakaya Lounge menu</strong>
+              </div>
+            </div>
+            <nav class="w-dropdown-list"></nav>
+          </div>
+        </div>
+
+<h2 id="Sexion0" class="menu-category-heading">Main</h2><div id="Sexion0item0" class="item-div-2"><p hidden ="000001000001110001001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Ebi Mayo</h2><div class="item-price">$9.75 </div><div class="item-description">Tempura prawn; sweet and spicy Japanese mayo sauce</div></div></div></div></div><div id="Sexion0item1" class="item-div-2"><p hidden ="000010000100001010001010"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Tuna Avocad Salsa</h2><div class="item-price">$9.95 </div><div class="item-description">Ahi tuna tartar with tomato and onion in a sweet soya sauce with wonton chips</div></div></div></div></div><div id="Sexion0item2" class="item-div-2"><p hidden ="010000000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Short Ribs</h2><div class="item-price">$14.95 </div><div class="item-description">Slow cooked; seared; marinated triple AAA ribs finished with our homemade glaze; Asian Salad</div></div></div></div></div><div id="Sexion0item3" class="item-div-2"><p hidden ="000001000001110011001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Spicy Dynamite Roll</h2><div class="item-price">$9.95 </div><div class="item-description">Crispy tempura prawn; avocado and spicy mayo</div></div></div></div></div><div id="Sexion0item4" class="item-div-2"><p hidden ="001000000000001000001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Chicken Karaage</h2><div class="item-price">$8.75 </div><div class="item-description">Delectable deep fried boneless chicken; soya ginger sauce; shredded cabbage</div></div></div></div></div><div id="Sexion0item5" class="item-div-2"><p hidden ="001000000000000010001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Kobe Hot Wings</h2><div class="item-price">$7.95 </div><div class="item-description">Deep fried chicken wings with rock salt; lime and; green chili hot sauce</div></div></div></div></div><div id="Sexion0item6" class="item-div-2"><p hidden ="000010000101000000001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Spicy Tuna Roll</h2><div class="item-price">$9.95 </div><div class="item-description">Ahi tuna prepared with Japanese mayo and spices</div></div></div></div></div><div id="Sexion0item7" class="item-div-2"><p hidden ="000001000000000001001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Chili Garlic Calamari</h2><div class="item-price">$9.50 </div><div class="item-description">Deep fried squid; herb salad; citrus; chili and; garlic sauce</div></div></div></div></div><div id="Sexion0item8" class="item-div-2"><p hidden ="000010000101000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Sashimi</h2><div class="item-price">$11.95 </div><div class="item-description">Tender ahi tuna accompanied by our famous fiery Japanese mustard and; shoyu sauce</div></div></div></div></div><div id="Sexion0item9" class="item-div-2"><p hidden ="000000100000001000001010"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Tofu Salad</h2><div class="item-price">$8.50 </div><div class="item-description">Mixed greens; julienne vegetables; fried onion; carrot ginger dressing</div></div></div></div></div>
+
+
+        <div class="menu-disclaimer-hook" id="Disclaimer"></div>
+        <div class="disclaimer-div-block">
+          <h5 class="menu-disclaimer-title">Menu disclaimer</h5>
+          <p class="disclaimer-paragraph">It is the end user's sole responsibility to confirm the applicable ingredients of any given menu item with the restaurant staff upon ordering. Honeycomb and it's listed restaurants are not responsible for any inaccurate menu items or cross contamination. Always remember to inform restaurant staff of your dietary restrictions and/or allergies.</p>
+        </div>
+        <div class="toggle-menu-div"><a class="w-button toggle-menu-link" href="index.html">View Personalized Menu</a>
+        </div>
+      </div>
+      <div class="w-col w-col-3 column-3">
+        <div class="w-hidden-small w-hidden-tiny status-div" id="disclaimer">
+          <h4 class="status-title">Verification status:<br/><span class="status-text"><span class="disabled-text">Disabled</span></span></h4>
+          <p class="status-description">You're viewing the standard, non-personalized version of this menu. <a class="learn-more-link-text" href="../../verification.html" target="_blank">Learn more.</a>
+          </p>
+          <div class="disclaimer-2"></div><a class="w-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny disclaimer-button" href="#Disclaimer">PLEASE READ OUR DISCLAIMER</a><a class="w-button enable-personalization-button" href="index.html">TURN ON PERSONALIZATION</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section other-links-section">
+    <div class="w-row">
+      <div class="w-col w-col-4 other-links-column">
+        <a class="w-inline-block other-link-link-block" href="http://honeycomb.ai/philosophy" target="_blank">
+          <div class="other-link-div review-div">
+            <div class="other-link-title review-link">our philosophy</div>
+            <div class="other-link-description"><strong class="question-bold">Why are there no customer reviews?</strong>
+              <br/>Learn how Honeycomb works.</div>
+          </div>
+        </a>
+      </div>
+      <div class="w-col w-col-4 other-links-column">
+        <a class="w-inline-block other-link-link-block" href="../../invite.html">
+          <div class="other-link-div invite-div">
+            <div class="other-link-title invite-link">Invite your friends</div>
+            <div class="other-link-description"><strong class="question-bold">Have any friends with dietary restrictions?</strong>
+              <br/>Make their life easy and send them an invite!</div>
+          </div>
+        </a>
+      </div>
+      <div class="w-col w-col-4 other-links-column">
+        <a class="w-inline-block other-link-link-block" href="http://honeycomb.ai/health" target="_blank">
+          <div class="other-link-div health-div">
+            <div class="other-link-title health-link">Honeycomb Health</div>
+            <div class="other-link-description"><strong class="question-bold">Do you take your diet seriously?</strong>
+              <br/>Check out our amazing resource base.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="w-section footer">
+    <div class="w-container"><img class="logo-bottom" src="../../images/honeycomblogo.png" width="150"/>
+      <div class="footer-text">Â© 2016 Honeycomb.ai Solutions Inc. All Rights Reserved.</div>
+      <div class="legal-links"><a class="legal-link-1" href="http://honeycomb.ai/terms-of-use" target="_blank">Terms of Use</a> | <a class="legal-link-1" href="http://honeycomb.ai/privacy-policy" target="_blank">Privacy Policy</a>
+      </div>
+      <div class="social-div">
+        <a class="w-inline-block" href="https://www.facebook.com/honeycombapp/" target="_blank"><img class="social-icon" src="../../images/social-03.svg" width="15"/>
+        </a>
+        <a class="w-inline-block" href="https://twitter.com/honeycomb_app" target="_blank"><img class="social-icon" src="../../images/social-18.svg" width="15"/>
+        </a>
+        <a class="w-inline-block" href="https://www.instagram.com/honeycomb_app/" target="_blank"><img class="social-icon" src="../../images/1432865075_38-instagram.png" width="15"/>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="../../js/webflow.js" type="text/javascript"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script>
+    $('.custom-button').on('click', function (evt) {
+      $('.target-tab-link').triggerHandler('click');
+      evt.preventDefault();
+    });
+  </script>
+
+</body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Fri Apr 29 2016 07:04:35 GMT+0000 (UTC) --><html data-wf-page="57206f938d15a35849f2b7fe" data-wf-site="5679e510e7f2da3b70619690"><head>
+  <meta charset="utf-8"/>
+  <title>EBO Restaurant & Lounge</title>
+  <meta content="No more fussing about what to eat. Find the exact items to eat based on your personal food preferences." name="description"/>
+  <meta content="Menu 13" property="og:title"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Webflow" name="generator"/>
+  <link href="../../css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/honeycombnew.webflow.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:300,regular,500"]
+      }
+    });
+  </script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+  <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+  <script src="../../js/modernizr.js" type="text/javascript"></script>
+  <script src="../../js/match.js" type="text/javascript"></script>  
+
+  <link href="images/favicon-32x32.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="images/gplusprofhoney.png" rel="apple-touch-icon"/>
+  <meta content="https://daks2k3a4ib2z.cloudfront.net/5567bbce47dc18034e5e24e9/55a88610e4665fc569944588_Open%20Graph%20HC%203.png" property="og:image"/>
+  <meta content="image/png" property="og:image:type"/>
+  <meta content="1200" property="og:image:width"/>
+  <meta content="630" property="og:image:height"/>
+</head>
+<body>
+  <div class="w-nav navigation-bar nav-new" data-animation="over-right" data-collapse="all" data-contain="1" data-duration="400">
+    <a class="w-inline-block link-block" href="../../index.html"><img class="honeycomb-nav-logo" src="../../images/honeycomblogo.png" width="195"/>
+    </a>
+    <nav class="w-nav-menu navigation-menu" role="navigation"><a class="w-nav-link navigation-link create-profile-link" href="/sign-up">CREATE PROFILE</a><a class="w-nav-link navigation-link" href="index.html">HOME</a><a class="w-nav-link w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny navigation-link" href="/contact">Contact</a><a class="w-nav-link navigation-link" href="/faq">F.A.Q.</a><a class="w-nav-link navigation-link" href="/contact">CONTACT</a>
+    </nav>
+    <div class="w-nav-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny hamburger-button">
+      <div class="w-icon-nav-menu"></div>
+    </div>
+    <a class="w-inline-block w-clearfix account-link-block" href="../../account.html"><img class="w-hidden-small w-hidden-tiny account-icon" src="../../images/user white.png" width="20"/>
+      <div class="account-text">My Account</div>
+    </a>
+    <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+  </div>
+  <div class="w-section hero-section featured-restaurants single">
+    <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+      <h1 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny heading-1">METRO VANCOUVER</h1>
+      <div class="w-form search-form">
+        <form class="w-clearfix" data-name="Email Form" id="email-form" name="email-form">
+          <div class="city-name-div">
+            <h5 class="search-city-name-text">Vancouver</h5>
+          </div>
+          <input class="w-input search-bar" data-name="Email" id="email" name="email" placeholder="Search for a restaurant..." required="required" type="text"/>
+          <input class="w-button button-search" data-wait="Please wait..." type="submit" value="SEARCH"/>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-container">
+      <div class="w-form w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny search-form">
+        <form class="w-clearfix" data-name="Email Form" id="email-form" name="email-form">
+          <div class="city-name-div">
+            <h5 class="search-city-name-text">Vancouver</h5>
+          </div>
+          <input class="w-input search-bar" data-name="Email 2" id="email-2" name="email-2" placeholder="Search for a restaurant..." required="required" type="text"/>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+      <div>
+        <div class="w-row navigation-row">
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a class="w-inline-block nav-page-link" href="../../restaurant.html">
+              <div class="nav-div nav-clicked"><img class="menu-icon" src="../../images/location white.png" width="20"/>
+                <h5 class="w-hidden-tiny page-title">local</h5>
+              </div>
+            </a>
+          </div>
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a class="w-inline-block nav-page-link" href="../../trending.html">
+              <div class="nav-div" data-ix="display-verify-tablet"><img class="menu-icon" src="../../images/1450858058_Fire-white.png" width="20"/>
+                <h5 class="w-hidden-tiny page-title">trending</h5>
+              </div>
+            </a>
+          </div>
+          <div class="w-col w-col-4 w-col-small-4 w-col-tiny-4 button-column">
+            <a class="w-inline-block nav-page-link" href="../../favourites.html">
+              <div class="nav-div"><img class="menu-icon" src="../../images/1450858302_like-white.png" width="20"/>
+                <h5 class="w-hidden-tiny page-title">favourites</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section main-section">
+    <div class="w-container w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+      <h3 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny personalized-menu-title">Your <span class="restaurant-menu-name">personalized</span> menu</h3>
+    </div><a class="w-inline-block restaurant-link-block" href="#Restaurant-Info"><h3 class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny personalized-menu-title" data-ix="display-verify">Your personalized menu for <strong><span class="restaurant-menu-name">EBO Restaurant & Lounge</span></strong></h3></a>
+    <div class="w-row">
+      <div class="w-col w-col-3 restaurant-column">
+        <div class="menu-restaurant-div"><img class="restaurant-image" src="images/restaurant.jpg" width="1250"/>
+          <h1 class="restaurant-name">EBO Restaurant & Lounge</h1>
+          <h4 class="restaurant-address menu-address">4331 Dominion Street, Burnaby<br/>(604) 453-0788, <a class="restaurant-website-link" href="http://marriott.com/hotels/hotel-information/restaurant/yvrdb-delta-burnaby-hotel-and-conference-center/" target="_blank">Website</a></h4>
+          <div>
+            <div class="w-clearfix w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny"><a class="w-button rest-cta new-format" href="tel:+16042998002">+FAVOURITE</a><a class="w-button rest-cta new-format" href="tel:+16042998002">SHARE</a>
+            </div>
+          </div>
+          <p class="restaurant-description">Sophisticated Pacific NW cuisine & wines from British Columbia in a swanky dining room/lounge.</p><a class="w-button reserve-button" href="http://www.opentable.com/ebo-restaurant-and-lounge" target="_blank">Reserve Table</a>
+        </div>
+        <div class="w-hidden-main w-hidden-medium status-div" id="disclaimer">
+          <h4 class="status-title">Verification status:<br/><span class="status-text"><span class="not-active-text">UNVerified</span></span></h4>
+          <p class="status-description">Initial menu analysis is completed, but items are yet to be verified with the restaurant. <a class="learn-more-link-text" href="../../verification.html" target="_blank">Learn more.</a>
+          </p>
+          <div class="disclaimer-2"></div><a class="w-button disclaimer-button" href="#Disclaimer">PLEASE READ OUR DISCLAIMER</a>
+        </div>
+      </div>
+      <div class="w-col w-col-6 menu-column">
+        <div class="w-clearfix menu-type-div"><a class="w-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny menu-type-button-1" href="#">Lunch</a><a class="w-button w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny menu-type-button-1" href="#">dinner</a>
+          <div class="w-dropdown menu-type-dropdown" data-delay="0">
+            <div class="w-dropdown-toggle dropdown-menu-toggle">
+              <div class="dropdown-text"><strong>your personalized menu</strong>
+              </div>
+            </div>
+            <nav class="w-dropdown-list"></nav>
+          </div>
+        </div>
+
+<h2 id="Sexion0" class="menu-category-heading">Starters</h2><div id="Sexion0item0" class="item-div-2"><p hidden ="000000000111110000000100"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Wild Mushroom Soup</h2><div class="item-price">$10.00 </div><div class="item-description">mushroom textures; brioche crouton; feta; focaccia</div></div></div></div></div><div id="Sexion0item1" class="item-div-2"><p hidden ="000000000110110000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">E. B. O Tomato Soup</h2><div class="item-price">$9.00 </div><div class="item-description">cheddar and; parmesan toast</div></div></div></div></div><div id="Sexion0item2" class="item-div-2"><p hidden ="000010000000000010000010"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Albacore Tuna Poke</h2><div class="item-price">$14.00 </div><div class="item-description">compressed watermelon; ponzu gel; nori; scallion</div></div></div></div></div><div id="Sexion0item3" class="item-div-2"><p hidden ="000001001000110011001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Local Mussels</h2><div class="item-price">$15.00 </div><div class="item-description">tomato coconut curry sauce; lime; crispy bread</div></div></div></div></div><div id="Sexion0item4" class="item-div-2"><p hidden ="000101000000000011100000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Roast Scallops</h2><div class="item-price">$17.00 </div><div class="item-description">beets; cauliflower; vanilla puree; caper and raisin emulsion; pork saddle; chicharron</div></div></div></div></div><div id="Sexion0item5" class="item-div-2"><p hidden ="010000000111110000000010"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Wagyu Beef Carpaccio</h2><div class="item-price">$13.00 </div><div class="item-description">dijon aioli; capers; parmesan mousse; pickled shallots; crostini</div></div></div></div></div><div id="Sexion0item6" class="item-div-2"><p hidden ="000100000110110000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Caesar Salad</h2><div class="item-price">$9.50 </div><div class="item-description">heart of romaine; bacon crumbs; croutons; crispy capers; grana padano</div></div></div></div></div><div id="Sexion0item7" class="item-div-2"><p hidden ="000000000111111000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Green Salad</h2><div class="item-price">$9.50 </div><div class="item-description">fresh seasonal vegetables; dried cranberries; crumbled goat feta; mustard soy vinaigrette; pumpkin seed granola</div></div></div></div></div><div id="Sexion0item8" class="item-div-2"><p hidden ="001000000000000100001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Chili Chicken</h2><div class="item-price">$12.00 </div><div class="item-description">black sesame paste; house pickles; korean style sauce</div></div></div></div></div><div id="Sexion0item9" class="item-div-2"><p hidden ="000000000110110000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Garlic Cheese Toast</h2><div class="item-price">$6.00 </div><div class="item-description">3 cheese blend</div></div></div></div></div><div id="Sexion0item10" class="item-div-2"><p hidden ="000000000000000110000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">White Bean &amp; Kale Hummus</h2><div class="item-price">$10.00 </div><div class="item-description">armenian crisps; chicharron; pickles; cherry tomatoes</div></div></div></div></div><div id="Sexion0item11" class="item-div-2"><p hidden ="000000000110110000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Baked Breads for 2</h2><div class="item-price">$4.00 </div><div class="item-description">house made mini baguette and focaccia with hand whipped butter</div></div></div></div></div><h2 id="Sexion1" class="menu-category-heading">Additions</h2><div id="Sexion1item12" class="item-div-2"><p hidden ="000001000000000001000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Garlic Prawns</h2><div class="item-price">Price unlisted</div><div class="item-description">N/A</div></div></div></div></div><div id="Sexion1item13" class="item-div-2"><p hidden ="000010000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Spring Salmon</h2><div class="item-price">Price unlisted</div><div class="item-description">N/A</div></div></div></div></div><div id="Sexion1item14" class="item-div-2"><p hidden ="000001000000000001000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Roast Scallop</h2><div class="item-price">Price unlisted</div><div class="item-description">N/A</div></div></div></div></div><div id="Sexion1item15" class="item-div-2"><p hidden ="001000000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Chicken Breast</h2><div class="item-price">Price unlisted</div><div class="item-description">N/A</div></div></div></div></div><div id="Sexion1item16" class="item-div-2"><p hidden ="000000000000000000001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Pan Seared or Cajun Spice</h2><div class="item-price">Price unlisted</div><div class="item-description">N/A</div></div></div></div></div><h2 id="Sexion2" class="menu-category-heading">Steaks</h2><div id="Sexion2item17" class="item-div-2"><p hidden ="010001000000000001000100"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Certified Angus Beef</h2><div class="item-price">Price unlisted</div><div class="item-description">served with "twice baked" baby potatoes; seasonal mushrooms; roast carrots; and peppercorn sauce</div></div></div></div></div><div id="Sexion2item18" class="item-div-2"><p hidden ="010000000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Top Sirloin 8oz</h2><div class="item-price">$29.00 </div><div class="item-description">centre cut; aged for twenty-eight days</div></div></div></div></div><div id="Sexion2item19" class="item-div-2"><p hidden ="010001000110000001000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Steak + Prawns</h2><div class="item-price">$34.00 </div><div class="item-description">8oz top sirloin with garlic butter prawn skewer</div></div></div></div></div><div id="Sexion2item20" class="item-div-2"><p hidden ="010100000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Tenderloin 6oz</h2><div class="item-price">$36.00 </div><div class="item-description">s-wrapped in smoked bacon</div></div></div></div></div><div id="Sexion2item21" class="item-div-2"><p hidden ="010000000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Rib Eye 10oz</h2><div class="item-price">$39.00 </div><div class="item-description">dry aged for twenty-eight days; well marbled throughout</div></div></div></div></div><div id="Sexion2item22" class="item-div-2"><p hidden ="010000000110000000000010"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Steak Frites 6oz</h2><div class="item-price">$23.00 </div><div class="item-description">hanger steak; garlic parmesan fries; green salad; onion crackling; suggested cook temperature medium or below</div></div></div></div></div><h2 id="Sexion3" class="menu-category-heading">Add to Your Steak</h2><div id="Sexion3item23" class="item-div-2"><p hidden ="010001000000000001000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Roasted Scallop</h2><div class="item-price">Price unlisted</div><div class="item-description">N/A</div></div></div></div></div><div id="Sexion3item24" class="item-div-2"><p hidden ="010001000000000001000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Garlic Prawns</h2><div class="item-price">Price unlisted</div><div class="item-description">N/A</div></div></div></div></div><div id="Sexion3item25" class="item-div-2"><p hidden ="010000000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Seasonal Organic Vegetables</h2><div class="item-price">$4.00 </div><div class="item-description">N/A</div></div></div></div></div><h2 id="Sexion4" class="menu-category-heading">Mains</h2><div id="Sexion4item26" class="item-div-2"><p hidden ="001000000000000000100100"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Roast Chicken</h2><div class="item-price">$24.00 </div><div class="item-description">soft polenta; carrot puree; wild mushrooms; spring peas</div></div></div></div></div><div id="Sexion4item27" class="item-div-2"><p hidden ="010000001100110000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Lamb Shank</h2><div class="item-price">$28.00 </div><div class="item-description">saffron fregola; kale; citrus and pine nut gremolata</div></div></div></div></div><div id="Sexion4item28" class="item-div-2"><p hidden ="000011000110110001000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Seafood Linguini</h2><div class="item-price">$27.00 </div><div class="item-description">pacific provider smoked salmon; prawns; mussels; scallops; tomatoes; white wine and mixed herb cream sauce; grana padano</div></div></div></div></div><div id="Sexion4item29" class="item-div-2"><p hidden ="000110000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Sablefish</h2><div class="item-price">$27.00 </div><div class="item-description">chinese sausage; fried rice; asian greens</div></div></div></div></div><div id="Sexion4item30" class="item-div-2"><p hidden ="000010000110000000100000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Spring Salmon</h2><div class="item-price">$25.00 </div><div class="item-description">risotto; textures of celeriac; fennel confit; corn nage</div></div></div></div></div><div id="Sexion4item31" class="item-div-2"><p hidden ="001000011000001000001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Chili Chicken Rice Bowl</h2><div class="item-price">$23.00 </div><div class="item-description">crispy chicken; jasmine rice; peanuts; water chestnuts; chili soy sauce; won ton crisp</div></div></div></div></div><div id="Sexion4item32" class="item-div-2"><p hidden ="000000000000000000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Seasonal Risotto</h2><div class="item-price">$21.00 </div><div class="item-description">superfino aged carnaroli rice; farm inspired ingredients</div></div></div></div></div><div id="Sexion4item33" class="item-div-2"><p hidden ="010000000000000000001000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Cailiflower Steak</h2><div class="item-price">$22.00 </div><div class="item-description">du puy lentils; tomato curry sauce; kale</div></div></div></div></div><div id="Sexion4item34" class="item-div-2"><p hidden ="000000000111110000000000"></p><div class="w-row item-row"><div class="w-col w-col-2 w-col-small-2 w-col-tiny-2"><img width = "35" src="../../images/honeyverify grey test.png"></div><div class="w-col w-col-10 w-col-small-10 w-col-tiny-10"><div class="menu-item-div"><h2 class="item-name">Bucatini Pasta</h2><div class="item-price">$19.00 </div><div class="item-description">sundried tomato; sous vide egg; grana padano; arugula; herb pistou</div></div></div></div></div>
+
+
+        <div class="menu-disclaimer-hook" id="Disclaimer"></div>
+        <div class="disclaimer-div-block">
+          <h5 class="menu-disclaimer-title">Menu disclaimer</h5>
+          <p class="disclaimer-paragraph">It is the end user's sole responsibility to confirm the applicable ingredients of any given menu item with the restaurant staff upon ordering. Honeycomb and it's listed restaurants are not responsible for any inaccurate menu items or cross contamination. Always remember to inform restaurant staff of your dietary restrictions and/or allergies.</p>
+        </div>
+        <div class="toggle-menu-div"><a class="w-button toggle-menu-link" href="menu.html">view non-personalized menu</a>
+        </div>
+      </div>
+      <div class="w-col w-col-3 column-3">
+        <div class="w-hidden-small w-hidden-tiny status-div" id="disclaimer">
+          <h4 class="status-title">Verification status:<br/><span class="status-text"><span class="not-active-text">UNVerified</span></span></h4>
+          <p class="status-description">Initial menu analysis is completed, but items are yet to be verified with the restaurant. <a class="learn-more-link-text" href="../../verification.html" target="_blank">Learn more.</a>
+          </p>
+          <div class="disclaimer-2"></div><a class="w-button disclaimer-button" href="#Disclaimer">PLEASE READ OUR DISCLAIMER</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-section other-links-section">
+    <div class="w-row">
+      <div class="w-col w-col-4 other-links-column">
+        <a class="w-inline-block other-link-link-block" href="http://honeycomb.ai/philosophy" target="_blank">
+          <div class="other-link-div review-div">
+            <div class="other-link-title review-link">our philosophy</div>
+            <div class="other-link-description"><strong class="question-bold">Why are there no customer reviews?</strong>
+              <br/>Learn how Honeycomb works.</div>
+          </div>
+        </a>
+      </div>
+      <div class="w-col w-col-4 other-links-column">
+        <a class="w-inline-block other-link-link-block" href="../../invite.html">
+          <div class="other-link-div invite-div">
+            <div class="other-link-title invite-link">Invite your friends</div>
+            <div class="other-link-description"><strong class="question-bold">Have any friends with dietary restrictions?</strong>
+              <br/>Make their life easy and send them an invite!</div>
+          </div>
+        </a>
+      </div>
+      <div class="w-col w-col-4 other-links-column">
+        <a class="w-inline-block other-link-link-block" href="http://honeycomb.ai/health" target="_blank">
+          <div class="other-link-div health-div">
+            <div class="other-link-title health-link">Honeycomb Health</div>
+            <div class="other-link-description"><strong class="question-bold">Do you take your diet seriously?</strong>
+              <br/>Check out our amazing resource base.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="w-section footer">
+    <div class="w-container"><img class="logo-bottom" src="../../images/honeycomblogo.png" width="150"/>
+      <div class="footer-text">Â© 2016 Honeycomb.ai Solutions Inc. All Rights Reserved.</div>
+      <div class="legal-links"><a class="legal-link-1" href="http://honeycomb.ai/terms-of-use" target="_blank">Terms of Use</a> | <a class="legal-link-1" href="http://honeycomb.ai/privacy-policy" target="_blank">Privacy Policy</a>
+      </div>
+      <div class="social-div">
+        <a class="w-inline-block" href="https://www.facebook.com/honeycombapp/" target="_blank"><img class="social-icon" src="../../images/social-03.svg" width="15"/>
+        </a>
+        <a class="w-inline-block" href="https://twitter.com/honeycomb_app" target="_blank"><img class="social-icon" src="../../images/social-18.svg" width="15"/>
+        </a>
+        <a class="w-inline-block" href="https://www.instagram.com/honeycomb_app/" target="_blank"><img class="social-icon" src="../../images/1432865075_38-instagram.png" width="15"/>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="../../js/webflow.js" type="text/javascript"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script>
+    $('.custom-button').on('click', function (evt) {
+      $('.target-tab-link').triggerHandler('click');
+      evt.preventDefault();
+    });
+  </script>
+
+</body></html>
