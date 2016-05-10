@@ -73,7 +73,7 @@
             </div>
              <p>Signing up for a Honeycomb account means you agree to the <a style="color: #2d3e4f" href="http://honeycomb.ai/privacy-policy">Privacy Policy</a> and <a style="color: #2d3e4f" href = "http://honeycomb.ai/terms-of-use"> Terms of Use.</a></p>
 
-            <button type="button" onclick="signUserUp()" value="BEGIN" data-wait="Please wait..." class="w-button signup-login-buttons sign-page">SignUp!</button>
+            <button id="sinecosbutton" type="button" onclick="signUserUp()" value="BEGIN" data-wait="Please wait..." class="w-button signup-login-buttons sign-page">SignUp!</button>
           </form> <br>
           </div>
         </div>
@@ -143,7 +143,11 @@
     //change to home page of site
     //save login info
     }
-
+    $(document).keypress(function(e){
+        if (e.which == 13){
+            $("#sinecosbutton").click();
+        }
+    });
   </script>
 </body>
 </html>
