@@ -38,13 +38,15 @@
         binary = binary + String(choice) + String(redMeat) + String(whiteMeat) + String(pork)  + String(fish) + String(otherSeafood) + String(tofu) + String(peanuts) + String(treenuts) + String(dairy) + String(cheese) + String(eggs) + String(wheat) + String(gluten) + String(soy) + String(sesameseeds) + String(fruit) + String(shellfish) + String(corn) + String(someThingElse) + String(spicy) + String(mushrooms) + String(onions) + String(dessert);        	
         }
 
-        window.alert(code);
         
         else{
 
+        window.alert(code);
+        window.alert(code[0]);
 
         if (parseInt(code[0]) == 1 || parseInt(code[0]) == 2 || parseInt(code[0] == 5) || parseInt(code[0] == 7)) {
         	redMeat = 1;
+            window.alert("Red meat");
         }
 
         if (parseInt(code[0]) == 2 || parseInt(code[0]) == 3 || parseInt(code[0]) == 6 || parseInt (code[0]) == 7){
@@ -53,6 +55,7 @@
 
         if (parseInt(code[0]) == 4 || parseInt(code[0]) == 5 || parseInt(code[0]) == 6 || parseInt (code[0]) == 7){
         	pork = 1;
+            window.alert("Pork");
         }
 
         if (parseInt(code[1])% 2 != 0) {
