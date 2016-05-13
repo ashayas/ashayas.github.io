@@ -42,6 +42,7 @@ $(function(){
 
         if(compareBinaries(itmbinary, userBinary) == false){
           console.log("Found a match!");
+          console.log(itmbinary + '\n' + userBinary);
           $("#Sexion"+String(i)+"item"+String(j)).show();
           $("#Sexion"+String(i)).show();      
           //console.log("MAX ITEMS: " + maxItems);  
