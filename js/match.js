@@ -47,8 +47,8 @@ $(function(){
         }
 
         else{
-         console.log("Found a match!");
-          console.log(itmbinary + '\n' + userBinary);          
+          console.log("Found a match!");
+          console.log(itmbinary + '\n' + userBinary + '\t' + i + '\t' + j);          
           $("#Sexion"+String(i)+"item"+String(j)).hide();
         }
         j++;
