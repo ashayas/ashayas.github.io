@@ -44,20 +44,33 @@
 
         console.log(code);
 
-        if (parseInt(code[0]) == 1 || parseInt(code[0]) == 2 || parseInt(code[0] == 5) || parseInt(code[0] == 7)) {
-        	redMeat = 1;
-            console.log("Red meat");
+        if(parseInt(code[0]) == 1) redMeat = 1;
+
+        else if(parseInt(code[0]) == 2) whiteMeat = 1;
+
+        else if(parseInt(code[0]) == 4) pork = 1;
+
+        else if (parseInt(code[0]) == 3){
+            redMeat = 1;
+            whiteMeat = 1;
         }
 
-        if (parseInt(code[0]) == 2 || parseInt(code[0]) == 3 || parseInt(code[0]) == 6 || parseInt (code[0]) == 7){
-        	whiteMeat = 1;
-            console.log("whiteMeat");
+        else if (parseInt(code[0]) == 5){
+            redMeat = 1;
+            pork = 1;
         }
 
-        if (parseInt(code[0]) == 4 || parseInt(code[0]) == 5 || parseInt(code[0]) == 6 || parseInt (code[0]) == 7){
-        	pork = 1;
-            console.log("Pork");
+        else if (parseInt(code[0]) == 6){
+            whiteMeat = 1;
+            pork = 1;
         }
+
+        else if (parseInt(code[0]) == 7){
+            whiteMeat = 1;
+            pork = 1;
+            redMeat = 1;
+        }
+
 
         if (parseInt(code[1])% 2 != 0) {
         	fish = 1;
