@@ -41,14 +41,14 @@ $(function(){
         //console.log("ITEMBINARY"+ itmbinary);
 
         if(compareBinaries(itmbinary, userBinary) == false){
-          console.log("Found a match!");
-          console.log(itmbinary + '\n' + userBinary);
           $("#Sexion"+String(i)+"item"+String(j)).show();
           $("#Sexion"+String(i)).show();      
           //console.log("MAX ITEMS: " + maxItems);  
         }
 
         else{
+         console.log("Found a match!");
+          console.log(itmbinary + '\n' + userBinary);          
           $("#Sexion"+String(i)+"item"+String(j)).hide();
         }
         j++;
@@ -73,7 +73,7 @@ $(function(){
             a=((snapshot.val()));
             userBinary = a.binary;
             checkItems(userBinary);
-            console.log("UserBinary Is" + userBinary);
+            console.log("User Binary is " + userBinary);
         }, function (errorObject) {
           console.log("error");
         });
