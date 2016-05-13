@@ -42,8 +42,6 @@
         else{
 
 
-        console.log(code);
-
         if(parseInt(code[0]) == 1) redMeat = 1;
 
         if(parseInt(code[0]) == 2) whiteMeat = 1;
@@ -146,8 +144,6 @@
         binary = binary + String(choice) + String(redMeat) + String(whiteMeat) + String(pork)  + String(fish) + String(otherSeafood) + String(tofu) + String(peanuts) + String(treenuts) + String(dairy) + String(cheese) + String(eggs) + String(wheat) + String(gluten) + String(soy) + String(sesameseeds) + String(fruit) + String(shellfish) + String(corn) + String(someThingElse) + String(spicy) + String(mushrooms) + String(onions) + String(dessert);
 
 
-        console.log(binary);
-
         }
 
 
@@ -155,7 +151,6 @@
             if (error){
             }
             else{
-                window.alert("I am currently changing the code to make matches more accurate :) Feel free to mess around but you might get incorrect matches. Try tomorrow!");
                 window.location.href= "../restaurant.html?" + username;
             }
         }
