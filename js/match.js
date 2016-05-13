@@ -56,7 +56,6 @@ $(function(){
   }
 } 
 
-  var url = String(window.location.href);
 
   var hash = getCookie("honeyUID");
   //ERROR CHECK HERE?
