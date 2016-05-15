@@ -31,7 +31,7 @@
 
   <div class = "container">
 
-    		<div class="col-sm-3" id="left">
+    		<div id="left">
 
         <!--***-->
     			<a href="#" onclick="loadItem('ZEITEMNAME')">
@@ -45,12 +45,32 @@
   				</a>
 
 
-          <a href="#" onclick="loadItem('ZEITEMNAME')">
-        <div class="card" id="ZEITEMNAME">
+          <a href="#" onclick="loadItem('ZEITEMNAME2')">
+        <div class="card" id="ZEITEMNAME2">
             <div class="card-block" style="background-color: white;">
-            <h1 class="card-title">ZEITEMNAME</h1>
-              <p id="ZEITEMNAMEbinary" hidden>111111111</p>
-              <button type="submit" onclick="finishedItem('ZEITEMNAME')" class="btn btn-default">Done</button>
+            <h1 class="card-title">ZEITEMNAME2</h1>
+              <p id="ZEITEMNAME2binary" hidden>111111111</p>
+              <button type="submit" onclick="finishedItem('ZEITEMNAME2')" class="btn btn-default">Done</button>
+            </div>
+          </div>
+          </a>
+
+          <a href="#" onclick="loadItem('ZEITEMNAME3')">
+        <div class="card" id="ZEITEMNAME3">
+            <div class="card-block" style="background-color: white;">
+            <h1 class="card-title">ZEITEMNAME3</h1>
+              <p id="ZEITEMNAME3binary" hidden>000001111</p>
+              <button type="submit" onclick="finishedItem('ZEITEMNAME3')" class="btn btn-default">Done</button>
+            </div>
+          </div>
+          </a>
+
+          <a href="#" onclick="loadItem('ZEITEMNAME4')">
+        <div class="card" id="ZEITEMNAME4">
+            <div class="card-block" style="background-color: white;">
+            <h1 class="card-title">ZEITEMNAME4</h1>
+              <p id="ZEITEMNAME4binary" hidden>111110000</p>
+              <button type="submit" onclick="finishedItem('ZEITEMNAME4')" class="btn btn-default">Done</button>
             </div>
           </div>
           </a>
@@ -155,45 +175,18 @@
 
     	function loadItem(itemName){
     		var itemCode = ($("#" + itemName+'binary').html());
-    		console.log(itemCode[0]);
-    		
-    		if(itemCode[0] == 0){
-    			($("#peanuts").prop('checked', false));
-    		}
+    		console.log(itemCode);
+        var itemArray = ["#peanuts", "#treenuts", "#dairy", "#eggs", "#gluten", "#soy", "#sesame", "#shellfish", "#corn"]
 
-    		if(itemCode[1] == 0){
-    			($("#treenuts").prop('checked', false));
-    		}
-
-    		if(itemCode[2] == 0){
-    			($("#dairy").prop('checked', false));
-    		}
-
-    		if(itemCode[3] == 0){
-    			($("#eggs").prop('checked', false));
-    		}
-
-    		if(itemCode[4] == 0){
-    			($("#gluten").prop('checked', false));
-    		}
-
-    		if(itemCode[5] == 0){
-    			($("#soy").prop('checked', false));
-    		}
-
-    		if(itemCode[6] == 0){
-    			($("#sesame").prop('checked', false));
-    		}
-
-    		if(itemCode[7] == 0){
-    			($("#shellfish").prop('checked', false));
-    		}
-
-    		if(itemCode[8] == 0){
-    			($("#corn").prop('checked', false));
-    		}
+        for (var i = 0; i < itemArray.length; i++) {
+          if(itemCode[i] == 0){
+            ($(itemArray[i]).prop('checked', false));
+          }
+          else{
+            ($(itemArray[i]).prop('checked', true));            
+          }
+        }
     	}
-
     </script>
 
   </body>
