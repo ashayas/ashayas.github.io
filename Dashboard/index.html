@@ -8,6 +8,9 @@
     <title>Dashboard | Honeycomb Personalized Menus</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- FIREBASE -->
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>    
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +33,8 @@
   <body>
 
   <div class = "container">
+
+      <p id = "restaurantName" hidden>ZERESTNAME</p>
 
     		<div id="left">
 
@@ -81,6 +86,11 @@
     				<div class="col-sm-12" style="background-color: #110c3c">
     					<img src="../images/honeycomblogo.png" style="width: 30%; height: 30%" class="img-responsive center-block">
     				</div>
+
+            <h2 id="itemNotifier">Please select an item!</h2>
+
+
+          <div  id = "top9items">
     				<div class="col-sm-4">
     				<div class="card-block" style="background-color: #d9534f;">
     				<h3 class="card-title">Peanuts</h3>
@@ -161,6 +171,7 @@
       					<label for="corn"></label>
   					</div>
     				</div>
+          </div> <!-- Close the item div -->
     		</div>
     </div>
 
@@ -168,25 +179,10 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="js/dashBoard.js"> </script>
+
     <script type="text/javascript">
-    	function finishedItem(itemName) {
-    		$("#" + itemName).hide();
-    	}
-
-    	function loadItem(itemName){
-    		var itemCode = ($("#" + itemName+'binary').html());
-    		console.log(itemCode);
-        var itemArray = ["#peanuts", "#treenuts", "#dairy", "#eggs", "#gluten", "#soy", "#sesame", "#shellfish", "#corn"]
-
-        for (var i = 0; i < itemArray.length; i++) {
-          if(itemCode[i] == 0){
-            ($(itemArray[i]).prop('checked', false));
-          }
-          else{
-            ($(itemArray[i]).prop('checked', true));            
-          }
-        }
-    	}
+    ($("#top9items").hide());      
     </script>
 
   </body>
