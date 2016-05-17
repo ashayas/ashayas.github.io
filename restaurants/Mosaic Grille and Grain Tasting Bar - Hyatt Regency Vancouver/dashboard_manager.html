@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dashboard | Honeycomb Personalized Menus</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Style sheet -->
+    <link href="../../css/style.css" rel="stylesheet"/>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet"/>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <div class="container">
+
+      <p hidden="" id="restaurantName">Mosaic Grille and Grain Tasting Bar - Hyatt Regency Vancouver</p>
+
+
+    		<div class="col-sm-3" id="left">
+
+        <a href="#" onclick="loadItem('Fall Trio: Brome Lake Duck; Two Rivers Duck Guanciale; Rougie Goose Liver')"><div class="card" id="Fall Trio: Brome Lake Duck; Two Rivers Duck Guanciale; Rougie Goose Liver"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Fall Trio: Brome Lake Duck; Two Rivers Duck Guanciale; Rougie Goose Liver</h1><p id="FallTrio:BromeLakeDuck;TwoRiversDuckGuanciale;RougieGooseLiverbinary" hidden>000010000</p><button type="submit" onclick="finishedItem('Fall Trio: Brome Lake Duck; Two Rivers Duck Guanciale; Rougie Goose Liver')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Okanagan Goat Cheese Souffl')"><div class="card" id="Okanagan Goat Cheese Souffl"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Okanagan Goat Cheese Souffl</h1><p id="OkanaganGoatCheeseSoufflbinary" hidden>011000000</p><button type="submit" onclick="finishedItem('Okanagan Goat Cheese Souffl')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Lobster Medallion*')"><div class="card" id="Lobster Medallion*"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Lobster Medallion*</h1><p id="LobsterMedallion*binary" hidden>010000010</p><button type="submit" onclick="finishedItem('Lobster Medallion*')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Cauliflower Bisque')"><div class="card" id="Cauliflower Bisque"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Cauliflower Bisque</h1><p id="CauliflowerBisquebinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Cauliflower Bisque')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Earth Apple Farm Roasted Fall Vegetable Salad')"><div class="card" id="Earth Apple Farm Roasted Fall Vegetable Salad"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Earth Apple Farm Roasted Fall Vegetable Salad</h1><p id="EarthAppleFarmRoastedFallVegetableSaladbinary" hidden>000010010</p><button type="submit" onclick="finishedItem('Earth Apple Farm Roasted Fall Vegetable Salad')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Grilled Quail Terrine')"><div class="card" id="Grilled Quail Terrine"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Grilled Quail Terrine</h1><p id="GrilledQuailTerrinebinary" hidden>001110100</p><button type="submit" onclick="finishedItem('Grilled Quail Terrine')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Fraser Valley Pork Melt')"><div class="card" id="Fraser Valley Pork Melt"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Fraser Valley Pork Melt</h1><p id="FraserValleyPorkMeltbinary" hidden>001010000</p><button type="submit" onclick="finishedItem('Fraser Valley Pork Melt')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Barnston Island Vegetable Focaccia')"><div class="card" id="Barnston Island Vegetable Focaccia"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Barnston Island Vegetable Focaccia</h1><p id="BarnstonIslandVegetableFocacciabinary" hidden>010010000</p><button type="submit" onclick="finishedItem('Barnston Island Vegetable Focaccia')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Aspen Ridge Steak Sandwich')"><div class="card" id="Aspen Ridge Steak Sandwich"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Aspen Ridge Steak Sandwich</h1><p id="AspenRidgeSteakSandwichbinary" hidden>001010000</p><button type="submit" onclick="finishedItem('Aspen Ridge Steak Sandwich')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Porchetta')"><div class="card" id="Porchetta"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Porchetta</h1><p id="Porchettabinary" hidden>000110000</p><button type="submit" onclick="finishedItem('Porchetta')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Farmcrest Chicken Breast')"><div class="card" id="Farmcrest Chicken Breast"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Farmcrest Chicken Breast</h1><p id="FarmcrestChickenBreastbinary" hidden>000001000</p><button type="submit" onclick="finishedItem('Farmcrest Chicken Breast')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Sloping Hill Pork Belly')"><div class="card" id="Sloping Hill Pork Belly"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Sloping Hill Pork Belly</h1><p id="SlopingHillPorkBellybinary" hidden>000010000</p><button type="submit" onclick="finishedItem('Sloping Hill Pork Belly')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Cache Creek Natural Beef Dry Aged Bone in Ribeye  26oz Good for Two')"><div class="card" id="Cache Creek Natural Beef Dry Aged Bone in Ribeye  26oz Good for Two"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Cache Creek Natural Beef Dry Aged Bone in Ribeye  26oz Good for Two</h1><p id="CacheCreekNaturalBeefDryAgedBoneinRibeye26ozGoodforTwobinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Cache Creek Natural Beef Dry Aged Bone in Ribeye  26oz Good for Two')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Iceland Arctic Char*')"><div class="card" id="Iceland Arctic Char*"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Iceland Arctic Char*</h1><p id="IcelandArcticChar*binary" hidden>000110010</p><button type="submit" onclick="finishedItem('Iceland Arctic Char*')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Seafood Trio*: Haida Gwaii Halibut Cheek; Weathervane Scallop; Honey Mussel')"><div class="card" id="Seafood Trio*: Haida Gwaii Halibut Cheek; Weathervane Scallop; Honey Mussel"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Seafood Trio*: Haida Gwaii Halibut Cheek; Weathervane Scallop; Honey Mussel</h1><p id="SeafoodTrio*:HaidaGwaiiHalibutCheek;WeathervaneScallop;HoneyMusselbinary" hidden>000010011</p><button type="submit" onclick="finishedItem('Seafood Trio*: Haida Gwaii Halibut Cheek; Weathervane Scallop; Honey Mussel')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Ancient Grain Risotto')"><div class="card" id="Ancient Grain Risotto"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Ancient Grain Risotto</h1><p id="AncientGrainRisottobinary" hidden>000001000</p><button type="submit" onclick="finishedItem('Ancient Grain Risotto')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Canadian Rangeland Venison Two Ways - October Feature')"><div class="card" id="Canadian Rangeland Venison Two Ways - October Feature"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Canadian Rangeland Venison Two Ways - October Feature</h1><p id="CanadianRangelandVenisonTwoWays-OctoberFeaturebinary" hidden>011010010</p><button type="submit" onclick="finishedItem('Canadian Rangeland Venison Two Ways - October Feature')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Foraged Mushroom')"><div class="card" id="Foraged Mushroom"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Foraged Mushroom</h1><p id="ForagedMushroombinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Foraged Mushroom')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Braised Red Cabbage')"><div class="card" id="Braised Red Cabbage"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Braised Red Cabbage</h1><p id="BraisedRedCabbagebinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Braised Red Cabbage')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Heirloom Carrots')"><div class="card" id="Heirloom Carrots"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Heirloom Carrots</h1><p id="HeirloomCarrotsbinary" hidden>000000011</p><button type="submit" onclick="finishedItem('Heirloom Carrots')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Brussel Sprouts')"><div class="card" id="Brussel Sprouts"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Brussel Sprouts</h1><p id="BrusselSproutsbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Brussel Sprouts')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Farro Pilaf')"><div class="card" id="Farro Pilaf"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Farro Pilaf</h1><p id="FarroPilafbinary" hidden>000010000</p><button type="submit" onclick="finishedItem('Farro Pilaf')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Pomme Puree')"><div class="card" id="Pomme Puree"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Pomme Puree</h1><p id="PommePureebinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Pomme Puree')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Pumpkin Cr')"><div class="card" id="Pumpkin Cr"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Pumpkin Cr</h1><p id="PumpkinCrbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Pumpkin Cr')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Harvest Apple ')"><div class="card" id="Harvest Apple "><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Harvest Apple </h1><p id="HarvestApplebinary" hidden>001010000</p><button type="submit" onclick="finishedItem('Harvest Apple ')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Pear Sticky Date Toffee Cake')"><div class="card" id="Pear Sticky Date Toffee Cake"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Pear Sticky Date Toffee Cake</h1><p id="PearStickyDateToffeeCakebinary" hidden>000110000</p><button type="submit" onclick="finishedItem('Pear Sticky Date Toffee Cake')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Banana Split')"><div class="card" id="Banana Split"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Banana Split</h1><p id="BananaSplitbinary" hidden>011000001</p><button type="submit" onclick="finishedItem('Banana Split')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Locally Made Gelato &amp; Sorbet')"><div class="card" id="Locally Made Gelato &amp; Sorbet"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Locally Made Gelato &amp; Sorbet</h1><p id="LocallyMadeGelato&amp;Sorbetbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Locally Made Gelato &amp; Sorbet')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Mosaic')"><div class="card" id="Mosaic"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Mosaic</h1><p id="Mosaicbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Mosaic')" class="btn btn-default">Done</button></div></div></a>
+
+
+    	</div>
+    		<div class="col-sm-9" id="right">
+
+    				<div class="col-sm-12" style="background-color: #110c3c">
+    					<img class="img-responsive center-block" src="../../images/honeybanner.png" style="width: 30%; height: 30%"/>
+    				</div>
+
+            <h2 id="itemNotifier">Please select an item!</h2>
+            <div id="top9items">
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Peanuts</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="peanuts" type="checkbox"/>
+      					<label for="peanuts"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Treenuts</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+						<input checked="checked" class="filled-in" id="treenuts" type="checkbox"/>
+      					<label for="treenuts"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Dairy</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="dairy" type="checkbox"/>
+      					<label for="dairy"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Eggs</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="eggs" type="checkbox"/>
+      					<label for="eggs"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Gluten</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="gluten" type="checkbox"/>
+      					<label for="gluten"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Soy</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="soy" type="checkbox"/>
+      					<label for="soy"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Sesame</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="sesame" type="checkbox"/>
+      					<label for="sesame"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Shellfish</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="shellfish" type="checkbox"/>
+      					<label for="shellfish"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Corn</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="corn" type="checkbox"/>
+      					<label for="corn"></label>
+  					</div>
+    				</div>
+          </div> <!-- Close the item div -->
+    		</div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/dashBoard.js"> </script>
+
+    <script type="text/javascript">
+    ($("#top9items").hide());      
+    </script>
+
+
+
+  
+
+</body></html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dashboard | Honeycomb Personalized Menus</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Style sheet -->
+    <link href="../../css/style.css" rel="stylesheet"/>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet"/>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <div class="container">
+
+      <p hidden="" id="restaurantName">Homer Street Cafe & Bar</p>
+
+
+    		<div class="col-sm-3" id="left">
+
+        <a href="#" onclick="loadItem('Maple Butter Pork Belly')"><div class="card" id="Maple Butter Pork Belly"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Maple Butter Pork Belly</h1><p id="MapleButterPorkBellybinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Maple Butter Pork Belly')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Honey Roasted Spiced Almonds')"><div class="card" id="Honey Roasted Spiced Almonds"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Honey Roasted Spiced Almonds</h1><p id="HoneyRoastedSpicedAlmondsbinary" hidden>010000001</p><button type="submit" onclick="finishedItem('Honey Roasted Spiced Almonds')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Fried Chickpea Dip and Crisps')"><div class="card" id="Fried Chickpea Dip and Crisps"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Fried Chickpea Dip and Crisps</h1><p id="FriedChickpeaDipandCrispsbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Fried Chickpea Dip and Crisps')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Marinated Olives and Pecorino')"><div class="card" id="Marinated Olives and Pecorino"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Marinated Olives and Pecorino</h1><p id="MarinatedOlivesandPecorinobinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Marinated Olives and Pecorino')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Crispy Fish Balls; Lemon Saffron Aioli')"><div class="card" id="Crispy Fish Balls; Lemon Saffron Aioli"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Crispy Fish Balls; Lemon Saffron Aioli</h1><p id="CrispyFishBalls;LemonSaffronAiolibinary" hidden>000100000</p><button type="submit" onclick="finishedItem('Crispy Fish Balls; Lemon Saffron Aioli')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Grilled Albacore Tuna')"><div class="card" id="Grilled Albacore Tuna"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Grilled Albacore Tuna</h1><p id="GrilledAlbacoreTunabinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Grilled Albacore Tuna')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Green Leaf')"><div class="card" id="Green Leaf"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Green Leaf</h1><p id="GreenLeafbinary" hidden>000000001</p><button type="submit" onclick="finishedItem('Green Leaf')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('chicken and duck liver brulee')"><div class="card" id="chicken and duck liver brulee"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">chicken and duck liver brulee</h1><p id="chickenandduckliverbruleebinary" hidden>001010000</p><button type="submit" onclick="finishedItem('chicken and duck liver brulee')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Radicchio and Roasted Pear')"><div class="card" id="Radicchio and Roasted Pear"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Radicchio and Roasted Pear</h1><p id="RadicchioandRoastedPearbinary" hidden>001100000</p><button type="submit" onclick="finishedItem('Radicchio and Roasted Pear')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Roasted Beet')"><div class="card" id="Roasted Beet"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Roasted Beet</h1><p id="RoastedBeetbinary" hidden>011000000</p><button type="submit" onclick="finishedItem('Roasted Beet')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Boerenkaas; Courtenay; Bc')"><div class="card" id="Boerenkaas; Courtenay; Bc"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Boerenkaas; Courtenay; Bc</h1><p id="Boerenkaas;Courtenay;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Boerenkaas; Courtenay; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Smokehouse Cheddar; Armstrong; Bc')"><div class="card" id="Smokehouse Cheddar; Armstrong; Bc"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Smokehouse Cheddar; Armstrong; Bc</h1><p id="SmokehouseCheddar;Armstrong;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Smokehouse Cheddar; Armstrong; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Brie; Parksville; Bc')"><div class="card" id="Brie; Parksville; Bc"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Brie; Parksville; Bc</h1><p id="Brie;Parksville;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Brie; Parksville; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('White Grace Organic; Salt Spring; Bc')"><div class="card" id="White Grace Organic; Salt Spring; Bc"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">White Grace Organic; Salt Spring; Bc</h1><p id="WhiteGraceOrganic;SaltSpring;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('White Grace Organic; Salt Spring; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Smoked Bauernschincken; North Van; Bc')"><div class="card" id="Smoked Bauernschincken; North Van; Bc"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Smoked Bauernschincken; North Van; Bc</h1><p id="SmokedBauernschincken;NorthVan;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Smoked Bauernschincken; North Van; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Sloping Hills Coppa; North Van; Bc')"><div class="card" id="Sloping Hills Coppa; North Van; Bc"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Sloping Hills Coppa; North Van; Bc</h1><p id="SlopingHillsCoppa;NorthVan;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Sloping Hills Coppa; North Van; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Duck and Guanciale Salami; North Van; Bc')"><div class="card" id="Duck and Guanciale Salami; North Van; Bc"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Duck and Guanciale Salami; North Van; Bc</h1><p id="DuckandGuancialeSalami;NorthVan;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Duck and Guanciale Salami; North Van; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Sicilian Chili Salami; North Van; Bc')"><div class="card" id="Sicilian Chili Salami; North Van; Bc"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Sicilian Chili Salami; North Van; Bc</h1><p id="SicilianChiliSalami;NorthVan;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Sicilian Chili Salami; North Van; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Rotisserie')"><div class="card" id="Rotisserie"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Rotisserie</h1><p id="Rotisseriebinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Rotisserie')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Steelhead Trout')"><div class="card" id="Steelhead Trout"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Steelhead Trout</h1><p id="SteelheadTroutbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Steelhead Trout')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Grilled Pork Steak')"><div class="card" id="Grilled Pork Steak"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Grilled Pork Steak</h1><p id="GrilledPorkSteakbinary" hidden>000000010</p><button type="submit" onclick="finishedItem('Grilled Pork Steak')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Slow Cooked Bison Short Rib')"><div class="card" id="Slow Cooked Bison Short Rib"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Slow Cooked Bison Short Rib</h1><p id="SlowCookedBisonShortRibbinary" hidden>000000001</p><button type="submit" onclick="finishedItem('Slow Cooked Bison Short Rib')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Ling Cod')"><div class="card" id="Ling Cod"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Ling Cod</h1><p id="LingCodbinary" hidden>010000010</p><button type="submit" onclick="finishedItem('Ling Cod')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Baked Ricotta Gnudi')"><div class="card" id="Baked Ricotta Gnudi"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Baked Ricotta Gnudi</h1><p id="BakedRicottaGnudibinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Baked Ricotta Gnudi')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Brussel Sprout ')"><div class="card" id="Brussel Sprout "><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Brussel Sprout </h1><p id="BrusselSproutbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Brussel Sprout ')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Saut')"><div class="card" id="Saut"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Saut</h1><p id="Sautbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Saut')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Roasted Pee Wee Potato')"><div class="card" id="Roasted Pee Wee Potato"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Roasted Pee Wee Potato</h1><p id="RoastedPeeWeePotatobinary" hidden>000000010</p><button type="submit" onclick="finishedItem('Roasted Pee Wee Potato')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Charred Broccolini')"><div class="card" id="Charred Broccolini"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Charred Broccolini</h1><p id="CharredBroccolinibinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Charred Broccolini')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Baked Crispy Chicken Skin')"><div class="card" id="Baked Crispy Chicken Skin"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Baked Crispy Chicken Skin</h1><p id="BakedCrispyChickenSkinbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Baked Crispy Chicken Skin')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Chewy Peanut Butter Cookies; Nutella Cream')"><div class="card" id="Chewy Peanut Butter Cookies; Nutella Cream"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Chewy Peanut Butter Cookies; Nutella Cream</h1><p id="ChewyPeanutButterCookies;NutellaCreambinary" hidden>111110000</p><button type="submit" onclick="finishedItem('Chewy Peanut Butter Cookies; Nutella Cream')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Chocolate Pudding')"><div class="card" id="Chocolate Pudding"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Chocolate Pudding</h1><p id="ChocolatePuddingbinary" hidden>001000010</p><button type="submit" onclick="finishedItem('Chocolate Pudding')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Spiced Pumpkin Brulee and Carrot Cake')"><div class="card" id="Spiced Pumpkin Brulee and Carrot Cake"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Spiced Pumpkin Brulee and Carrot Cake</h1><p id="SpicedPumpkinBruleeandCarrotCakebinary" hidden>000110000</p><button type="submit" onclick="finishedItem('Spiced Pumpkin Brulee and Carrot Cake')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Cheese Plate')"><div class="card" id="Cheese Plate"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Cheese Plate</h1><p id="CheesePlatebinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Cheese Plate')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Chewy Peanut Butter Cookies; Nutella Cream')"><div class="card" id="Chewy Peanut Butter Cookies; Nutella Cream"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Chewy Peanut Butter Cookies; Nutella Cream</h1><p id="ChewyPeanutButterCookies;NutellaCreambinary" hidden>111110000</p><button type="submit" onclick="finishedItem('Chewy Peanut Butter Cookies; Nutella Cream')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Chocolate Pudding')"><div class="card" id="Chocolate Pudding"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Chocolate Pudding</h1><p id="ChocolatePuddingbinary" hidden>001000010</p><button type="submit" onclick="finishedItem('Chocolate Pudding')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Spiced Pumpkin Brulee and Carrot Cake')"><div class="card" id="Spiced Pumpkin Brulee and Carrot Cake"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Spiced Pumpkin Brulee and Carrot Cake</h1><p id="SpicedPumpkinBruleeandCarrotCakebinary" hidden>000110000</p><button type="submit" onclick="finishedItem('Spiced Pumpkin Brulee and Carrot Cake')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Cheese Plate')"><div class="card" id="Cheese Plate"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Cheese Plate</h1><p id="CheesePlatebinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Cheese Plate')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Maple Butter Pork Belly')"><div class="card" id="Maple Butter Pork Belly"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Maple Butter Pork Belly</h1><p id="MapleButterPorkBellybinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Maple Butter Pork Belly')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Honey Roasted Spiced Almonds')"><div class="card" id="Honey Roasted Spiced Almonds"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Honey Roasted Spiced Almonds</h1><p id="HoneyRoastedSpicedAlmondsbinary" hidden>010000001</p><button type="submit" onclick="finishedItem('Honey Roasted Spiced Almonds')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Fried Chickpea Dip and Crisps')"><div class="card" id="Fried Chickpea Dip and Crisps"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Fried Chickpea Dip and Crisps</h1><p id="FriedChickpeaDipandCrispsbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Fried Chickpea Dip and Crisps')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Marinated Olives and Pecorino')"><div class="card" id="Marinated Olives and Pecorino"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Marinated Olives and Pecorino</h1><p id="MarinatedOlivesandPecorinobinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Marinated Olives and Pecorino')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Crispy Fish Balls; Lemon Saffron Aioli')"><div class="card" id="Crispy Fish Balls; Lemon Saffron Aioli"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Crispy Fish Balls; Lemon Saffron Aioli</h1><p id="CrispyFishBalls;LemonSaffronAiolibinary" hidden>000100000</p><button type="submit" onclick="finishedItem('Crispy Fish Balls; Lemon Saffron Aioli')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Boerenkaas; Courtenay; Bc')"><div class="card" id="Boerenkaas; Courtenay; Bc"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Boerenkaas; Courtenay; Bc</h1><p id="Boerenkaas;Courtenay;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Boerenkaas; Courtenay; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Smokehouse Cheddar; Armstrong; Bc')"><div class="card" id="Smokehouse Cheddar; Armstrong; Bc"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Smokehouse Cheddar; Armstrong; Bc</h1><p id="SmokehouseCheddar;Armstrong;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Smokehouse Cheddar; Armstrong; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Brie; Parksville; Bc')"><div class="card" id="Brie; Parksville; Bc"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Brie; Parksville; Bc</h1><p id="Brie;Parksville;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Brie; Parksville; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('White Grace Organic; Salt Spring; Bc')"><div class="card" id="White Grace Organic; Salt Spring; Bc"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">White Grace Organic; Salt Spring; Bc</h1><p id="WhiteGraceOrganic;SaltSpring;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('White Grace Organic; Salt Spring; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Smoked Bauernschincken; North Van; Bc')"><div class="card" id="Smoked Bauernschincken; North Van; Bc"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Smoked Bauernschincken; North Van; Bc</h1><p id="SmokedBauernschincken;NorthVan;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Smoked Bauernschincken; North Van; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Sloping Hills Coppa; North Van; Bc')"><div class="card" id="Sloping Hills Coppa; North Van; Bc"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Sloping Hills Coppa; North Van; Bc</h1><p id="SlopingHillsCoppa;NorthVan;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Sloping Hills Coppa; North Van; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Duck and Guanciale Salami; North Van; Bc')"><div class="card" id="Duck and Guanciale Salami; North Van; Bc"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Duck and Guanciale Salami; North Van; Bc</h1><p id="DuckandGuancialeSalami;NorthVan;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Duck and Guanciale Salami; North Van; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Sicilian Chili Salami; North Van; Bc')"><div class="card" id="Sicilian Chili Salami; North Van; Bc"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Sicilian Chili Salami; North Van; Bc</h1><p id="SicilianChiliSalami;NorthVan;Bcbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Sicilian Chili Salami; North Van; Bc')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Chewy Peanut Butter Cookies; Nutella Cream')"><div class="card" id="Chewy Peanut Butter Cookies; Nutella Cream"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Chewy Peanut Butter Cookies; Nutella Cream</h1><p id="ChewyPeanutButterCookies;NutellaCreambinary" hidden>111110000</p><button type="submit" onclick="finishedItem('Chewy Peanut Butter Cookies; Nutella Cream')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Chocolate Pudding')"><div class="card" id="Chocolate Pudding"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Chocolate Pudding</h1><p id="ChocolatePuddingbinary" hidden>001000010</p><button type="submit" onclick="finishedItem('Chocolate Pudding')" class="btn btn-default">Done</button></div></div></a>
+
+
+    	</div>
+    		<div class="col-sm-9" id="right">
+
+    				<div class="col-sm-12" style="background-color: #110c3c">
+    					<img class="img-responsive center-block" src="../../images/honeybanner.png" style="width: 30%; height: 30%"/>
+    				</div>
+
+            <h2 id="itemNotifier">Please select an item!</h2>
+            <div id="top9items">
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Peanuts</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="peanuts" type="checkbox"/>
+      					<label for="peanuts"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Treenuts</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+						<input checked="checked" class="filled-in" id="treenuts" type="checkbox"/>
+      					<label for="treenuts"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Dairy</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="dairy" type="checkbox"/>
+      					<label for="dairy"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Eggs</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="eggs" type="checkbox"/>
+      					<label for="eggs"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Gluten</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="gluten" type="checkbox"/>
+      					<label for="gluten"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Soy</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="soy" type="checkbox"/>
+      					<label for="soy"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Sesame</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="sesame" type="checkbox"/>
+      					<label for="sesame"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Shellfish</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="shellfish" type="checkbox"/>
+      					<label for="shellfish"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Corn</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="corn" type="checkbox"/>
+      					<label for="corn"></label>
+  					</div>
+    				</div>
+          </div> <!-- Close the item div -->
+    		</div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/dashBoard.js"> </script>
+
+    <script type="text/javascript">
+    ($("#top9items").hide());      
+    </script>
+
+
+
+  
+
+</body></html>

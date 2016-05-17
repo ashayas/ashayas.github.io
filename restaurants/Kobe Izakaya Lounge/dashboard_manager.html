@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dashboard | Honeycomb Personalized Menus</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Style sheet -->
+    <link href="../../css/style.css" rel="stylesheet"/>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet"/>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <div class="container">
+
+      <p hidden="" id="restaurantName">Kobe Izakaya Lounge</p>
+
+
+    		<div class="col-sm-3" id="left">
+
+        <a href="#" onclick="loadItem('Ebi Mayo')"><div class="card" id="Ebi Mayo"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Ebi Mayo</h1><p id="EbiMayobinary" hidden>000110010</p><button type="submit" onclick="finishedItem('Ebi Mayo')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Tuna Avocad Salsa')"><div class="card" id="Tuna Avocad Salsa"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Tuna Avocad Salsa</h1><p id="TunaAvocadSalsabinary" hidden>001001000</p><button type="submit" onclick="finishedItem('Tuna Avocad Salsa')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Short Ribs')"><div class="card" id="Short Ribs"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Short Ribs</h1><p id="ShortRibsbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Short Ribs')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Spicy Dynamite Roll')"><div class="card" id="Spicy Dynamite Roll"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Spicy Dynamite Roll</h1><p id="SpicyDynamiteRollbinary" hidden>000110010</p><button type="submit" onclick="finishedItem('Spicy Dynamite Roll')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Chicken Karaage')"><div class="card" id="Chicken Karaage"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Chicken Karaage</h1><p id="ChickenKaraagebinary" hidden>000001000</p><button type="submit" onclick="finishedItem('Chicken Karaage')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Kobe Hot Wings')"><div class="card" id="Kobe Hot Wings"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Kobe Hot Wings</h1><p id="KobeHotWingsbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Kobe Hot Wings')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Spicy Tuna Roll')"><div class="card" id="Spicy Tuna Roll"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Spicy Tuna Roll</h1><p id="SpicyTunaRollbinary" hidden>001100000</p><button type="submit" onclick="finishedItem('Spicy Tuna Roll')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Chili Garlic Calamari')"><div class="card" id="Chili Garlic Calamari"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Chili Garlic Calamari</h1><p id="ChiliGarlicCalamaribinary" hidden>000000010</p><button type="submit" onclick="finishedItem('Chili Garlic Calamari')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Sashimi')"><div class="card" id="Sashimi"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Sashimi</h1><p id="Sashimibinary" hidden>001100000</p><button type="submit" onclick="finishedItem('Sashimi')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Tofu Salad')"><div class="card" id="Tofu Salad"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Tofu Salad</h1><p id="TofuSaladbinary" hidden>000001000</p><button type="submit" onclick="finishedItem('Tofu Salad')" class="btn btn-default">Done</button></div></div></a>
+
+
+    	</div>
+    		<div class="col-sm-9" id="right">
+
+    				<div class="col-sm-12" style="background-color: #110c3c">
+    					<img class="img-responsive center-block" src="../../images/honeybanner.png" style="width: 30%; height: 30%"/>
+    				</div>
+
+            <h2 id="itemNotifier">Please select an item!</h2>
+            <div id="top9items">
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Peanuts</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="peanuts" type="checkbox"/>
+      					<label for="peanuts"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Treenuts</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+						<input checked="checked" class="filled-in" id="treenuts" type="checkbox"/>
+      					<label for="treenuts"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Dairy</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="dairy" type="checkbox"/>
+      					<label for="dairy"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Eggs</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="eggs" type="checkbox"/>
+      					<label for="eggs"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Gluten</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="gluten" type="checkbox"/>
+      					<label for="gluten"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Soy</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="soy" type="checkbox"/>
+      					<label for="soy"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Sesame</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="sesame" type="checkbox"/>
+      					<label for="sesame"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Shellfish</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="shellfish" type="checkbox"/>
+      					<label for="shellfish"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Corn</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="corn" type="checkbox"/>
+      					<label for="corn"></label>
+  					</div>
+    				</div>
+          </div> <!-- Close the item div -->
+    		</div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/dashBoard.js"> </script>
+
+    <script type="text/javascript">
+    ($("#top9items").hide());      
+    </script>
+
+
+
+  
+
+</body></html>

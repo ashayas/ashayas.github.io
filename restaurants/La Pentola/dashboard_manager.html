@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dashboard | Honeycomb Personalized Menus</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Style sheet -->
+    <link href="../../css/style.css" rel="stylesheet"/>
+
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet"/>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <div class="container">
+
+      <p hidden="" id="restaurantName">La Pentola</p>
+
+
+    		<div class="col-sm-3" id="left">
+
+        <a href="#" onclick="loadItem('Butternut Squash Salad')"><div class="card" id="Butternut Squash Salad"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Butternut Squash Salad</h1><p id="ButternutSquashSaladbinary" hidden>011000000</p><button type="submit" onclick="finishedItem('Butternut Squash Salad')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Grilled Romaine Salad')"><div class="card" id="Grilled Romaine Salad"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Grilled Romaine Salad</h1><p id="GrilledRomaineSaladbinary" hidden>001110010</p><button type="submit" onclick="finishedItem('Grilled Romaine Salad')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('B.C Braised Octopus')"><div class="card" id="B.C Braised Octopus"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">B.C Braised Octopus</h1><p id="B.CBraisedOctopusbinary" hidden>000010010</p><button type="submit" onclick="finishedItem('B.C Braised Octopus')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Carne Salada')"><div class="card" id="Carne Salada"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Carne Salada</h1><p id="CarneSaladabinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Carne Salada')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Parmesan Souffl')"><div class="card" id="Parmesan Souffl"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Parmesan Souffl</h1><p id="ParmesanSoufflbinary" hidden>011000000</p><button type="submit" onclick="finishedItem('Parmesan Souffl')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Antipasta Board')"><div class="card" id="Antipasta Board"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Antipasta Board</h1><p id="AntipastaBoardbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Antipasta Board')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Maltagliati')"><div class="card" id="Maltagliati"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Maltagliati</h1><p id="Maltagliatibinary" hidden>001010000</p><button type="submit" onclick="finishedItem('Maltagliati')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Tagliatelle')"><div class="card" id="Tagliatelle"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Tagliatelle</h1><p id="Tagliatellebinary" hidden>001110000</p><button type="submit" onclick="finishedItem('Tagliatelle')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Pansotti')"><div class="card" id="Pansotti"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Pansotti</h1><p id="Pansottibinary" hidden>011010000</p><button type="submit" onclick="finishedItem('Pansotti')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Agnolotti Del Plin')"><div class="card" id="Agnolotti Del Plin"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Agnolotti Del Plin</h1><p id="AgnolottiDelPlinbinary" hidden>001010000</p><button type="submit" onclick="finishedItem('Agnolotti Del Plin')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Taglierini')"><div class="card" id="Taglierini"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Taglierini</h1><p id="Taglierinibinary" hidden>001010010</p><button type="submit" onclick="finishedItem('Taglierini')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Daily Risotto')"><div class="card" id="Daily Risotto"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Daily Risotto</h1><p id="DailyRisottobinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Daily Risotto')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Veal Osso Buco')"><div class="card" id="Veal Osso Buco"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Veal Osso Buco</h1><p id="VealOssoBucobinary" hidden>000000001</p><button type="submit" onclick="finishedItem('Veal Osso Buco')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Duck breast')"><div class="card" id="Duck breast"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Duck breast</h1><p id="Duckbreastbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Duck breast')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Hanger Steak')"><div class="card" id="Hanger Steak"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Hanger Steak</h1><p id="HangerSteakbinary" hidden>001010000</p><button type="submit" onclick="finishedItem('Hanger Steak')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Whole Branzino')"><div class="card" id="Whole Branzino"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Whole Branzino</h1><p id="WholeBranzinobinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Whole Branzino')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Whole Fraser Valley Game Hen')"><div class="card" id="Whole Fraser Valley Game Hen"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Whole Fraser Valley Game Hen</h1><p id="WholeFraserValleyGameHenbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Whole Fraser Valley Game Hen')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Oven roasted eggplant parmesan')"><div class="card" id="Oven roasted eggplant parmesan"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Oven roasted eggplant parmesan</h1><p id="Ovenroastedeggplantparmesanbinary" hidden>001000000</p><button type="submit" onclick="finishedItem('Oven roasted eggplant parmesan')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Spicy meatball trio')"><div class="card" id="Spicy meatball trio"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Spicy meatball trio</h1><p id="Spicymeatballtriobinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Spicy meatball trio')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Roasted cauliflower; caramelized onions and bagna cauda')"><div class="card" id="Roasted cauliflower; caramelized onions and bagna cauda"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Roasted cauliflower; caramelized onions and bagna cauda</h1><p id="Roastedcauliflower;caramelizedonionsandbagnacaudabinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Roasted cauliflower; caramelized onions and bagna cauda')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Kale; pancetta; brown butter almonds and pecorino')"><div class="card" id="Kale; pancetta; brown butter almonds and pecorino"><div class="card-block" style="background-color: #caeba1;"><h1 class="card-title">Kale; pancetta; brown butter almonds and pecorino</h1><p id="Kale;pancetta;brownbutteralmondsandpecorinobinary" hidden>011000000</p><button type="submit" onclick="finishedItem('Kale; pancetta; brown butter almonds and pecorino')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('Italian green salad; shaved radish; cucumber; and fennel')"><div class="card" id="Italian green salad; shaved radish; cucumber; and fennel"><div class="card-block" style="background-color: #f5f5f5;"><h1 class="card-title">Italian green salad; shaved radish; cucumber; and fennel</h1><p id="Italiangreensalad;shavedradish;cucumber;andfennelbinary" hidden>000000000</p><button type="submit" onclick="finishedItem('Italian green salad; shaved radish; cucumber; and fennel')" class="btn btn-default">Done</button></div></div></a>
+
+
+    	</div>
+    		<div class="col-sm-9" id="right">
+
+    				<div class="col-sm-12" style="background-color: #110c3c">
+    					<img class="img-responsive center-block" src="../../images/honeybanner.png" style="width: 30%; height: 30%"/>
+    				</div>
+
+            <h2 id="itemNotifier">Please select an item!</h2>
+            <div id="top9items">
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Peanuts</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="peanuts" type="checkbox"/>
+      					<label for="peanuts"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Treenuts</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+						<input checked="checked" class="filled-in" id="treenuts" type="checkbox"/>
+      					<label for="treenuts"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Dairy</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="dairy" type="checkbox"/>
+      					<label for="dairy"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Eggs</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="eggs" type="checkbox"/>
+      					<label for="eggs"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Gluten</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="gluten" type="checkbox"/>
+      					<label for="gluten"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Soy</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="soy" type="checkbox"/>
+      					<label for="soy"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Sesame</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="sesame" type="checkbox"/>
+      					<label for="sesame"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Shellfish</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="shellfish" type="checkbox"/>
+      					<label for="shellfish"></label>
+  					</div>
+    				</div>
+
+    				<div class="col-sm-4">
+    				<div class="card-block" style="background-color: #d9534f;">
+    				<h3 class="card-title">Corn</h3>
+    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
+    				     <input checked="checked" class="filled-in" id="corn" type="checkbox"/>
+      					<label for="corn"></label>
+  					</div>
+    				</div>
+          </div> <!-- Close the item div -->
+    		</div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/dashBoard.js"> </script>
+
+    <script type="text/javascript">
+    ($("#top9items").hide());      
+    </script>
+
+
+
+  
+
+</body></html>
