@@ -6,7 +6,7 @@ function finishedItem(itemName) {
 
 function loadItem(itemName){
 	console.log(itemName);
-	itemName = itemName.replace(' ', '');
+	itemName = itemName.replace('/ /'g, '');
 	console.log(itemName);
 	var itemCode = ($("#" + itemName+'binary').html());
     console.log(itemCode);
