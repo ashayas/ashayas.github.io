@@ -42,9 +42,9 @@ function pushItemInfo(zerestname, zeItem) {
 
 	console.log("NEWBINARY" + newBinary);
 
-	ref.push({ top9code: newBinary});
-
-
+	ref.child(zeItem).set({
+	  binary: newBinary
+	});	
 
 }
 
