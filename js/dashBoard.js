@@ -25,7 +25,7 @@ function loadItem(itemName){
 }
 function pushItemInfo(zerestname, zeItem) {
 	console.log(zerestname + zeItem);
-	var ref = new Firebase("https://honeycombapp.firebaseio.com/restaurants/" + zerestname);
+	var ref = new Firebase("https://honeycombapp.firebaseio.com/restaurants/" + zerestname + '/' + zeItem);
 
 	//Get the binary code from the item
 	var newBinary = "";
@@ -41,7 +41,8 @@ function pushItemInfo(zerestname, zeItem) {
 	}
 
 	console.log("NEWBINARY" + newBinary);
-	ref.push({ zeItem: newBinary});
+
+	ref.push({ top9code: newBinary});
 
 
 
