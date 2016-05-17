@@ -7,6 +7,7 @@ function finishedItem(itemName) {
 function loadItem(itemName){
 	console.log(itemName);
 	itemName = itemName.replace(' ', '');
+	console.log(itemName);
 	var itemCode = ($("#" + itemName+'binary').html());
     console.log(itemCode);
 	var itemArray = ["#peanuts", "#treenuts", "#dairy", "#eggs", "#gluten", "#soy", "#sesame", "#shellfish", "#corn"]
