@@ -1,15 +1,12 @@
 function finishedItem(itemName) {
     $("#" + itemName).hide();
-    ($("#top9items").show());
+    ($("#top9items").hide());
     pushItemInfo($('#restaurantName').html(), itemName);
 }
 
 function loadItem(itemName){
-	console.log(itemName);
 	var newitemName = itemName.split(' ').join('');
-	console.log(itemName);
 	var itemCode = ($("#" + itemName+'binary').html());
-    console.log(itemCode);
 	var itemArray = ["#peanuts", "#treenuts", "#dairy", "#eggs", "#gluten", "#soy", "#sesame", "#shellfish", "#corn"]
 
     for (var i = 0; i < itemArray.length; i++) {
@@ -21,10 +18,10 @@ function loadItem(itemName){
     	}
     }
     ($("#top9items").show());
-    ($("#itemNotifier")).text(itemName);
+    itemRealName = $("#" + itemName + "NAME").html();
+    ($("#itemNotifier")).text(itemRealName);
 }
 function pushItemInfo(zerestname, zeItem) {
-	console.log(zerestname + zeItem);
 	var ref = new Firebase("https://honeycombapp.firebaseio.com/restaurants/" + zerestname);
 
 	//Get the binary code from the item
@@ -39,8 +36,6 @@ function pushItemInfo(zerestname, zeItem) {
 			newBinary = newBinary + '0';
 		}
 	}
-
-	console.log("NEWBINARY" + newBinary);
 
 	ref.child(zeItem).set({
 	  binary: newBinary
