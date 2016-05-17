@@ -6,7 +6,7 @@ function finishedItem(itemName) {
 
 function loadItem(itemName){
 	console.log(itemName);
-	itemName = itemName.split(' ').join('');
+	var newitemName = itemName.split(' ').join('');
 	console.log(itemName);
 	var itemCode = ($("#" + itemName+'binary').html());
     console.log(itemCode);
