@@ -1,152 +1,146 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Dashboard | Honeycomb Personalized Menus</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!-- FIREBASE -->
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-
-    <!-- Bootstrap -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
-
-    <!-- Style sheet -->
-    <link href="../../css/style.css" rel="stylesheet"/>
-
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet"/>
-
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-
-  <div class="container">
-
-      <p hidden="" id="restaurantName">Bistro Verde - Nordstrom Pacific Centre</p>
-
-
-    		<div class="col-sm-3" id="left">
-
-        <a href="#" onclick="loadItem('item0')"><div class="card" id="item0"><div class="card-block" style="background-color: #caeba1;"><h1 id="item0NAME" class="card-title">Roma Tomato Basil Soup</h1><p id="item0binary" hidden>001000000</p><button type="submit" onclick="finishedItem('item0')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item1')"><div class="card" id="item1"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item1NAME" class="card-title">Fried Calamari</h1><p id="item1binary" hidden>000000000</p><button type="submit" onclick="finishedItem('item1')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item2')"><div class="card" id="item2"><div class="card-block" style="background-color: #caeba1;"><h1 id="item2NAME" class="card-title">Roasted Mushroom Bruschetta</h1><p id="item2binary" hidden>001000000</p><button type="submit" onclick="finishedItem('item2')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item3')"><div class="card" id="item3"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item3NAME" class="card-title">Ahi Tuna Poke</h1><p id="item3binary" hidden>000001010</p><button type="submit" onclick="finishedItem('item3')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item4')"><div class="card" id="item4"><div class="card-block" style="background-color: #caeba1;"><h1 id="item4NAME" class="card-title">Cilantro Lime Chicken Tacos</h1><p id="item4binary" hidden>001000000</p><button type="submit" onclick="finishedItem('item4')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item5')"><div class="card" id="item5"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item5NAME" class="card-title">Smoked Wild Salmon with Johnny Cakes</h1><p id="item5binary" hidden>001110000</p><button type="submit" onclick="finishedItem('item5')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item6')"><div class="card" id="item6"><div class="card-block" style="background-color: #caeba1;"><h1 id="item6NAME" class="card-title">Sopressata Pizza</h1><p id="item6binary" hidden>001010000</p><button type="submit" onclick="finishedItem('item6')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item7')"><div class="card" id="item7"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item7NAME" class="card-title">Herbed Mushroom Flatbread</h1><p id="item7binary" hidden>001010000</p><button type="submit" onclick="finishedItem('item7')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item8')"><div class="card" id="item8"><div class="card-block" style="background-color: #caeba1;"><h1 id="item8NAME" class="card-title">Neapolitan Pizza</h1><p id="item8binary" hidden>001010000</p><button type="submit" onclick="finishedItem('item8')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item9')"><div class="card" id="item9"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item9NAME" class="card-title">Wild Salmon &amp&#59 Maple Glazed Bacon</h1><p id="item9binary" hidden>001110000</p><button type="submit" onclick="finishedItem('item9')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item10')"><div class="card" id="item10"><div class="card-block" style="background-color: #caeba1;"><h1 id="item10NAME" class="card-title">Short Rib Grilled Cheese</h1><p id="item10binary" hidden>001010000</p><button type="submit" onclick="finishedItem('item10')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item11')"><div class="card" id="item11"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item11NAME" class="card-title">Roast Turkey Club</h1><p id="item11binary" hidden>001110001</p><button type="submit" onclick="finishedItem('item11')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item12')"><div class="card" id="item12"><div class="card-block" style="background-color: #caeba1;"><h1 id="item12NAME" class="card-title">Bv Burger</h1><p id="item12binary" hidden>001110001</p><button type="submit" onclick="finishedItem('item12')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item13')"><div class="card" id="item13"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item13NAME" class="card-title">Glazed Ham &amp&#59 Manchego Cheese</h1><p id="item13binary" hidden>001110000</p><button type="submit" onclick="finishedItem('item13')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item14')"><div class="card" id="item14"><div class="card-block" style="background-color: #caeba1;"><h1 id="item14NAME" class="card-title">Roasted Chicken &amp&#59 Avocado Salad</h1><p id="item14binary" hidden>000010000</p><button type="submit" onclick="finishedItem('item14')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item15')"><div class="card" id="item15"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item15NAME" class="card-title">Cilantro Lime Shrimp Salad</h1><p id="item15binary" hidden>001010011</p><button type="submit" onclick="finishedItem('item15')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item16')"><div class="card" id="item16"><div class="card-block" style="background-color: #caeba1;"><h1 id="item16NAME" class="card-title">Roasted Local Beet Salad</h1><p id="item16binary" hidden>011010000</p><button type="submit" onclick="finishedItem('item16')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item17')"><div class="card" id="item17"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item17NAME" class="card-title">Ginger Crusted Ahi Tuna Salad</h1><p id="item17binary" hidden>000001010</p><button type="submit" onclick="finishedItem('item17')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item18')"><div class="card" id="item18"><div class="card-block" style="background-color: #caeba1;"><h1 id="item18NAME" class="card-title">Kale &amp&#59 Farro Salad</h1><p id="item18binary" hidden>011010000</p><button type="submit" onclick="finishedItem('item18')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item19')"><div class="card" id="item19"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item19NAME" class="card-title">Herb Roasted Salmon Nicoise</h1><p id="item19binary" hidden>000000000</p><button type="submit" onclick="finishedItem('item19')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item20')"><div class="card" id="item20"><div class="card-block" style="background-color: #caeba1;"><h1 id="item20NAME" class="card-title">Chinese Chicken Salad</h1><p id="item20binary" hidden>010010100</p><button type="submit" onclick="finishedItem('item20')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item21')"><div class="card" id="item21"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item21NAME" class="card-title">Shrimp Linguine with Spicy Tomato Sauce</h1><p id="item21binary" hidden>001010010</p><button type="submit" onclick="finishedItem('item21')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item22')"><div class="card" id="item22"><div class="card-block" style="background-color: #caeba1;"><h1 id="item22NAME" class="card-title">Pan Roasted Chicken</h1><p id="item22binary" hidden>000000001</p><button type="submit" onclick="finishedItem('item22')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item23')"><div class="card" id="item23"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item23NAME" class="card-title">Grilled Wild Salmon Filet</h1><p id="item23binary" hidden>011000000</p><button type="submit" onclick="finishedItem('item23')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item24')"><div class="card" id="item24"><div class="card-block" style="background-color: #caeba1;"><h1 id="item24NAME" class="card-title">Skirt Steak Salsa Verde</h1><p id="item24binary" hidden>000000000</p><button type="submit" onclick="finishedItem('item24')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item25')"><div class="card" id="item25"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item25NAME" class="card-title">Sauteed Chicken & Angel Hair Pasta</h1><p id="item25binary" hidden>001000010</p><button type="submit" onclick="finishedItem('item25')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item26')"><div class="card" id="item26"><div class="card-block" style="background-color: #caeba1;"><h1 id="item26NAME" class="card-title">Sake Marinated Black Cod</h1><p id="item26binary" hidden>000001010</p><button type="submit" onclick="finishedItem('item26')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item27')"><div class="card" id="item27"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item27NAME" class="card-title">Bone in Rib Eye Steak</h1><p id="item27binary" hidden>000000000</p><button type="submit" onclick="finishedItem('item27')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item28')"><div class="card" id="item28"><div class="card-block" style="background-color: #caeba1;"><h1 id="item28NAME" class="card-title">Chicken Fingers</h1><p id="item28binary" hidden>000000000</p><button type="submit" onclick="finishedItem('item28')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item29')"><div class="card" id="item29"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item29NAME" class="card-title">Grilled Cheese Sandwich</h1><p id="item29binary" hidden>001010000</p><button type="submit" onclick="finishedItem('item29')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item30')"><div class="card" id="item30"><div class="card-block" style="background-color: #caeba1;"><h1 id="item30NAME" class="card-title">Macaroni &amp&#59 Cheese</h1><p id="item30binary" hidden>001110000</p><button type="submit" onclick="finishedItem('item30')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item31')"><div class="card" id="item31"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item31NAME" class="card-title">Pasta with Tomato Sauce</h1><p id="item31binary" hidden>001110000</p><button type="submit" onclick="finishedItem('item31')" class="btn btn-default">Done</button></div></div></a>
-
-
-    	</div>
-    		<div class="col-sm-9" id="right">
-
-    				<div class="col-sm-12" style="background-color: #110c3c">
-    					<img class="img-responsive center-block" src="../../images/honeybanner.png" style="width: 30%; height: 30%"/>
-    				</div>
-
-            <h2 id="itemNotifier">Please select an item!</h2>
-            <div id="top9items">
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Peanuts</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="peanuts" type="checkbox"/>
-      					<label for="peanuts"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Treenuts</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-						<input checked="checked" class="filled-in" id="treenuts" type="checkbox"/>
-      					<label for="treenuts"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Dairy</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="dairy" type="checkbox"/>
-      					<label for="dairy"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Eggs</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="eggs" type="checkbox"/>
-      					<label for="eggs"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Gluten</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="gluten" type="checkbox"/>
-      					<label for="gluten"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Soy</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="soy" type="checkbox"/>
-      					<label for="soy"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Sesame</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="sesame" type="checkbox"/>
-      					<label for="sesame"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Shellfish</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="shellfish" type="checkbox"/>
-      					<label for="shellfish"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Corn</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="corn" type="checkbox"/>
-      					<label for="corn"></label>
-  					</div>
-    				</div>
-          </div> <!-- Close the item div -->
-    		</div>
+<!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Wed May 18 2016 07:39:06 GMT+0000 (UTC) --><html data-wf-page="5713d17dfbe891be774e7618" data-wf-site="5713d17dfbe891be774e7617"><head>
+  <meta charset="utf-8"/>
+  <title>Restaurant Dashboard</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Webflow" name="generator"/>
+  <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="css/restaurant-dashboard.webflow.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>      
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<!--   <script src="js/dashBoard.js"></script>
+ -->  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+      }
+    });
+  </script>
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon"/>
+</head>
+<body>
+  <div class="w-nav navbar-1" data-animation="default" data-collapse="tiny" data-duration="400">
+    <a class="w-nav-brand" href="#"><img src="images/honeycomblogo.png" width="200"/>
+    </a>
+    <nav class="w-nav-menu nav-menu" role="navigation"><a class="w-nav-link nav-link" href="index.html" target="_BLANK">View Menu on Honeycomb</a>
+    </nav>
+    <div class="w-nav-button menu-button">
+      <div class="w-icon-nav-menu icon"></div>
     </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="menu-div">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/dashBoard.js"> </script>
+    <p hidden="" id="restaurantName">Bistro Verde - Nordstrom Pacific Centre</p>
+    <p hidden="" id="totalItems">32</p>
 
-    <script type="text/javascript">
-    ($("#top9items").hide());      
-    </script>
+      <div class="w-tabs" data-duration-in="300" data-duration-out="100">
+        <div class="w-tab-menu tabs-menu-1">
+          <a class="w-tab-link w--current w-inline-block tab-link" data-w-tab="Tab 1" id="remaining">
+            <div>Remaining</div>
+          </a>
+          <a class="w-tab-link w-inline-block tab-link completed" data-w-tab="Tab 2" id="completed">
+            <div>Completed</div>
+          </a>
+        </div>
+        <div class="w-tab-content">
+          <div class="w-tab-pane w--tab-active" data-w-tab="Tab 1">
+
+          <div onclick="loadItem('item0N')" id = "item0N" class="menu-item-selector-div"> <p id = "item0binary" hidden>001000000</p><p id = "item0Description" hidden>N/A</p><div id = "item0Name" class = "menu-selector-title">Roma Tomato Basil Soup</div><a onclick="finishedItem('item0')" href="#" class="w-button done-button" id="item0butt">Done</a></div><div onclick="loadItem('item1N')" id = "item1N" class="menu-item-selector-div"> <p id = "item1binary" hidden>000000000</p><p id = "item1Description" hidden>Banana pepper; bean sprouts; sweet chile sauce</p><div id = "item1Name" class = "menu-selector-title">Fried Calamari</div><a onclick="finishedItem('item1')" href="#" class="w-button done-button" id="item1butt">Done</a></div><div onclick="loadItem('item2N')" id = "item2N" class="menu-item-selector-div"> <p id = "item2binary" hidden>001000000</p><p id = "item2Description" hidden>Baby arugula; manchego cheese; port balsamic reduction</p><div id = "item2Name" class = "menu-selector-title">Roasted Mushroom Bruschetta</div><a onclick="finishedItem('item2')" href="#" class="w-button done-button" id="item2butt">Done</a></div><div onclick="loadItem('item3N')" id = "item3N" class="menu-item-selector-div"> <p id = "item3binary" hidden>000001010</p><p id = "item3Description" hidden>Seaweed salad; seasoned wontons; soy sauce; wasabi</p><div id = "item3Name" class = "menu-selector-title">Ahi Tuna Poke</div><a onclick="finishedItem('item3')" href="#" class="w-button done-button" id="item3butt">Done</a></div><div onclick="loadItem('item4N')" id = "item4N" class="menu-item-selector-div"> <p id = "item4binary" hidden>001000000</p><p id = "item4Description" hidden>Romaine; yellow pepper; tomato; cilantro lime vinaigrette; queso fresco</p><div id = "item4Name" class = "menu-selector-title">Cilantro Lime Chicken Tacos</div><a onclick="finishedItem('item4')" href="#" class="w-button done-button" id="item4butt">Done</a></div><div onclick="loadItem('item5N')" id = "item5N" class="menu-item-selector-div"> <p id = "item5binary" hidden>001110000</p><p id = "item5Description" hidden>Horseradish dill crème fraiche, pickled onion, crispy capers</p><div id = "item5Name" class = "menu-selector-title">Smoked Wild Salmon with Johnny Cakes</div><a onclick="finishedItem('item5')" href="#" class="w-button done-button" id="item5butt">Done</a></div><div onclick="loadItem('item6N')" id = "item6N" class="menu-item-selector-div"> <p id = "item6binary" hidden>001010000</p><p id = "item6Description" hidden>Oven-roasted tomatoes; yellow peppers; provolone and parmigiano cheeses</p><div id = "item6Name" class = "menu-selector-title">Sopressata Pizza</div><a onclick="finishedItem('item6')" href="#" class="w-button done-button" id="item6butt">Done</a></div><div onclick="loadItem('item7N')" id = "item7N" class="menu-item-selector-div"> <p id = "item7binary" hidden>001010000</p><p id = "item7Description" hidden>Provolone cheese; baby arugula; extra virgin olive oil</p><div id = "item7Name" class = "menu-selector-title">Herbed Mushroom Flatbread</div><a onclick="finishedItem('item7')" href="#" class="w-button done-button" id="item7butt">Done</a></div><div onclick="loadItem('item8N')" id = "item8N" class="menu-item-selector-div"> <p id = "item8binary" hidden>001010000</p><p id = "item8Description" hidden>mozzarella; provolone; pear tomatoes; fresh basil</p><div id = "item8Name" class = "menu-selector-title">Neapolitan Pizza</div><a onclick="finishedItem('item8')" href="#" class="w-button done-button" id="item8butt">Done</a></div><div onclick="loadItem('item9N')" id = "item9N" class="menu-item-selector-div"> <p id = "item9binary" hidden>001110000</p><p id = "item9Description" hidden>Bacon jam; avocado; tomato; garlic aioli, toasted rustic bread</p><div id = "item9Name" class = "menu-selector-title">Wild Salmon &amp&#59 Maple Glazed Bacon</div><a onclick="finishedItem('item9')" href="#" class="w-button done-button" id="item9butt">Done</a></div><div onclick="loadItem('item10N')" id = "item10N" class="menu-item-selector-div"> <p id = "item10binary" hidden>001010000</p><p id = "item10Description" hidden>blackberry jam; white cheddar cheese; toasted rustic bread</p><div id = "item10Name" class = "menu-selector-title">Short Rib Grilled Cheese</div><a onclick="finishedItem('item10')" href="#" class="w-button done-button" id="item10butt">Done</a></div><div onclick="loadItem('item11N')" id = "item11N" class="menu-item-selector-div"> <p id = "item11binary" hidden>001110001</p><p id = "item11Description" hidden>Crisp bacon; avocado; tomato; peppercorn aioli, toasted rustic bread</p><div id = "item11Name" class = "menu-selector-title">Roast Turkey Club</div><a onclick="finishedItem('item11')" href="#" class="w-button done-button" id="item11butt">Done</a></div><div onclick="loadItem('item12N')" id = "item12N" class="menu-item-selector-div"> <p id = "item12binary" hidden>001110001</p><p id = "item12Description" hidden>Balsamic roasted onion; tomato; sharp white cheddar; peppercorn aioli, brioche roll</p><div id = "item12Name" class = "menu-selector-title">Bv Burger</div><a onclick="finishedItem('item12')" href="#" class="w-button done-button" id="item12butt">Done</a></div><div onclick="loadItem('item13N')" id = "item13N" class="menu-item-selector-div"> <p id = "item13binary" hidden>001110000</p><p id = "item13Description" hidden>Johnston's ham, mango chutney, baby arugula, peppercorn aioli, toasted rustic bread</p><div id = "item13Name" class = "menu-selector-title">Glazed Ham &amp&#59 Manchego Cheese</div><a onclick="finishedItem('item13')" href="#" class="w-button done-button" id="item13butt">Done</a></div><div onclick="loadItem('item14N')" id = "item14N" class="menu-item-selector-div"> <p id = "item14binary" hidden>000010000</p><p id = "item14Description" hidden>Rustic croutons; petite tomatoes; pickled french beans; radish; roasted tomato dressing</p><div id = "item14Name" class = "menu-selector-title">Roasted Chicken &amp&#59 Avocado Salad</div><a onclick="finishedItem('item14')" href="#" class="w-button done-button" id="item14butt">Done</a></div><div onclick="loadItem('item15N')" id = "item15N" class="menu-item-selector-div"> <p id = "item15binary" hidden>001010011</p><p id = "item15Description" hidden>Wild shrimp; petite tomatoes; grilled corn; pepitas; jack cheese; tortilla crisps; cilantro lime vinaigrette</p><div id = "item15Name" class = "menu-selector-title">Cilantro Lime Shrimp Salad</div><a onclick="finishedItem('item15')" href="#" class="w-button done-button" id="item15butt">Done</a></div><div onclick="loadItem('item16N')" id = "item16N" class="menu-item-selector-div"> <p id = "item16binary" hidden>011010000</p><p id = "item16Description" hidden>Baby lettuce; chevre; toasted hazelnuts; walnut vinaigrette</p><div id = "item16Name" class = "menu-selector-title">Roasted Local Beet Salad</div><a onclick="finishedItem('item16')" href="#" class="w-button done-button" id="item16butt">Done</a></div><div onclick="loadItem('item17N')" id = "item17N" class="menu-item-selector-div"> <p id = "item17binary" hidden>000001010</p><p id = "item17Description" hidden>Napa cabbage; blistered green beans; red pepper; seasoned wontons; candied ginger; soy glaze; spicy thai basil vinaigrette</p><div id = "item17Name" class = "menu-selector-title">Ginger Crusted Ahi Tuna Salad</div><a onclick="finishedItem('item17')" href="#" class="w-button done-button" id="item17butt">Done</a></div><div onclick="loadItem('item18N')" id = "item18N" class="menu-item-selector-div"> <p id = "item18binary" hidden>011010000</p><p id = "item18Description" hidden>Butternut squash; toasted almonds; blue cheese; red onion; pomegranate vinaigrette</p><div id = "item18Name" class = "menu-selector-title">Kale &amp&#59 Farro Salad</div><a onclick="finishedItem('item18')" href="#" class="w-button done-button" id="item18butt">Done</a></div><div onclick="loadItem('item19N')" id = "item19N" class="menu-item-selector-div"> <p id = "item19binary" hidden>000000000</p><p id = "item19Description" hidden>Wild salmon; haricot verts; petite tomatoes; egg; potatoes; roasted tomato dressing</p><div id = "item19Name" class = "menu-selector-title">Herb Roasted Salmon Nicoise</div><a onclick="finishedItem('item19')" href="#" class="w-button done-button" id="item19butt">Done</a></div><div onclick="loadItem('item20N')" id = "item20N" class="menu-item-selector-div"> <p id = "item20binary" hidden>010010100</p><p id = "item20Description" hidden>Julienne vegetables; crisp wontons; toasted almonds; mandarin oranges; sesame seeds; ginger sesame dressing</p><div id = "item20Name" class = "menu-selector-title">Chinese Chicken Salad</div><a onclick="finishedItem('item20')" href="#" class="w-button done-button" id="item20butt">Done</a></div><div onclick="loadItem('item21N')" id = "item21N" class="menu-item-selector-div"> <p id = "item21binary" hidden>001010010</p><p id = "item21Description" hidden>Wild shrimp; baby spinach; petite tomatoes; parmesan cheese; fresh herbs</p><div id = "item21Name" class = "menu-selector-title">Shrimp Linguine with Spicy Tomato Sauce</div><a onclick="finishedItem('item21')" href="#" class="w-button done-button" id="item21butt">Done</a></div><div onclick="loadItem('item22N')" id = "item22N" class="menu-item-selector-div"> <p id = "item22binary" hidden>000000001</p><p id = "item22Description" hidden>Crispy smashed potatoes; baby carrots; brussels sprouts; peppercorn demi-glace</p><div id = "item22Name" class = "menu-selector-title">Pan Roasted Chicken</div><a onclick="finishedItem('item22')" href="#" class="w-button done-button" id="item22butt">Done</a></div><div onclick="loadItem('item23N')" id = "item23N" class="menu-item-selector-div"> <p id = "item23binary" hidden>011000000</p><p id = "item23Description" hidden>Roasted butternut squash and seasonal mushroom risotto; micro greens; beurre blanc</p><div id = "item23Name" class = "menu-selector-title">Grilled Wild Salmon Filet</div><a onclick="finishedItem('item23')" href="#" class="w-button done-button" id="item23butt">Done</a></div><div onclick="loadItem('item24N')" id = "item24N" class="menu-item-selector-div"> <p id = "item24binary" hidden>000000000</p><p id = "item24Description" hidden>Heirloom potatoes; patty pan squash; asparagus; shiitake mushrooms; balsamic grilled onion</p><div id = "item24Name" class = "menu-selector-title">Skirt Steak Salsa Verde</div><a onclick="finishedItem('item24')" href="#" class="w-button done-button" id="item24butt">Done</a></div><div onclick="loadItem('item25N')" id = "item25N" class="menu-item-selector-div"> <p id = "item25binary" hidden>001000010</p><p id = "item25Description" hidden>Baby spinach; oyster mushrooms; roasted garlic tomato sauce; rosemary beurre blanc</p><div id = "item25Name" class = "menu-selector-title">Sauteed Chicken & Angel Hair Pasta</div><a onclick="finishedItem('item25')" href="#" class="w-button done-button" id="item25butt">Done</a></div><div onclick="loadItem('item26N')" id = "item26N" class="menu-item-selector-div"> <p id = "item26binary" hidden>000001010</p><p id = "item26Description" hidden>Shrimp dumplings; organic spinach; shiitake mushroom; soy broth</p><div id = "item26Name" class = "menu-selector-title">Sake Marinated Black Cod</div><a onclick="finishedItem('item26')" href="#" class="w-button done-button" id="item26butt">Done</a></div><div onclick="loadItem('item27N')" id = "item27N" class="menu-item-selector-div"> <p id = "item27binary" hidden>000000000</p><p id = "item27Description" hidden>Crispy smashed potatoes; baby carrots; brussels sprouts</p><div id = "item27Name" class = "menu-selector-title">Bone in Rib Eye Steak</div><a onclick="finishedItem('item27')" href="#" class="w-button done-button" id="item27butt">Done</a></div><div onclick="loadItem('item28N')" id = "item28N" class="menu-item-selector-div"> <p id = "item28binary" hidden>000000000</p><p id = "item28Description" hidden>chicken breast tenders; french fries; ranch or bbq dipping sauce and fresh fruit</p><div id = "item28Name" class = "menu-selector-title">Chicken Fingers</div><a onclick="finishedItem('item28')" href="#" class="w-button done-button" id="item28butt">Done</a></div><div onclick="loadItem('item29N')" id = "item29N" class="menu-item-selector-div"> <p id = "item29binary" hidden>001010000</p><p id = "item29Description" hidden>grilled cheese sandwich on whole wheat bread; french fries and fresh fruit</p><div id = "item29Name" class = "menu-selector-title">Grilled Cheese Sandwich</div><a onclick="finishedItem('item29')" href="#" class="w-button done-button" id="item29butt">Done</a></div><div onclick="loadItem('item30N')" id = "item30N" class="menu-item-selector-div"> <p id = "item30binary" hidden>001110000</p><p id = "item30Description" hidden>classic macaroni and cheese and a serving of fresh fruit</p><div id = "item30Name" class = "menu-selector-title">Macaroni &amp&#59 Cheese</div><a onclick="finishedItem('item30')" href="#" class="w-button done-button" id="item30butt">Done</a></div><div onclick="loadItem('item31N')" id = "item31N" class="menu-item-selector-div"> <p id = "item31binary" hidden>001110000</p><p id = "item31Description" hidden>sweet tomato sauce; grated parmesan cheese; served with fresh fruit</p><div id = "item31Name" class = "menu-selector-title">Pasta with Tomato Sauce</div><a onclick="finishedItem('item31')" href="#" class="w-button done-button" id="item31butt">Done</a></div>
 
 
+          </div>
+          <div class="w-tab-pane" data-w-tab="Tab 2">
 
+          <div onclick="loadItem('item0F')" id = "item0F" class="menu-item-selector-div"> <p id = "item0binary" hidden>001000000</p><p id = "item0Description" hidden>N/A</p><div id = "item0Name" class = "menu-selector-title">Roma Tomato Basil Soup</div><a onclick="undoItem('item0')" href="#" class="w-button undo-button" id="item0butt">Undo</a></div><div onclick="loadItem('item1F')" id = "item1F" class="menu-item-selector-div"> <p id = "item1binary" hidden>000000000</p><p id = "item1Description" hidden>Banana pepper; bean sprouts; sweet chile sauce</p><div id = "item1Name" class = "menu-selector-title">Fried Calamari</div><a onclick="undoItem('item1')" href="#" class="w-button undo-button" id="item1butt">Undo</a></div><div onclick="loadItem('item2F')" id = "item2F" class="menu-item-selector-div"> <p id = "item2binary" hidden>001000000</p><p id = "item2Description" hidden>Baby arugula; manchego cheese; port balsamic reduction</p><div id = "item2Name" class = "menu-selector-title">Roasted Mushroom Bruschetta</div><a onclick="undoItem('item2')" href="#" class="w-button undo-button" id="item2butt">Undo</a></div><div onclick="loadItem('item3F')" id = "item3F" class="menu-item-selector-div"> <p id = "item3binary" hidden>000001010</p><p id = "item3Description" hidden>Seaweed salad; seasoned wontons; soy sauce; wasabi</p><div id = "item3Name" class = "menu-selector-title">Ahi Tuna Poke</div><a onclick="undoItem('item3')" href="#" class="w-button undo-button" id="item3butt">Undo</a></div><div onclick="loadItem('item4F')" id = "item4F" class="menu-item-selector-div"> <p id = "item4binary" hidden>001000000</p><p id = "item4Description" hidden>Romaine; yellow pepper; tomato; cilantro lime vinaigrette; queso fresco</p><div id = "item4Name" class = "menu-selector-title">Cilantro Lime Chicken Tacos</div><a onclick="undoItem('item4')" href="#" class="w-button undo-button" id="item4butt">Undo</a></div><div onclick="loadItem('item5F')" id = "item5F" class="menu-item-selector-div"> <p id = "item5binary" hidden>001110000</p><p id = "item5Description" hidden>Horseradish dill crème fraiche, pickled onion, crispy capers</p><div id = "item5Name" class = "menu-selector-title">Smoked Wild Salmon with Johnny Cakes</div><a onclick="undoItem('item5')" href="#" class="w-button undo-button" id="item5butt">Undo</a></div><div onclick="loadItem('item6F')" id = "item6F" class="menu-item-selector-div"> <p id = "item6binary" hidden>001010000</p><p id = "item6Description" hidden>Oven-roasted tomatoes; yellow peppers; provolone and parmigiano cheeses</p><div id = "item6Name" class = "menu-selector-title">Sopressata Pizza</div><a onclick="undoItem('item6')" href="#" class="w-button undo-button" id="item6butt">Undo</a></div><div onclick="loadItem('item7F')" id = "item7F" class="menu-item-selector-div"> <p id = "item7binary" hidden>001010000</p><p id = "item7Description" hidden>Provolone cheese; baby arugula; extra virgin olive oil</p><div id = "item7Name" class = "menu-selector-title">Herbed Mushroom Flatbread</div><a onclick="undoItem('item7')" href="#" class="w-button undo-button" id="item7butt">Undo</a></div><div onclick="loadItem('item8F')" id = "item8F" class="menu-item-selector-div"> <p id = "item8binary" hidden>001010000</p><p id = "item8Description" hidden>mozzarella; provolone; pear tomatoes; fresh basil</p><div id = "item8Name" class = "menu-selector-title">Neapolitan Pizza</div><a onclick="undoItem('item8')" href="#" class="w-button undo-button" id="item8butt">Undo</a></div><div onclick="loadItem('item9F')" id = "item9F" class="menu-item-selector-div"> <p id = "item9binary" hidden>001110000</p><p id = "item9Description" hidden>Bacon jam; avocado; tomato; garlic aioli, toasted rustic bread</p><div id = "item9Name" class = "menu-selector-title">Wild Salmon &amp&#59 Maple Glazed Bacon</div><a onclick="undoItem('item9')" href="#" class="w-button undo-button" id="item9butt">Undo</a></div><div onclick="loadItem('item10F')" id = "item10F" class="menu-item-selector-div"> <p id = "item10binary" hidden>001010000</p><p id = "item10Description" hidden>blackberry jam; white cheddar cheese; toasted rustic bread</p><div id = "item10Name" class = "menu-selector-title">Short Rib Grilled Cheese</div><a onclick="undoItem('item10')" href="#" class="w-button undo-button" id="item10butt">Undo</a></div><div onclick="loadItem('item11F')" id = "item11F" class="menu-item-selector-div"> <p id = "item11binary" hidden>001110001</p><p id = "item11Description" hidden>Crisp bacon; avocado; tomato; peppercorn aioli, toasted rustic bread</p><div id = "item11Name" class = "menu-selector-title">Roast Turkey Club</div><a onclick="undoItem('item11')" href="#" class="w-button undo-button" id="item11butt">Undo</a></div><div onclick="loadItem('item12F')" id = "item12F" class="menu-item-selector-div"> <p id = "item12binary" hidden>001110001</p><p id = "item12Description" hidden>Balsamic roasted onion; tomato; sharp white cheddar; peppercorn aioli, brioche roll</p><div id = "item12Name" class = "menu-selector-title">Bv Burger</div><a onclick="undoItem('item12')" href="#" class="w-button undo-button" id="item12butt">Undo</a></div><div onclick="loadItem('item13F')" id = "item13F" class="menu-item-selector-div"> <p id = "item13binary" hidden>001110000</p><p id = "item13Description" hidden>Johnston's ham, mango chutney, baby arugula, peppercorn aioli, toasted rustic bread</p><div id = "item13Name" class = "menu-selector-title">Glazed Ham &amp&#59 Manchego Cheese</div><a onclick="undoItem('item13')" href="#" class="w-button undo-button" id="item13butt">Undo</a></div><div onclick="loadItem('item14F')" id = "item14F" class="menu-item-selector-div"> <p id = "item14binary" hidden>000010000</p><p id = "item14Description" hidden>Rustic croutons; petite tomatoes; pickled french beans; radish; roasted tomato dressing</p><div id = "item14Name" class = "menu-selector-title">Roasted Chicken &amp&#59 Avocado Salad</div><a onclick="undoItem('item14')" href="#" class="w-button undo-button" id="item14butt">Undo</a></div><div onclick="loadItem('item15F')" id = "item15F" class="menu-item-selector-div"> <p id = "item15binary" hidden>001010011</p><p id = "item15Description" hidden>Wild shrimp; petite tomatoes; grilled corn; pepitas; jack cheese; tortilla crisps; cilantro lime vinaigrette</p><div id = "item15Name" class = "menu-selector-title">Cilantro Lime Shrimp Salad</div><a onclick="undoItem('item15')" href="#" class="w-button undo-button" id="item15butt">Undo</a></div><div onclick="loadItem('item16F')" id = "item16F" class="menu-item-selector-div"> <p id = "item16binary" hidden>011010000</p><p id = "item16Description" hidden>Baby lettuce; chevre; toasted hazelnuts; walnut vinaigrette</p><div id = "item16Name" class = "menu-selector-title">Roasted Local Beet Salad</div><a onclick="undoItem('item16')" href="#" class="w-button undo-button" id="item16butt">Undo</a></div><div onclick="loadItem('item17F')" id = "item17F" class="menu-item-selector-div"> <p id = "item17binary" hidden>000001010</p><p id = "item17Description" hidden>Napa cabbage; blistered green beans; red pepper; seasoned wontons; candied ginger; soy glaze; spicy thai basil vinaigrette</p><div id = "item17Name" class = "menu-selector-title">Ginger Crusted Ahi Tuna Salad</div><a onclick="undoItem('item17')" href="#" class="w-button undo-button" id="item17butt">Undo</a></div><div onclick="loadItem('item18F')" id = "item18F" class="menu-item-selector-div"> <p id = "item18binary" hidden>011010000</p><p id = "item18Description" hidden>Butternut squash; toasted almonds; blue cheese; red onion; pomegranate vinaigrette</p><div id = "item18Name" class = "menu-selector-title">Kale &amp&#59 Farro Salad</div><a onclick="undoItem('item18')" href="#" class="w-button undo-button" id="item18butt">Undo</a></div><div onclick="loadItem('item19F')" id = "item19F" class="menu-item-selector-div"> <p id = "item19binary" hidden>000000000</p><p id = "item19Description" hidden>Wild salmon; haricot verts; petite tomatoes; egg; potatoes; roasted tomato dressing</p><div id = "item19Name" class = "menu-selector-title">Herb Roasted Salmon Nicoise</div><a onclick="undoItem('item19')" href="#" class="w-button undo-button" id="item19butt">Undo</a></div><div onclick="loadItem('item20F')" id = "item20F" class="menu-item-selector-div"> <p id = "item20binary" hidden>010010100</p><p id = "item20Description" hidden>Julienne vegetables; crisp wontons; toasted almonds; mandarin oranges; sesame seeds; ginger sesame dressing</p><div id = "item20Name" class = "menu-selector-title">Chinese Chicken Salad</div><a onclick="undoItem('item20')" href="#" class="w-button undo-button" id="item20butt">Undo</a></div><div onclick="loadItem('item21F')" id = "item21F" class="menu-item-selector-div"> <p id = "item21binary" hidden>001010010</p><p id = "item21Description" hidden>Wild shrimp; baby spinach; petite tomatoes; parmesan cheese; fresh herbs</p><div id = "item21Name" class = "menu-selector-title">Shrimp Linguine with Spicy Tomato Sauce</div><a onclick="undoItem('item21')" href="#" class="w-button undo-button" id="item21butt">Undo</a></div><div onclick="loadItem('item22F')" id = "item22F" class="menu-item-selector-div"> <p id = "item22binary" hidden>000000001</p><p id = "item22Description" hidden>Crispy smashed potatoes; baby carrots; brussels sprouts; peppercorn demi-glace</p><div id = "item22Name" class = "menu-selector-title">Pan Roasted Chicken</div><a onclick="undoItem('item22')" href="#" class="w-button undo-button" id="item22butt">Undo</a></div><div onclick="loadItem('item23F')" id = "item23F" class="menu-item-selector-div"> <p id = "item23binary" hidden>011000000</p><p id = "item23Description" hidden>Roasted butternut squash and seasonal mushroom risotto; micro greens; beurre blanc</p><div id = "item23Name" class = "menu-selector-title">Grilled Wild Salmon Filet</div><a onclick="undoItem('item23')" href="#" class="w-button undo-button" id="item23butt">Undo</a></div><div onclick="loadItem('item24F')" id = "item24F" class="menu-item-selector-div"> <p id = "item24binary" hidden>000000000</p><p id = "item24Description" hidden>Heirloom potatoes; patty pan squash; asparagus; shiitake mushrooms; balsamic grilled onion</p><div id = "item24Name" class = "menu-selector-title">Skirt Steak Salsa Verde</div><a onclick="undoItem('item24')" href="#" class="w-button undo-button" id="item24butt">Undo</a></div><div onclick="loadItem('item25F')" id = "item25F" class="menu-item-selector-div"> <p id = "item25binary" hidden>001000010</p><p id = "item25Description" hidden>Baby spinach; oyster mushrooms; roasted garlic tomato sauce; rosemary beurre blanc</p><div id = "item25Name" class = "menu-selector-title">Sauteed Chicken & Angel Hair Pasta</div><a onclick="undoItem('item25')" href="#" class="w-button undo-button" id="item25butt">Undo</a></div><div onclick="loadItem('item26F')" id = "item26F" class="menu-item-selector-div"> <p id = "item26binary" hidden>000001010</p><p id = "item26Description" hidden>Shrimp dumplings; organic spinach; shiitake mushroom; soy broth</p><div id = "item26Name" class = "menu-selector-title">Sake Marinated Black Cod</div><a onclick="undoItem('item26')" href="#" class="w-button undo-button" id="item26butt">Undo</a></div><div onclick="loadItem('item27F')" id = "item27F" class="menu-item-selector-div"> <p id = "item27binary" hidden>000000000</p><p id = "item27Description" hidden>Crispy smashed potatoes; baby carrots; brussels sprouts</p><div id = "item27Name" class = "menu-selector-title">Bone in Rib Eye Steak</div><a onclick="undoItem('item27')" href="#" class="w-button undo-button" id="item27butt">Undo</a></div><div onclick="loadItem('item28F')" id = "item28F" class="menu-item-selector-div"> <p id = "item28binary" hidden>000000000</p><p id = "item28Description" hidden>chicken breast tenders; french fries; ranch or bbq dipping sauce and fresh fruit</p><div id = "item28Name" class = "menu-selector-title">Chicken Fingers</div><a onclick="undoItem('item28')" href="#" class="w-button undo-button" id="item28butt">Undo</a></div><div onclick="loadItem('item29F')" id = "item29F" class="menu-item-selector-div"> <p id = "item29binary" hidden>001010000</p><p id = "item29Description" hidden>grilled cheese sandwich on whole wheat bread; french fries and fresh fruit</p><div id = "item29Name" class = "menu-selector-title">Grilled Cheese Sandwich</div><a onclick="undoItem('item29')" href="#" class="w-button undo-button" id="item29butt">Undo</a></div><div onclick="loadItem('item30F')" id = "item30F" class="menu-item-selector-div"> <p id = "item30binary" hidden>001110000</p><p id = "item30Description" hidden>classic macaroni and cheese and a serving of fresh fruit</p><div id = "item30Name" class = "menu-selector-title">Macaroni &amp&#59 Cheese</div><a onclick="undoItem('item30')" href="#" class="w-button undo-button" id="item30butt">Undo</a></div><div onclick="loadItem('item31F')" id = "item31F" class="menu-item-selector-div"> <p id = "item31binary" hidden>001110000</p><p id = "item31Description" hidden>sweet tomato sauce; grated parmesan cheese; served with fresh fruit</p><div id = "item31Name" class = "menu-selector-title">Pasta with Tomato Sauce</div><a onclick="undoItem('item31')" href="#" class="w-button undo-button" id="item31butt">Undo</a></div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="menu-item-page-div">
+      <div class="instruction-intro">
+            <h2>Select an item to begin</h2>
+Please select an item on the left hand column to begin verifying menu ingredients. Items may be "pre-filled" by our system, so please verify if these are correct, and make any changes as needed. When you are finished with an item, please click 'DONE'. Completed items will appear under the Completed tab.</div>
+
+      <div id="top9">
+      <div class="menu-item-title"></div>
+      <div class="menu-item-description"></div>
+      <div class="w-row restrictions-row">
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="peanuts" onclick="changeColor('peanuts')"><img src="images/1463529003_icon-peanut.png" width="64"/>
+            <div class="restriction-title">Peanuts</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="treenuts" onclick="changeColor('treenuts')"><img src="images/1463529000_Acorn.png" width="64"/>
+            <div class="restriction-title">Tree nuts</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="dairy" onclick="changeColor('dairy')"><img src="images/1463529014_icon-milk.png" width="64"/>
+            <div class="restriction-title">Dairy</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-row restrictions-row">
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="eggs" onclick="changeColor('eggs')"><img src="images/1463529012_icon-egg.png" width="64"/>
+            <div class="restriction-title">Eggs</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="gluten" onclick="changeColor('gluten')"><img src="images/1463529010_icon-wheat.png" width="64"/>
+            <div class="restriction-title">Gluten</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="soy" onclick="changeColor('soy')"><img src="images/1463529005_soy_cup.png" width="64"/>
+            <div class="restriction-title">Soy</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-row restrictions-row">
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="sesame" onclick="changeColor('sesame')"><img src="images/1463528980_Seeds.png" width="64"/>
+            <div class="restriction-title">Sesame</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="shellfish" onclick="changeColor('shellfish')"><img src="images/1463529006_Fooodix_shrimp.png" width="64"/>
+            <div class="restriction-title">Shellfish</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="corn" onclick="changeColor('corn')"><img src="images/1463529009_Fooodix_corn.png" width="64"/>
+            <div class="restriction-title">Corn</div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="help">
+      <p>Dark Blue = Contains</p>
+      <p>White = Does not Contain</p>
+      <a class="need-help-link" href="#">Need some help?</a>
+      </div>
+      <div class="copyright" style="margin-bottom: 35px">Â© 2016 Honeycomb.ai Solutions Inc. All Rights Reserved.</div>
+    </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>  
   
+  <script src="js/dashBoard.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script>
+
+
+  </script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 
 </body></html>

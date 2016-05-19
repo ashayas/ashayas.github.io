@@ -1,35 +1,29 @@
-function finishedItem(itemName) {
-    $("#" + itemName).hide();
-    ($("#top9items").hide());
-    pushItemInfo($('#restaurantName').html(), itemName);
-}
+var activeItem;
+var remainingItems = parseInt($("#totalItems").html());
+var completedItems = 0;
+var completedFlag = 0;
 
-function loadItem(itemName){
-	var newitemName = itemName.split(' ').join('');
-	var itemCode = ($("#" + itemName+'binary').html());
-	var itemArray = ["#peanuts", "#treenuts", "#dairy", "#eggs", "#gluten", "#soy", "#sesame", "#shellfish", "#corn"]
+$(function() {
+      $("#top9").hide();
 
-    for (var i = 0; i < itemArray.length; i++) {
-    	if(itemCode[i] == 0){
-    		($(itemArray[i]).prop('checked', false));
-    	}
-    	else{
-    		($(itemArray[i]).prop('checked', true));            
-    	}
-    }
-    ($("#top9items").show());
-    itemRealName = $("#" + itemName + "NAME").html();
-    ($("#itemNotifier")).text(itemRealName);
-}
-function pushItemInfo(zerestname, zeItem) {
+        for (var i = 0; i < $("#totalItems").html(); i++) {
+              $("#item" + i + 'F').hide();
+        }
+
+        $("#remaining").html("Remaining" + ' (' + String(remainingItems) + ')')
+});
+
+function pushItemInfo(itemNumber) {
+	var zerestname = $("#restaurantName").html();
 	var ref = new Firebase("https://honeycombapp.firebaseio.com/restaurants/" + zerestname);
+	var zeItem = $("#" + itemNumber + "Name").html();
 
 	//Get the binary code from the item
 	var newBinary = "";
 	var itemArray = ["#peanuts", "#treenuts", "#dairy", "#eggs", "#gluten", "#soy", "#sesame", "#shellfish", "#corn"]
 
 	for (var i = 0; i < itemArray.length; i++) {
-		if ($(itemArray[i]).prop('checked')){
+      if ($(itemArray[i]).css("background-color") == "rgb(45, 62, 79)") {
 			newBinary = newBinary + '1';
 		}
 		else{
@@ -37,10 +31,104 @@ function pushItemInfo(zerestname, zeItem) {
 		}
 	}
 
+	console.log(newBinary + '\t' + zerestname + '\t' + zeItem);
+
 	ref.child(zeItem).set({
 	  binary: newBinary
-	});	
-
+	});
 }
 
+
+
+    /* TODO
+    * Load each item's binary from firebase and see when last updated
+    */
+
+    /* TODO
+    * Ability to add a new item
+    */
+
+  	 function changeColor(id) {
+      console.log(($("#" + id).css("background-color")));
+      if ($("#" + id).css("background-color") == "rgb(45, 62, 79)") {
+        $("#" + id).css("background-color", "#fff");
+        $("#" + id).css("color", "#333");
+      }
+      else{
+        $("#" + id).css("background-color", "#2d3e4f");
+        $("#" + id).css("color", "#fff");
+      }
+
+  	}
+
+    function loadItem(itemNumberDes) {
+      if(completedFlag == 1){
+      	completedFlag = 0;
+      	return 0;
+      }
+      $("#selectClass").html("");
+      $("#top9").show();
+      var itemNumber = itemNumberDes.substring(0, itemNumberDes.length-1);
+      var intItemNum = parseInt(itemNumber.split('item')[1]);
+      var itemCode = ($("#" + itemNumber+'binary').html());
+      var itemArray = ["#peanuts", "#treenuts", "#dairy", "#eggs", "#gluten", "#soy", "#sesame", "#shellfish", "#corn"];
+
+      for (var i = 0; i < itemArray.length; i++) {
+        if(itemCode[i] == 1){
+            $(itemArray[i]).css("background-color", "#2d3e4f");
+            $(itemArray[i]).css("color", "#fff");        
+        }
+
+        else{
+            $(itemArray[i]).css("background-color", "#fff");
+            $(itemArray[i]).css("color", "#333");
+        }
+      }
+
+      $(".instruction-intro").hide();
+      $("#menu-item-page-div").show();
+      if (activeItem != -1){
+        $("#" + "item" + activeItem + 'F').css("background-color", "#fff");
+        $("#" + "item" + activeItem + 'N').css("background-color", "#fff");
+      }
+        activeItem = intItemNum;
+        $("#" + itemNumberDes).css("background-color", "#f0f0f0");
+
+      
+      $(".menu-item-title").html($("#" + itemNumber + "Name").html());
+      $(".menu-item-description").html($("#" + itemNumber + "Description").html());      
+
+    }
+
+    function undoItem(itemNumber){
+      completedFlag = 1;
+      remainingItems++;
+      completedItems--;
+      $("#remaining").html("Remaining" + ' (' + String(remainingItems) + ')');
+      $("#completed").html("Completed" + ' (' + String(completedItems) + ')');
+
+      $("#" + itemNumber + 'N').show();
+      $("#" + itemNumber + 'F').hide();
+      $("#top9").hide();      
+
+    }
+
+
+    function finishedItem(itemNumber) {
+      completedFlag = 1;
+      var itemArray = ["#peanuts", "#treenuts", "#dairy", "#eggs", "#gluten", "#soy", "#sesame", "#shellfish", "#corn"];
+
+      remainingItems--;
+      completedItems++;
+      $("#remaining").html("Remaining" + ' (' + String(remainingItems) + ')');
+      $("#completed").html("Completed" + ' (' + String(completedItems) + ')');
+
+      $("#" + itemNumber + 'N').hide();
+      $("#" + itemNumber + 'F').show();
+      
+      pushItemInfo(itemNumber);
+      $("#top9").hide();
+      $("#selectClass").html("Select a new item!");
+
+    }
 

@@ -1,152 +1,146 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="utf-8"/>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Dashboard | Honeycomb Personalized Menus</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!-- FIREBASE -->
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-
-    <!-- Bootstrap -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet"/>
-
-    <!-- Style sheet -->
-    <link href="../../css/style.css" rel="stylesheet"/>
-
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet"/>
-
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-
-  <div class="container">
-
-      <p hidden="" id="restaurantName">Kobe Izakaya Lounge</p>
-
-
-    		<div class="col-sm-3" id="left">
-
-        <a href="#" onclick="loadItem('item0')"><div class="card" id="item0"><div class="card-block" style="background-color: #caeba1;"><h1 id="item0NAME" class="card-title">Ebi Mayo</h1><p id="item0binary" hidden>000110010</p><button type="submit" onclick="finishedItem('item0')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item1')"><div class="card" id="item1"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item1NAME" class="card-title">Tuna Avocad Salsa</h1><p id="item1binary" hidden>001001000</p><button type="submit" onclick="finishedItem('item1')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item2')"><div class="card" id="item2"><div class="card-block" style="background-color: #caeba1;"><h1 id="item2NAME" class="card-title">Short Ribs</h1><p id="item2binary" hidden>000000000</p><button type="submit" onclick="finishedItem('item2')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item3')"><div class="card" id="item3"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item3NAME" class="card-title">Spicy Dynamite Roll</h1><p id="item3binary" hidden>000110010</p><button type="submit" onclick="finishedItem('item3')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item4')"><div class="card" id="item4"><div class="card-block" style="background-color: #caeba1;"><h1 id="item4NAME" class="card-title">Chicken Karaage</h1><p id="item4binary" hidden>000001000</p><button type="submit" onclick="finishedItem('item4')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item5')"><div class="card" id="item5"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item5NAME" class="card-title">Kobe Hot Wings</h1><p id="item5binary" hidden>000000000</p><button type="submit" onclick="finishedItem('item5')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item6')"><div class="card" id="item6"><div class="card-block" style="background-color: #caeba1;"><h1 id="item6NAME" class="card-title">Spicy Tuna Roll</h1><p id="item6binary" hidden>001100000</p><button type="submit" onclick="finishedItem('item6')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item7')"><div class="card" id="item7"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item7NAME" class="card-title">Chili Garlic Calamari</h1><p id="item7binary" hidden>000000010</p><button type="submit" onclick="finishedItem('item7')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item8')"><div class="card" id="item8"><div class="card-block" style="background-color: #caeba1;"><h1 id="item8NAME" class="card-title">Sashimi</h1><p id="item8binary" hidden>001100000</p><button type="submit" onclick="finishedItem('item8')" class="btn btn-default">Done</button></div></div></a><a href="#" onclick="loadItem('item9')"><div class="card" id="item9"><div class="card-block" style="background-color: #f5f5f5;"><h1 id="item9NAME" class="card-title">Tofu Salad</h1><p id="item9binary" hidden>000001000</p><button type="submit" onclick="finishedItem('item9')" class="btn btn-default">Done</button></div></div></a>
-
-
-    	</div>
-    		<div class="col-sm-9" id="right">
-
-    				<div class="col-sm-12" style="background-color: #110c3c">
-    					<img class="img-responsive center-block" src="../../images/honeybanner.png" style="width: 30%; height: 30%"/>
-    				</div>
-
-            <h2 id="itemNotifier">Please select an item!</h2>
-            <div id="top9items">
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Peanuts</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="peanuts" type="checkbox"/>
-      					<label for="peanuts"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Treenuts</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-						<input checked="checked" class="filled-in" id="treenuts" type="checkbox"/>
-      					<label for="treenuts"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Dairy</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="dairy" type="checkbox"/>
-      					<label for="dairy"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Eggs</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="eggs" type="checkbox"/>
-      					<label for="eggs"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Gluten</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="gluten" type="checkbox"/>
-      					<label for="gluten"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Soy</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="soy" type="checkbox"/>
-      					<label for="soy"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Sesame</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="sesame" type="checkbox"/>
-      					<label for="sesame"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Shellfish</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="shellfish" type="checkbox"/>
-      					<label for="shellfish"></label>
-  					</div>
-    				</div>
-
-    				<div class="col-sm-4">
-    				<div class="card-block" style="background-color: #d9534f;">
-    				<h3 class="card-title">Corn</h3>
-    				<h6 class="card-subtitle text-muted">Check if this item contains</h6>
-    				     <input checked="checked" class="filled-in" id="corn" type="checkbox"/>
-      					<label for="corn"></label>
-  					</div>
-    				</div>
-          </div> <!-- Close the item div -->
-    		</div>
+<!-- This site was created in Webflow. http://www.webflow.com--><!-- Last Published: Wed May 18 2016 07:39:06 GMT+0000 (UTC) --><html data-wf-page="5713d17dfbe891be774e7618" data-wf-site="5713d17dfbe891be774e7617"><head>
+  <meta charset="utf-8"/>
+  <title>Restaurant Dashboard</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Webflow" name="generator"/>
+  <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
+  <link href="css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="css/restaurant-dashboard.webflow.css" rel="stylesheet" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>      
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<!--   <script src="js/dashBoard.js"></script>
+ -->  <script>
+    WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]
+      }
+    });
+  </script>
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon"/>
+</head>
+<body>
+  <div class="w-nav navbar-1" data-animation="default" data-collapse="tiny" data-duration="400">
+    <a class="w-nav-brand" href="#"><img src="images/honeycomblogo.png" width="200"/>
+    </a>
+    <nav class="w-nav-menu nav-menu" role="navigation"><a class="w-nav-link nav-link" href="index.html" target="_BLANK">View Menu on Honeycomb</a>
+    </nav>
+    <div class="w-nav-button menu-button">
+      <div class="w-icon-nav-menu icon"></div>
     </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="menu-div">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/dashBoard.js"> </script>
+    <p hidden="" id="restaurantName">Kobe Izakaya Lounge</p>
+    <p hidden="" id="totalItems">10</p>
 
-    <script type="text/javascript">
-    ($("#top9items").hide());      
-    </script>
+      <div class="w-tabs" data-duration-in="300" data-duration-out="100">
+        <div class="w-tab-menu tabs-menu-1">
+          <a class="w-tab-link w--current w-inline-block tab-link" data-w-tab="Tab 1" id="remaining">
+            <div>Remaining</div>
+          </a>
+          <a class="w-tab-link w-inline-block tab-link completed" data-w-tab="Tab 2" id="completed">
+            <div>Completed</div>
+          </a>
+        </div>
+        <div class="w-tab-content">
+          <div class="w-tab-pane w--tab-active" data-w-tab="Tab 1">
+
+          <div onclick="loadItem('item0N')" id = "item0N" class="menu-item-selector-div"> <p id = "item0binary" hidden>000110010</p><p id = "item0Description" hidden>Tempura prawn; sweet and spicy Japanese mayo sauce</p><div id = "item0Name" class = "menu-selector-title">Ebi Mayo</div><a onclick="finishedItem('item0')" href="#" class="w-button done-button" id="item0butt">Done</a></div><div onclick="loadItem('item1N')" id = "item1N" class="menu-item-selector-div"> <p id = "item1binary" hidden>001001000</p><p id = "item1Description" hidden>Ahi tuna tartar with tomato and onion in a sweet soya sauce with wonton chips</p><div id = "item1Name" class = "menu-selector-title">Tuna Avocad Salsa</div><a onclick="finishedItem('item1')" href="#" class="w-button done-button" id="item1butt">Done</a></div><div onclick="loadItem('item2N')" id = "item2N" class="menu-item-selector-div"> <p id = "item2binary" hidden>000000000</p><p id = "item2Description" hidden>Slow cooked; seared; marinated triple AAA ribs finished with our homemade glaze; Asian Salad</p><div id = "item2Name" class = "menu-selector-title">Short Ribs</div><a onclick="finishedItem('item2')" href="#" class="w-button done-button" id="item2butt">Done</a></div><div onclick="loadItem('item3N')" id = "item3N" class="menu-item-selector-div"> <p id = "item3binary" hidden>000110010</p><p id = "item3Description" hidden>Crispy tempura prawn; avocado and spicy mayo</p><div id = "item3Name" class = "menu-selector-title">Spicy Dynamite Roll</div><a onclick="finishedItem('item3')" href="#" class="w-button done-button" id="item3butt">Done</a></div><div onclick="loadItem('item4N')" id = "item4N" class="menu-item-selector-div"> <p id = "item4binary" hidden>000001000</p><p id = "item4Description" hidden>Delectable deep fried boneless chicken; soya ginger sauce; shredded cabbage</p><div id = "item4Name" class = "menu-selector-title">Chicken Karaage</div><a onclick="finishedItem('item4')" href="#" class="w-button done-button" id="item4butt">Done</a></div><div onclick="loadItem('item5N')" id = "item5N" class="menu-item-selector-div"> <p id = "item5binary" hidden>000000000</p><p id = "item5Description" hidden>Deep fried chicken wings with rock salt; lime &amp; green chili hot sauce</p><div id = "item5Name" class = "menu-selector-title">Kobe Hot Wings</div><a onclick="finishedItem('item5')" href="#" class="w-button done-button" id="item5butt">Done</a></div><div onclick="loadItem('item6N')" id = "item6N" class="menu-item-selector-div"> <p id = "item6binary" hidden>001100000</p><p id = "item6Description" hidden>Ahi tuna prepared with Japanese mayo and spices</p><div id = "item6Name" class = "menu-selector-title">Spicy Tuna Roll</div><a onclick="finishedItem('item6')" href="#" class="w-button done-button" id="item6butt">Done</a></div><div onclick="loadItem('item7N')" id = "item7N" class="menu-item-selector-div"> <p id = "item7binary" hidden>000000010</p><p id = "item7Description" hidden>Deep fried squid; herb salad; citrus; chili &amp; garlic sauce</p><div id = "item7Name" class = "menu-selector-title">Chili Garlic Calamari</div><a onclick="finishedItem('item7')" href="#" class="w-button done-button" id="item7butt">Done</a></div><div onclick="loadItem('item8N')" id = "item8N" class="menu-item-selector-div"> <p id = "item8binary" hidden>001100000</p><p id = "item8Description" hidden>Tender ahi tuna accompanied by our famous fiery Japanese mustard &amp; shoyu sauce</p><div id = "item8Name" class = "menu-selector-title">Sashimi</div><a onclick="finishedItem('item8')" href="#" class="w-button done-button" id="item8butt">Done</a></div><div onclick="loadItem('item9N')" id = "item9N" class="menu-item-selector-div"> <p id = "item9binary" hidden>000001000</p><p id = "item9Description" hidden>Mixed greens; julienne vegetables; fried onion; carrot ginger dressing</p><div id = "item9Name" class = "menu-selector-title">Tofu Salad</div><a onclick="finishedItem('item9')" href="#" class="w-button done-button" id="item9butt">Done</a></div>
 
 
+          </div>
+          <div class="w-tab-pane" data-w-tab="Tab 2">
 
+          <div onclick="loadItem('item0F')" id = "item0F" class="menu-item-selector-div"> <p id = "item0binary" hidden>000110010</p><p id = "item0Description" hidden>Tempura prawn; sweet and spicy Japanese mayo sauce</p><div id = "item0Name" class = "menu-selector-title">Ebi Mayo</div><a onclick="undoItem('item0')" href="#" class="w-button undo-button" id="item0butt">Undo</a></div><div onclick="loadItem('item1F')" id = "item1F" class="menu-item-selector-div"> <p id = "item1binary" hidden>001001000</p><p id = "item1Description" hidden>Ahi tuna tartar with tomato and onion in a sweet soya sauce with wonton chips</p><div id = "item1Name" class = "menu-selector-title">Tuna Avocad Salsa</div><a onclick="undoItem('item1')" href="#" class="w-button undo-button" id="item1butt">Undo</a></div><div onclick="loadItem('item2F')" id = "item2F" class="menu-item-selector-div"> <p id = "item2binary" hidden>000000000</p><p id = "item2Description" hidden>Slow cooked; seared; marinated triple AAA ribs finished with our homemade glaze; Asian Salad</p><div id = "item2Name" class = "menu-selector-title">Short Ribs</div><a onclick="undoItem('item2')" href="#" class="w-button undo-button" id="item2butt">Undo</a></div><div onclick="loadItem('item3F')" id = "item3F" class="menu-item-selector-div"> <p id = "item3binary" hidden>000110010</p><p id = "item3Description" hidden>Crispy tempura prawn; avocado and spicy mayo</p><div id = "item3Name" class = "menu-selector-title">Spicy Dynamite Roll</div><a onclick="undoItem('item3')" href="#" class="w-button undo-button" id="item3butt">Undo</a></div><div onclick="loadItem('item4F')" id = "item4F" class="menu-item-selector-div"> <p id = "item4binary" hidden>000001000</p><p id = "item4Description" hidden>Delectable deep fried boneless chicken; soya ginger sauce; shredded cabbage</p><div id = "item4Name" class = "menu-selector-title">Chicken Karaage</div><a onclick="undoItem('item4')" href="#" class="w-button undo-button" id="item4butt">Undo</a></div><div onclick="loadItem('item5F')" id = "item5F" class="menu-item-selector-div"> <p id = "item5binary" hidden>000000000</p><p id = "item5Description" hidden>Deep fried chicken wings with rock salt; lime &amp; green chili hot sauce</p><div id = "item5Name" class = "menu-selector-title">Kobe Hot Wings</div><a onclick="undoItem('item5')" href="#" class="w-button undo-button" id="item5butt">Undo</a></div><div onclick="loadItem('item6F')" id = "item6F" class="menu-item-selector-div"> <p id = "item6binary" hidden>001100000</p><p id = "item6Description" hidden>Ahi tuna prepared with Japanese mayo and spices</p><div id = "item6Name" class = "menu-selector-title">Spicy Tuna Roll</div><a onclick="undoItem('item6')" href="#" class="w-button undo-button" id="item6butt">Undo</a></div><div onclick="loadItem('item7F')" id = "item7F" class="menu-item-selector-div"> <p id = "item7binary" hidden>000000010</p><p id = "item7Description" hidden>Deep fried squid; herb salad; citrus; chili &amp; garlic sauce</p><div id = "item7Name" class = "menu-selector-title">Chili Garlic Calamari</div><a onclick="undoItem('item7')" href="#" class="w-button undo-button" id="item7butt">Undo</a></div><div onclick="loadItem('item8F')" id = "item8F" class="menu-item-selector-div"> <p id = "item8binary" hidden>001100000</p><p id = "item8Description" hidden>Tender ahi tuna accompanied by our famous fiery Japanese mustard &amp; shoyu sauce</p><div id = "item8Name" class = "menu-selector-title">Sashimi</div><a onclick="undoItem('item8')" href="#" class="w-button undo-button" id="item8butt">Undo</a></div><div onclick="loadItem('item9F')" id = "item9F" class="menu-item-selector-div"> <p id = "item9binary" hidden>000001000</p><p id = "item9Description" hidden>Mixed greens; julienne vegetables; fried onion; carrot ginger dressing</p><div id = "item9Name" class = "menu-selector-title">Tofu Salad</div><a onclick="undoItem('item9')" href="#" class="w-button undo-button" id="item9butt">Undo</a></div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="menu-item-page-div">
+      <div class="instruction-intro">
+            <h2>Select an item to begin</h2>
+Please select an item on the left hand column to begin verifying menu ingredients. Items may be "pre-filled" by our system, so please verify if these are correct, and make any changes as needed. When you are finished with an item, please click 'DONE'. Completed items will appear under the Completed tab.</div>
+
+      <div id="top9">
+      <div class="menu-item-title"></div>
+      <div class="menu-item-description"></div>
+      <div class="w-row restrictions-row">
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="peanuts" onclick="changeColor('peanuts')"><img src="images/1463529003_icon-peanut.png" width="64"/>
+            <div class="restriction-title">Peanuts</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="treenuts" onclick="changeColor('treenuts')"><img src="images/1463529000_Acorn.png" width="64"/>
+            <div class="restriction-title">Tree nuts</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="dairy" onclick="changeColor('dairy')"><img src="images/1463529014_icon-milk.png" width="64"/>
+            <div class="restriction-title">Dairy</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-row restrictions-row">
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="eggs" onclick="changeColor('eggs')"><img src="images/1463529012_icon-egg.png" width="64"/>
+            <div class="restriction-title">Eggs</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="gluten" onclick="changeColor('gluten')"><img src="images/1463529010_icon-wheat.png" width="64"/>
+            <div class="restriction-title">Gluten</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="soy" onclick="changeColor('soy')"><img src="images/1463529005_soy_cup.png" width="64"/>
+            <div class="restriction-title">Soy</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-row restrictions-row">
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="sesame" onclick="changeColor('sesame')"><img src="images/1463528980_Seeds.png" width="64"/>
+            <div class="restriction-title">Sesame</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="shellfish" onclick="changeColor('shellfish')"><img src="images/1463529006_Fooodix_shrimp.png" width="64"/>
+            <div class="restriction-title">Shellfish</div>
+          </div>
+        </div>
+        <div class="w-col w-col-4">
+          <div class="restriction-div" id="corn" onclick="changeColor('corn')"><img src="images/1463529009_Fooodix_corn.png" width="64"/>
+            <div class="restriction-title">Corn</div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="help">
+      <p>Dark Blue = Contains</p>
+      <p>White = Does not Contain</p>
+      <a class="need-help-link" href="#">Need some help?</a>
+      </div>
+      <div class="copyright" style="margin-bottom: 35px">© 2016 Honeycomb.ai Solutions Inc. All Rights Reserved.</div>
+    </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>  
   
+  <script src="js/dashBoard.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script>
+
+
+  </script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 
 </body></html>
