@@ -13,9 +13,11 @@ $(function() {
         $("#remaining").html("Remaining" + ' (' + String(remainingItems) + ')')
 });
 
-function pushItemInfo(itemNumber) {
+function pushItemInfo(flag, itemNumber) {
 	var zerestname = $("#restaurantName").html();
-	var ref = new Firebase("https://honeycombapp.firebaseio.com/restaurants/" + zerestname);
+  if(flag == 1){
+    var ref = new Firebase("https://honeycombapp.firebaseio.com/restaurants/" + zerestname);
+  }
 	var zeItem = $("#" + itemNumber + "Name").html();
 
 	//Get the binary code from the item
@@ -31,11 +33,15 @@ function pushItemInfo(itemNumber) {
 		}
 	}
 
+  $('#' + itemNumber + "binary").html(newBinary);
 	console.log(newBinary + '\t' + zerestname + '\t' + zeItem);
 
-	ref.child(zeItem).set({
-	  binary: newBinary
-	});
+  if(flag == 1){
+    ref.child(zeItem).set({
+      binary: newBinary
+    });    
+  }
+
 }
 
 
@@ -48,8 +54,23 @@ function pushItemInfo(itemNumber) {
     * Ability to add a new item
     */
 
+    function changeCode(flag, id) {
+      var itemArray = ["peanuts", "treenuts", "dairy", "eggs", "gluten", "soy", "sesame", "shellfish", "corn"];
+      var tempValue = $("#item" + activeItem+"binary").html();
+      console.log("one " + tempValue)
+      for (var i = 0; i < itemArray.length; i++) {
+        if(id == itemArray[i]){
+          console.log("GOT HERE" + id + i);
+          tempValue[i] = flag;
+        }
+      }
+      console.log("two " + tempValue);
+      $("#item" + activeItem+"binary").html(tempValue);
+
+      // body...
+    }
+
   	 function changeColor(id) {
-      console.log(($("#" + id).css("background-color")));
       if ($("#" + id).css("background-color") == "rgb(45, 62, 79)") {
         $("#" + id).css("background-color", "#fff");
         $("#" + id).css("color", "#333");
@@ -110,6 +131,7 @@ function pushItemInfo(itemNumber) {
       $("#" + itemNumber + 'N').show();
       $("#" + itemNumber + 'F').hide();
       $("#top9").hide();      
+      pushItemInfo(0, itemNumber);
 
     }
 
@@ -126,7 +148,7 @@ function pushItemInfo(itemNumber) {
       $("#" + itemNumber + 'N').hide();
       $("#" + itemNumber + 'F').show();
       
-      pushItemInfo(itemNumber);
+      pushItemInfo(1, itemNumber);
       $("#top9").hide();
       $("#selectClass").html("Select a new item!");
 
