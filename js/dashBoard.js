@@ -118,6 +118,7 @@ function pushItemInfo(flag, itemNumber) {
       
       $(".menu-item-title").html($("#" + itemNumber + "Name").html());
       $(".menu-item-description").html($("#" + itemNumber + "Description").html());      
+      $(".menu-item-category").html($("#" + itemNumber + "Category").html());      
 
     }
 
