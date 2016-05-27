@@ -417,6 +417,9 @@
   .icon {
     color: #fff;
   }
+  .menu-item-category {
+    font-size: 30px;
+  }
   .menu-button.w--open {
     background-color: transparent;
   }
