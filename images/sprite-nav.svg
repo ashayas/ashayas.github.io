@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="60px" height="700px" viewBox="0 0 60 700" enable-background="new 0 0 60 700" xml:space="preserve">
+<g id="Layer_1_1_">
+	<polyline fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" points="14,38 30,21 14,4 	"/>
+	<polyline fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" points="30,484 14,501 30,518 	"/>
+	<polyline fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" points="40,268 23,252 6,268 	"/>
+	<polyline fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" points="6,372 23,388 40,372 	"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="6" y1="124" x2="34" y2="152"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="34" y1="124" x2="6" y2="152"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="0" y1="639" x2="40" y2="639"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="0" y1="656" x2="40" y2="656"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" x1="0" y1="622" x2="40" y2="622"/>
+</g>
+<g id="Layer_2" display="none">
+	<g display="inline">
+		<rect opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+		<rect y="120" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+	</g>
+	<rect y="240" display="inline" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+	<rect y="360" display="inline" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+	<rect y="480" display="inline" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+</g>
+</svg>

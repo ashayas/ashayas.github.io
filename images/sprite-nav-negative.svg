@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="60px" height="600px" viewBox="211 0 60 600" enable-background="new 211 0 60 600" xml:space="preserve">
+<g id="Layer_1_2_">
+	<polyline fill="none" stroke="#2B2B2B" stroke-width="6" stroke-miterlimit="10" points="223,38 239,21 223,4 	"/>
+	<polyline fill="none" stroke="#2B2B2B" stroke-width="6" stroke-miterlimit="10" points="239,484 223,501 239,518 	"/>
+	<polyline fill="none" stroke="#2B2B2B" stroke-width="6" stroke-miterlimit="10" points="249,268 232,252 215,268 	"/>
+	<polyline fill="none" stroke="#2B2B2B" stroke-width="6" stroke-miterlimit="10" points="215,372 232,388 249,372 	"/>
+	<line fill="none" stroke="#2B2B2B" stroke-width="6" stroke-miterlimit="10" x1="215" y1="124" x2="243" y2="152"/>
+	<line fill="none" stroke="#2B2B2B" stroke-width="6" stroke-miterlimit="10" x1="243" y1="124" x2="215" y2="152"/>
+</g>
+<g id="Layer_2" display="none">
+	<g display="inline">
+		<rect opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+		<rect y="120" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+	</g>
+	<rect y="240" display="inline" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+	<rect y="360" display="inline" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+	<rect y="480" display="inline" opacity="0.2" fill="#FFFFFF" enable-background="new    " width="60" height="120"/>
+</g>
+</svg>
