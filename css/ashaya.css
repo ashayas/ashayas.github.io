@@ -303,7 +303,8 @@ footer {
 
 .link-text{
   text-decoration: none;
-  color: #cb2e02;
+  font-weight: bold;
+  color: white;
 }
 
 .home-section {
