@@ -623,13 +623,6 @@ footer {
   padding-left: 30px;
 }
 
-.details-text.marker {
-  background-image: url('../images/map.png');
-  background-position: 0px 50%;
-  background-size: 20px;
-  background-repeat: no-repeat;
-}
-
 .details-text.phone {
   background-image: url('../images/technology.png');
   background-position: 0px 50%;
